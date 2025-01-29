@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+echo "Switching to Nixos with Configuration in ~/nixos-configuration/"
+sudo nixos-rebuild switch --flake ~/nixos-configuration/
