@@ -2,8 +2,8 @@
 set -e
 pushd ~/nixos-configuration
 
-git add * || true
 git diff -U0
+git add * || true
 echo "Switching to Nixos with Configuration in ~/nixos-configuration/"
 sudo nixos-rebuild switch --flake . 2>&1 | tee nixos-last-switch.log
 echo "Committing to git"
