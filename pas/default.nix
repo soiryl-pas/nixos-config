@@ -10,6 +10,7 @@
   imports = [
     ./programs
     ./shell
+    ./gui
   ];
 
   programs.home-manager.enable = true;
