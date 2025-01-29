@@ -2,7 +2,7 @@
 
 let
   cfg = config.default_display_manager;
-
+in
 {
   options = {
     default_display_manager = lib.mkOption {
@@ -12,8 +12,8 @@ let
 	Auswahl des Displaymanagers:
 	"none" (TTY mit startx, das xterm startet, und Skripten der einzelnen Desktop Environments)
 	"sddm" (von KDE Plasma 6)
-      ''
-    }
+      '';
+    };
   };
 
   config = {
