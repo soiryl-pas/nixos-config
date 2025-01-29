@@ -4,11 +4,11 @@ pushd ~/nixos-configuration
 
 echo "== Git diff =="
 git diff -U0
-echo "\n== Git add =="
+echo -e "\n== Git add =="
 git add * || true
-echo "\n== Switching to Nixos with Configuration in ~/nixos-configuration/ =="
+echo -e "\n== Switching to Nixos with Configuration in ~/nixos-configuration/ =="
 sudo nixos-rebuild switch --flake . 2>&1 | tee nixos-last-switch.log
-echo "\n== Committing to git =="
+echo -e "\n== Committing to git =="
 gen=$(nixos-rebuild list-generations | grep current)
 git commit -am "$gen"
 
