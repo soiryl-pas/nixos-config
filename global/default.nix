@@ -6,6 +6,8 @@
     ./gui.nix
   ];
 
+  default_display_manager = "sddm";
+
   nix = {
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
