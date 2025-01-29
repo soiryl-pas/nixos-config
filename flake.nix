@@ -19,7 +19,7 @@
 	  home-manager = {
 	    useGlobalPkgs = true;
 	    useUserPackages = true;
-	    backupFileExtension = "backup";
+	    backupFileExtension = "orig.home";
 	    users.pas = import ./pas;
 	  };
 	}
