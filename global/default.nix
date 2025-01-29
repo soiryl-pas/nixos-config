@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./gui.nix
   ];
 
   nix = {
