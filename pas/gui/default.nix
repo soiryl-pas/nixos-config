@@ -13,4 +13,11 @@
 #   XDG_PICTURES_DIR="$HOME/pictures"
 #   XDG_VIDEOS_DIR="$HOME/"
 # '';
+
+  xdg.configFile."test.txt" = {
+    enable = true;
+    text = ''
+      Hello world
+    '';
+  };
 }

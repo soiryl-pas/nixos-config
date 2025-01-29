@@ -16,9 +16,12 @@
         ./global
 
 	home-manager.nixosModules.home-manager {
-	  home-manager.useGlobalPkgs = true;
-	  home-manager.useUserPackages = true;
-	  home-manager.users.pas = import ./pas;
+	  home-manager = {
+	    useGlobalPkgs = true;
+	    useUserPackages = true;
+	    backupFileExtension = "backup";
+	    users.pas = import ./pas;
+	  };
 	}
       ];
     };
