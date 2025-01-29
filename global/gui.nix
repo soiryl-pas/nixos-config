@@ -18,8 +18,8 @@ in
 
   config = {
 
-    services.xserver.enable = true;
-    services.desktopManager.plasma6.enable = true;
+    services.xserver.enable = false;
+    services.desktopManager.plasma6.enable = false;
     # TODO Hyprland
     services.xserver.displayManager.startx.enable = (cfg == "none");
     services.displayManager.sddm.enable = (cfg == "sddm");
