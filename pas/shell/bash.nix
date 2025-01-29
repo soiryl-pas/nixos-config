@@ -12,7 +12,6 @@
 
     # Environmental Variables
     sessionVariables = {
-      PATH = "/home/pas/nixos-configuration/pas/shell/:$PATH";
     };
 
     # Further ~/.bashrc Configs
