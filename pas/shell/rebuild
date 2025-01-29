@@ -1,4 +1,12 @@
 #!/bin/sh
 set -e
+pushd ~/nixos-configuration
+
+git diff -U0 *.nix
 echo "Switching to Nixos with Configuration in ~/nixos-configuration/"
-sudo nixos-rebuild switch --flake ~/nixos-configuration/
+sudo nixos-rebuild switch --flake . 2>&1 | tee nixos-last-switch.log
+echo "Committing to git"
+gen=$(nixos-rebuild list-generations | grep current)
+git commit -am "$gen"
+
+popd
