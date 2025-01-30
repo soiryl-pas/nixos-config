@@ -27,6 +27,8 @@ in
       enable = true;
       xwayland.enable = true;
     };
+
+    programs.sway.enable = true;
     
     services = {
       xserver.enable = true;
