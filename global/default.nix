@@ -51,6 +51,10 @@
 	layout = "de";
 	options = "eurosign:e,caps:escape";
       };
+      resolutions = [{
+	x = 1920;
+	y = 1080;
+      }];
     };
 
     pipewire = {
