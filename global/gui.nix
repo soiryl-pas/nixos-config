@@ -33,7 +33,10 @@ in
       desktopManager.plasma6.enable = true;
       
       xserver.displayManager.startx.enable = (cfg == "none");
-      displayManager.sddm.enable = (cfg == "sddm");
+      displayManager.sddm = rec { 
+	enable = (cfg == "sddm");
+	wayland.enable = enable;
+      };
       greetd = {
 	enable = (cfg == "greetd");
 	settings = {
