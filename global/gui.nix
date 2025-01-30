@@ -23,12 +23,12 @@ in
 
   config = {
 
+    /*
     programs.hyprland = {
       enable = true;
       xwayland.enable = true;
     };
-
-    programs.sway.enable = true;
+    */
     
     services = {
       xserver.enable = true;
