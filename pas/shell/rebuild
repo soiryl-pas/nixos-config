@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 set -o pipefail
-pushd ~/nixos-configuration
+pushd $HOME/nixos-configuration
 
 echo "== Git diff =="
 git diff -U0 --color=always | less -R
