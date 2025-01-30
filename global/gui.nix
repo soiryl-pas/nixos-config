@@ -22,11 +22,15 @@ in
   };
 
   config = {
+
+    programs.hyprland = {
+      enable = true;
+      xwayland.enable = true;
+    };
     
     services = {
       xserver.enable = true;
       desktopManager.plasma6.enable = true;
-      # TODO Hyprland
       
       xserver.displayManager.startx.enable = (cfg == "none");
       displayManager.sddm.enable = (cfg == "sddm");
