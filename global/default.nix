@@ -55,6 +55,10 @@
 	x = 1920;
 	y = 1080;
       }];
+      virtualScreen = {
+	x = 1920;
+	y = 1080;
+      };
     };
 
     pipewire = {
