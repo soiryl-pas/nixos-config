@@ -62,7 +62,9 @@
 
   };
 
-
+  environment.systemPackages = with pkgs; [
+    kitty
+  ];
 
   programs.neovim = {
     enable = true;
