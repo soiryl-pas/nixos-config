@@ -32,10 +32,11 @@ in
     
     services = {
       xserver.enable = true;
-      desktopManager.plasma6.enable = true;
+      # TODO
+      desktopManager.plasma6.enable = false;
       xserver.windowManager.qtile.enable = true;
       
-      xserver.displayManager.startx.enable = (cfg == "none");
+      #xserver.displayManager.startx.enable = (cfg == "none");
       displayManager.sddm = rec { 
 	enable = (cfg == "sddm");
 	wayland.enable = enable;
