@@ -23,6 +23,10 @@ in
 
   config = {
 
+    environment.systemPackages = with pkgs; [
+      xorg.xinit
+    ];
+
     /*
     programs.hyprland = {
       enable = true;
