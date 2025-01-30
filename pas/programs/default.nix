@@ -15,5 +15,8 @@
       };
     };
     htop.enable = true;
+    firefox = {
+      enable = true;
+    };
   };
 }
