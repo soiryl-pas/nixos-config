@@ -8,7 +8,9 @@
 
 ###
 # Custom Options
-  default_display_manager = "none";
+  custom = {
+    defaultDisplayManager = "none";
+  };
 #
 ###
 
