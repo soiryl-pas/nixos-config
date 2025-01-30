@@ -32,8 +32,7 @@ in
     
     services = {
       xserver.enable = true;
-      # TODO
-      desktopManager.plasma6.enable = false;
+      desktopManager.plasma6.enable = true;
       xserver.windowManager.qtile.enable = true;
       
       #xserver.displayManager.startx.enable = (cfg == "none");
