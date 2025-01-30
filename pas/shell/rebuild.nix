@@ -4,7 +4,7 @@ let
   git = pkgs.git;
 in
 pkgs.writeShellApplication {
-  name = "rebuild-nat";
+  name = "rebuild";
   text = ''
     pushd "$HOME"/nixos-configuration
 
