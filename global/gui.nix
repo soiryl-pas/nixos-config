@@ -32,6 +32,14 @@ in
       displayManager.sddm.enable = (cfg == "sddm");
       greetd = {
 	enable = (cfg == "greetd");
+	settings = {
+	  default_session.command = ''
+	  ${pkgs.greetd.tuigreet}/bin/tuigreet \
+	  --time \
+	  --asterisks \
+	  --user-menu
+	  '';
+	};
       };
     };
   };
