@@ -2,6 +2,6 @@
 
 {
   wayland.windowManager.hyprland = {
-    enable = true;
+    #enable = true;
   };
 }
