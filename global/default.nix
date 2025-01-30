@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ./gui.nix
+    ../pas/shell/scripts.nix
   ];
 
 ###

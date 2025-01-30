@@ -1,9 +1,8 @@
 { pkgs }:
 
 let
-  git = ${pkgs.git};
+  git = pkgs.git;
 in
-{
   pkgs.writeShellScriptBin "rebuild-nat" ''
     set -e
     set -o pipefail
@@ -19,5 +18,4 @@ in
     ${git} commit -am "$gen"
 
     popd
-  '';
-}
+  ''
