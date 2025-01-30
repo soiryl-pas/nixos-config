@@ -10,7 +10,7 @@
 ###
 # Custom Options
   custom = {
-    defaultDisplayManager = "greetd";
+    defaultDisplayManager = "none";
   };
 #
 ###
