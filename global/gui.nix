@@ -45,7 +45,6 @@ in
 	settings = {
 	  default_session.command = ''
 	  ${pkgs.greetd.tuigreet}/bin/tuigreet \
-	  --xsession-wrapper
 	  --time \
 	  --asterisks \
 	  --user-menu
