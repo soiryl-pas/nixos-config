@@ -25,7 +25,7 @@ in
 
     # Desktop Packages
     environment.systemPackages = with pkgs; [
-      #xorg.xinit
+      xorg.xinit
     ];
     
     services = {
@@ -33,7 +33,7 @@ in
       xserver.autorun = true;
       desktopManager.plasma6.enable = true;
 
-      xserver.videoDrivers = [ "amdgpu" "fbdev" ];
+      xserver.videoDrivers = [ "amdgpu" "modesetting" "fbdev" ];
       
       xserver.displayManager.startx.enable = (cfg == "none");
       displayManager.sddm = rec { 
@@ -47,7 +47,6 @@ in
 	  ${pkgs.greetd.tuigreet}/bin/tuigreet \
 	  --sessions ${config.services.displayManager.sessionData.desktops}/share/wayland-sessions \
 	  --xsessions ${config.services.displayManager.sessionData.desktops}/share/xsessions \
-	  --no-xsession-wrapper \
 	  --time \
 	  --asterisks \
 	  --user-menu
