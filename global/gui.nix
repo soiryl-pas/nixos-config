@@ -25,7 +25,7 @@ in
 
     # Desktop Packages
     environment.systemPackages = with pkgs; [
-      #xorg.xinit
+      xorg.xinit
     ];
 
     programs.sway.enable = true;
