@@ -28,7 +28,6 @@ in
     # Desktop Packages
     environment.systemPackages = with pkgs; [
       xorg.xinit
-
     ];
 
     programs.sway.enable = true;
@@ -37,6 +36,7 @@ in
       desktopManager.plasma6.enable = true;
 
       xserver.enable = true;
+      xserver.autorun = true;
       xserver.videoDrivers = [ "amdgpu" "modesetting" "fbdev" ];
       
       xserver.displayManager.startx.enable = (cfg == "none");
