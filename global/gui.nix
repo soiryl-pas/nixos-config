@@ -27,13 +27,11 @@ in
     environment.systemPackages = with pkgs; [
       xorg.xinit
     ];
+
+    programs.sway.enable = true;
     
     services = {
-      #xserver.enable = true;
-      #xserver.autorun = true;
       desktopManager.plasma6.enable = true;
-
-      #programs.sway.enable = true;
 
       xserver.videoDrivers = [ "amdgpu" "modesetting" "fbdev" ];
       
