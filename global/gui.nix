@@ -27,16 +27,10 @@ in
     environment.systemPackages = with pkgs; [
       xorg.xinit
     ];
-
-    /*
-    programs.hyprland = {
-      enable = true;
-      xwayland.enable = true;
-    };
-    */
     
     services = {
       xserver.enable = true;
+      xserver.autorun = true;
       desktopManager.plasma6.enable = true;
       xserver.windowManager.qtile.enable = true;
       
