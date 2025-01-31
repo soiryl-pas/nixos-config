@@ -36,7 +36,6 @@ in
       desktopManager.plasma6.enable = true;
 
       xserver.enable = true;
-      xserver.autorun = false;
       xserver.videoDrivers = [ "amdgpu" "modesetting" "fbdev" ];
       
       xserver.displayManager.startx.enable = (cfg == "none");
@@ -52,7 +51,6 @@ in
 	  ${pkgs.greetd.tuigreet}/bin/tuigreet \
 	  --sessions ${config.services.displayManager.sessionData.desktops}/share/wayland-sessions \
 	  --xsessions ${config.services.displayManager.sessionData.desktops}/share/xsessions \
-	  --xsession-wrapper ${config.services.displayManager.sessionData.wrapper} \
 	  --time \
 	  --asterisks \
 	  --user-menu
