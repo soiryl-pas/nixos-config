@@ -10,6 +10,7 @@ in
 	"none"
 	"sddm"
 	"greetd"
+	"lightdm"
       ];
       default = "none";
       description = ''
@@ -17,6 +18,7 @@ in
 	"none" (TTY mit startx, das xterm startet, und Skripten der einzelnen Desktop Environments)
 	"sddm" (von KDE Plasma 6)
 	"greetd" (Terminal Display Manager)
+	"lightdm" (Light Display Manager)
       '';
     };
   };
