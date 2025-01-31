@@ -45,7 +45,7 @@ in
 	settings = {
 	  default_session.command = ''
 	  ${pkgs.greetd.tuigreet}/bin/tuigreet \
-	  --sessions ${config.services.xserver.displayManager.sessionData.desktops}/share/xsessions
+	  --sessions ${config.services.displayManager.sessionData.desktops}/share/xsessions
 	  --time \
 	  --asterisks \
 	  --user-menu
