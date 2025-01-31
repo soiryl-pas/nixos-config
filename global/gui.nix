@@ -36,6 +36,7 @@ in
       desktopManager.plasma6.enable = true;
 
       xserver.enable = true;
+      xserver.autorun = false;
       xserver.videoDrivers = [ "amdgpu" "modesetting" "fbdev" ];
       
       xserver.displayManager.startx.enable = (cfg == "none");
