@@ -7,14 +7,6 @@
     ../pas/shell/scripts.nix
   ];
 
-###
-# Custom Options
-  custom = {
-    defaultDisplayManager = "greetd";
-  };
-#
-###
-
   security.polkit.enable = true;
 
   nix = {

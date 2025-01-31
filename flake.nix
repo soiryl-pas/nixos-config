@@ -15,6 +15,14 @@
       modules = [ 
         ./global
 
+	###
+	# Custom Settings
+	{ custom = {
+	  defaultDisplayManager = "greetd";
+	}; }
+	#
+	###
+
 	home-manager.nixosModules.home-manager {
 	  home-manager = {
 	    useGlobalPkgs = true;
