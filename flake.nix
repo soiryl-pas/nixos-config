@@ -18,7 +18,7 @@
 	# Custom Settings
 	{
 	  custom = {
-	    defaultDisplayManager = "lightdm";
+	    defaultDisplayManager = "greetd";
 	  };
 	}
 
