@@ -39,7 +39,7 @@ in
       xserver.displayManager.startx.enable = (cfg == "none");
       displayManager.sddm = rec { 
 	enable = (cfg == "sddm");
-	#wayland.enable = true;
+	wayland.enable = true;
       };
       greetd = {
 	enable = (cfg == "greetd");
