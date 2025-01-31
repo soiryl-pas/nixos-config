@@ -15,13 +15,12 @@
       modules = [ 
         ./global
 
-	###
 	# Custom Settings
-	{ custom = {
-	  defaultDisplayManager = "greetd";
-	}; }
-	#
-	###
+	{
+	  custom = {
+	    defaultDisplayManager = "sddm";
+	  };
+	}
 
 	home-manager.nixosModules.home-manager {
 	  home-manager = {
