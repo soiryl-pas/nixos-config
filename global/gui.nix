@@ -25,7 +25,7 @@ in
 
     # Desktop Packages
     environment.systemPackages = with pkgs; [
-      xorg.xinit
+      #xorg.xinit
     ];
     
     services = {
@@ -45,6 +45,7 @@ in
 	settings = {
 	  default_session.command = ''
 	  ${pkgs.greetd.tuigreet}/bin/tuigreet \
+	  --xsessions ${config.services.displayManager.sessionData.desktops}/share/xsessions:${config.services.displayManager.sessionData.desktops}/share/wayland-xsessions
 	  --time \
 	  --asterisks \
 	  --user-menu
