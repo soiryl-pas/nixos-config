@@ -24,7 +24,7 @@ in
   config = {
 
     environment.systemPackages = with pkgs; [
-      xorg.xinit
+      #xorg.xinit
     ];
 
     /*

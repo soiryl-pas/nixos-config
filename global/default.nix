@@ -10,11 +10,12 @@
 ###
 # Custom Options
   custom = {
-    defaultDisplayManager = "none";
+    defaultDisplayManager = "greetd";
   };
 #
 ###
 
+  security.polkit.enable = true;
 
   nix = {
     settings = {
