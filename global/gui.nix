@@ -32,7 +32,8 @@ in
       xserver.enable = true;
       xserver.autorun = true;
       desktopManager.plasma6.enable = true;
-      xserver.windowManager.qtile.enable = true;
+
+      xserver.videoDrivers = [ "amdgpu" ];
       
       xserver.displayManager.startx.enable = (cfg == "none");
       displayManager.sddm = rec { 
