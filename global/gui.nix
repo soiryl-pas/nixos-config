@@ -45,11 +45,13 @@ in
       };
       greetd = {
 	enable = (cfg == "greetd");
+	vt = 7;
 	settings = {
 	  default_session.command = ''
 	  ${pkgs.greetd.tuigreet}/bin/tuigreet \
 	  --sessions ${config.services.displayManager.sessionData.desktops}/share/wayland-sessions \
 	  --xsessions ${config.services.displayManager.sessionData.desktops}/share/xsessions \
+	  --xsession-wrapper ${config.services.displayManager.sessionData.wrapper}
 	  --time \
 	  --asterisks \
 	  --user-menu
