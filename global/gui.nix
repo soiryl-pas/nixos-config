@@ -51,7 +51,7 @@ in
 	  ${pkgs.greetd.tuigreet}/bin/tuigreet \
 	  --sessions ${config.services.displayManager.sessionData.desktops}/share/wayland-sessions \
 	  --xsessions ${config.services.displayManager.sessionData.desktops}/share/xsessions \
-	  --xsession-wrapper ${config.services.displayManager.sessionData.wrapper}
+	  --xsession-wrapper ${config.services.displayManager.sessionData.wrapper} \
 	  --time \
 	  --asterisks \
 	  --user-menu
