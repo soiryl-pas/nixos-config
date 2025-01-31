@@ -45,9 +45,9 @@ in
 	settings = {
 	  default_session.command = ''
 	  ${pkgs.greetd.tuigreet}/bin/tuigreet \
-	  --sessions ${config.services.displayManager.sessionData.desktops}/share/wayland-sessions
-	  --xsessions ${config.services.displayManager.sessionData.desktops}/share/xsessions
-	  --no-xsession-wrapper
+	  --sessions ${config.services.displayManager.sessionData.desktops}/share/wayland-sessions \
+	  --xsessions ${config.services.displayManager.sessionData.desktops}/share/xsessions \
+	  --no-xsession-wrapper \
 	  --time \
 	  --asterisks \
 	  --user-menu
