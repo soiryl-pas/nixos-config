@@ -23,8 +23,9 @@ in
 
   config = {
 
+    # Desktop Packages
     environment.systemPackages = with pkgs; [
-      #xorg.xinit
+      xorg.xinit
     ];
 
     /*
