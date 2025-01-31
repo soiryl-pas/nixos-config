@@ -29,9 +29,11 @@ in
     ];
     
     services = {
-      xserver.enable = true;
-      xserver.autorun = true;
+      #xserver.enable = true;
+      #xserver.autorun = true;
       desktopManager.plasma6.enable = true;
+
+      #programs.sway.enable = true;
 
       xserver.videoDrivers = [ "amdgpu" "modesetting" "fbdev" ];
       
