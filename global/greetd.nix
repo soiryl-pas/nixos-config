@@ -21,7 +21,7 @@ in
 	    --time \
 	    --asterisks \
 	    --user-menu \
-	    --theme container=cod_gray
+	    --theme container=darkgray
 	  '';
 	};
       };
