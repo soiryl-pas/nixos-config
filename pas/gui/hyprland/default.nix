@@ -1,16 +1,5 @@
-{ config, pkgs, ...}:
+{ config, lib, pkgs, ... }:
 
 {
-  /*
-  wayland.windowManager.hyprland = {
-    enable = true;
-    systemd.enable = true;
-    settings = {
-      "$mod" = "SUPER";
-      bind = [
-	"$mod"
-      ];
-    };
-  };
-  */
+
 }

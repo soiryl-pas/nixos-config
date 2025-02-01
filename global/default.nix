@@ -7,6 +7,10 @@
     ../pas/shell/scripts.nix
   ];
 
+  environment.systemPackages = with pkgs; [
+    tree
+  ];
+
   security.polkit.enable = true;
 
   nix = {
@@ -56,10 +60,6 @@
 
   };
 
-  environment.systemPackages = with pkgs; [
-    alacritty
-    tree
-  ];
 
   programs.neovim = {
     enable = true;
