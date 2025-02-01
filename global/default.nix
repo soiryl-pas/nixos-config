@@ -57,7 +57,8 @@
   };
 
   environment.systemPackages = with pkgs; [
-    kitty
+    alacritty
+    tree
   ];
 
   programs.neovim = {
