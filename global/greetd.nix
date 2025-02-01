@@ -20,8 +20,7 @@ in
 	    --xsessions ${config.services.displayManager.sessionData.desktops}/share/xsessions \
 	    --time \
 	    --asterisks \
-	    --user-menu \
-	    --theme container=gray
+	    --user-menu
 	  '';
 	};
       };
