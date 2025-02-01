@@ -1,3 +1,0 @@
-#!/nix/store/gwgqdl0242ymlikq9s9s62gkp5cvyal3-bash-5.2p37/bin/bash
-exec /nix/store/f2f0lqm70iap6lsvchvk15ymvhiip4m9-xorg-server-21.1.14/bin/X -config /nix/store/hf4lrjk28x92sip2ybkj0n3six0siqhp-xserver.conf -xkbdir /nix/store/8z9s7wcfm78awgfky443r7av94sxa4j2-xkeyboard-config-2.43/etc/X11/xkb :0 vt7 -verbose 3 -nolisten tcp -terminate "$@"
-
