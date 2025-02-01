@@ -21,8 +21,7 @@ in
 	    --time \
 	    --asterisks \
 	    --user-menu \
-	    --window-padding 1 \
-	    --prompt-padding 2
+	    --theme container=light_white
 	  '';
 	};
       };
