@@ -33,5 +33,6 @@ in
       systemPackages = [ pkgs.xorg.xinit ];
     };
 
+    security.pam.services.greetd.kwallet.enable = true;
   };
 }
