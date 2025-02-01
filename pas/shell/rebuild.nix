@@ -2,7 +2,7 @@
 
 pkgs.writeShellApplication {
   name = "rebuild";
-  text = ''
+  text = /*bash*/ ''
     pushd "$HOME"/nixos-configuration
 
     echo "== Git diff =="
