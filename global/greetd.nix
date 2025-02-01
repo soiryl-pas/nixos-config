@@ -21,7 +21,8 @@ in
 	    --time \
 	    --asterisks \
 	    --user-menu \
-	    --window-padding 3
+	    --window-padding 1 \
+	    --prompt-padding 2
 	  '';
 	};
       };
