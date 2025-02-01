@@ -23,12 +23,11 @@ in
     };
   };
 
-  config = {
+  imports = [
+    ./greetd.nix
+  ];
 
-    # Desktop Packages
-    environment.systemPackages = with pkgs; [
-      xorg.xinit
-    ];
+  config = {
 
     programs.sway.enable = true;
     
@@ -39,23 +38,10 @@ in
       xserver.videoDrivers = [ "amdgpu" "modesetting" "fbdev" ];
       
       xserver.displayManager.startx.enable = (cfg == "none");
+
       displayManager.sddm = rec { 
 	enable = (cfg == "sddm");
-	wayland.enable = true;
-      };
-      greetd = {
-	enable = (cfg == "greetd");
-	vt = 7;
-	settings = {
-	  default_session.command = ''
-	  ${pkgs.greetd.tuigreet}/bin/tuigreet \
-	  --sessions ${config.services.displayManager.sessionData.desktops}/share/wayland-sessions \
-	  --xsessions ${config.services.displayManager.sessionData.desktops}/share/xsessions \
-	  --time \
-	  --asterisks \
-	  --user-menu
-	  '';
-	};
+	wayland.enable = enable;
       };
     };
   };
