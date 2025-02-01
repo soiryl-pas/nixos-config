@@ -20,7 +20,8 @@ in
 	    --xsessions ${config.services.displayManager.sessionData.desktops}/share/xsessions \
 	    --time \
 	    --asterisks \
-	    --user-menu
+	    --user-menu \
+	    --window-padding 3
 	  '';
 	};
       };
