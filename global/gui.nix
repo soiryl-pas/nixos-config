@@ -32,11 +32,15 @@ in
     programs.sway.enable = true;
     
     services = {
+      # Desktop Environments / Window Managers
       desktopManager.plasma6.enable = true;
+      xserver.windowManager.qtile.enable = true;
 
+      # Xorg Conf
       xserver.enable = true;
       xserver.videoDrivers = [ "amdgpu" "modesetting" "fbdev" ];
       
+      # Display Managers
       xserver.displayManager.startx.enable = (cfg == "none");
 
       displayManager.sddm = rec { 
