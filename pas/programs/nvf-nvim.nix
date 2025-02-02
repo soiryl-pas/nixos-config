@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.nvf = {
     enable = true;
     enableManpages = true;
@@ -9,6 +11,10 @@
       treesitter.context.enable = true;
       options.shiftwidth = 2;
       lsp.formatOnSave = true;
+
+      theme = {
+        enable = true;
+      };
 
       languages = {
         enableLSP = true;
@@ -20,8 +26,7 @@
         python.enable = true;
         html.enable = true;
         bash.enable = true;
+      };
     };
-  };
-
   };
 }
