@@ -31,7 +31,7 @@
 	    useGlobalPkgs = true;
 	    useUserPackages = true;
 	    backupFileExtension = "orig.home";
-	    extraSpecialArgs = { inherit inputs; };
+            extraSpecialArgs = { inherit inputs; };
 	    users.pas = import ./pas;
 	  };
 	}
