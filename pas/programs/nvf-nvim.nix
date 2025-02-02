@@ -15,7 +15,6 @@
         formatOnSave = true;
         lightbulb.enable = true;
         lspSignature.enable = true;
-        lspsaga.enable = true;
         lsplines.enable = true;
         nvim-docs-view.enable = true;
         otter-nvim.enable = true;
