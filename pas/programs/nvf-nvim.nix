@@ -8,9 +8,14 @@
     enableManpages = true;
 
     settings.vim = {
-      #treesitter.context.enable = true;
       options.shiftwidth = 2;
-      lsp.formatOnSave = true;
+
+      lsp = {
+        formatOnSave = true;
+        lightbulb.enable = true;
+        lspSignature.enable = true;
+        lspsaga.enable = true;
+      };
 
       theme = {
         enable = true;
