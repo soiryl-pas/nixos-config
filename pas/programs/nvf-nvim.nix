@@ -11,6 +11,7 @@
       options.shiftwidth = 2;
 
       lsp = {
+        enable = true;
         formatOnSave = true;
         lightbulb.enable = true;
         lspSignature.enable = true;
