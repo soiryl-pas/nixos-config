@@ -15,6 +15,7 @@
         lightbulb.enable = true;
         lspSignature.enable = true;
         lspsaga.enable = true;
+        lsplines.enable = true;
       };
 
       theme = {
