@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   home = {
@@ -8,6 +8,7 @@
   };
 
   imports = [
+    inputs.nvf.homeManagerModules.default
     ./programs
     ./shell
     ./gui
