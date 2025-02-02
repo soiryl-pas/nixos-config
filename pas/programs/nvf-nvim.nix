@@ -14,6 +14,7 @@
         cheatsheet.enable = true;
         whichKey.enable = true;
       };
+      telescope.enable = true;
 
       snippets.luasnip.enable = true;
 
