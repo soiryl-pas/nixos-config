@@ -20,7 +20,7 @@
         lspSignature.enable = true;
         lsplines.enable = true;
         nvim-docs-view.enable = true;
-        otter-nvim.enable = true;
+        otter-nvim.enable = false;
         trouble.enable = true;
       };
 
