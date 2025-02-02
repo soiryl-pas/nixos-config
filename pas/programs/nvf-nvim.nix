@@ -5,9 +5,12 @@
     enable = true;
     enableManpages = true;
 
+    #treesitter.context.enable = true;
+
     settings = {
       vim = {
         options.shiftwidth = 2;
+        options.termguicolors = true;
         languages = {
           enableLSP = true;
           enableTreesitter = true;
