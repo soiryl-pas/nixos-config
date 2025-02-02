@@ -15,6 +15,8 @@
         whichKey.enable = true;
       };
 
+      snippets.luasnip.enable = true;
+
       autocomplete.nvim-cmp.enable = true;
       autocomplete.nvim-cmp.sourcePlugins = [
         "lspkind"
@@ -43,8 +45,10 @@
         enableLSP = true;
         enableTreesitter = true;
         enableFormat = true;
+        enableExtraDiagnostics = true;
 
         nix.enable = true;
+        markdown.enable = true;
         clang.enable = true;
         python.enable = true;
         html.enable = true;
