@@ -8,14 +8,14 @@
     enableManpages = true;
 
     settings.vim = {
-      treesitter.context.enable = true;
+      #treesitter.context.enable = true;
       options.shiftwidth = 2;
       lsp.formatOnSave = true;
 
       theme = {
         enable = true;
         name = "tokyonight";
-        style = "night";
+        style = "moon";
       };
 
       languages = {
