@@ -10,13 +10,19 @@
     settings.vim = {
       options.shiftwidth = 2;
 
+      binds = {
+      };
+
       autocomplete.nvim-cmp.enable = true;
+      autocomplete.nvim-cmp.sourcePlugins = [
+        "lspkind"
+      ];
       ui.borders.plugins.nvim-cmp.enable = true;
 
       lsp = {
         enable = true;
         formatOnSave = true;
-        lightbulb.enable = true;
+        lightbulb.enable = false;
         lspSignature.enable = true;
         lsplines.enable = true;
         nvim-docs-view.enable = true;
