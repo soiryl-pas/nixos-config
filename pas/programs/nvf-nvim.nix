@@ -16,6 +16,7 @@
         enable = true;
         name = "tokyonight";
         style = "moon";
+        transparent = true;
       };
 
       languages = {
