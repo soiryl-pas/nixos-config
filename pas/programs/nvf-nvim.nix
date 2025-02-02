@@ -11,6 +11,7 @@
       options.shiftwidth = 2;
 
       autocomplete.nvim-cmp.enable = true;
+      ui.borders.plugins.nvim-cmp.enable = true;
 
       lsp = {
         enable = true;
