@@ -13,28 +13,34 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nvf, ... }: {
+  outputs = inputs @ {
+    nixpkgs,
+    home-manager,
+    nvf,
+    ...
+  }: {
     nixosConfigurations.pas-nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      modules = [ 
+      modules = [
         ./global
 
-	# Custom Settings
-	{
-	  custom = {
-	    defaultDisplayManager = "greetd";
-	  };
-	}
+        # Custom Settings
+        {
+          custom = {
+            defaultDisplayManager = "greetd";
+          };
+        }
 
-	home-manager.nixosModules.home-manager {
-	  home-manager = {
-	    useGlobalPkgs = true;
-	    useUserPackages = true;
-	    backupFileExtension = "orig.home";
-            extraSpecialArgs = { inherit inputs; };
-	    users.pas = import ./pas;
-	  };
-	}
+        home-manager.nixosModules.home-manager
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            backupFileExtension = "orig.home";
+            extraSpecialArgs = {inherit inputs;};
+            users.pas = import ./pas;
+          };
+        }
       ];
     };
   };

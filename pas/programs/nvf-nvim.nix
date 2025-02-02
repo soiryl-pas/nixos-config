@@ -14,6 +14,8 @@
 
       theme = {
         enable = true;
+        name = "tokyonight";
+        style = "night";
       };
 
       languages = {
