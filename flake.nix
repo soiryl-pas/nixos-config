@@ -7,9 +7,13 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, nvf, ... }: {
     nixosConfigurations.pas-nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [ 
@@ -27,6 +31,7 @@
 	    useGlobalPkgs = true;
 	    useUserPackages = true;
 	    backupFileExtension = "orig.home";
+	    extraSpecialArgs = { inherit inputs; };
 	    users.pas = import ./pas;
 	  };
 	}
