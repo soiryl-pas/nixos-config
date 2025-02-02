@@ -11,6 +11,8 @@
       options.shiftwidth = 2;
 
       binds = {
+        cheatsheet.enable = true;
+        whichKey.enable = true;
       };
 
       autocomplete.nvim-cmp.enable = true;
