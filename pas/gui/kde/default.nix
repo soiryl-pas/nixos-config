@@ -3,6 +3,6 @@
 {
   qt = {
     enable = true;
-    style.name = "breeze dark";
+    style.name = "adwaita-dark";
   };
 }
