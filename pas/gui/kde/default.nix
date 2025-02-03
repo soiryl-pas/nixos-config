@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  qt = {
-    enable = true;
-  };
+  imports = [
+    ./plasma-manager.nix
+  ];
 }
