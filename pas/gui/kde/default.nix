@@ -3,7 +3,7 @@
 {
   qt = {
     enable = true;
-    platformTheme.name = "kde";
+    platformTheme.name = "qtct";
     #style.name = "breeze-dark";
   };
 }
