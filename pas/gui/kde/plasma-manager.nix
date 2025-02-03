@@ -11,7 +11,8 @@
 
     panels = [
       {
-	height = 100;
+	height = 50;
+	location = "right";
       }
     ];
   };
