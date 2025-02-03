@@ -3,6 +3,6 @@
 {
   qt = {
     enable = true;
-    style.name = "adwaita dark";
+    style.name = lib.mkForce "adwaita dark";
   };
 }
