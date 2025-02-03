@@ -4,7 +4,7 @@
   ...
 }: {
   programs.nvf = {
-    enable = true;
+    enable = false;
     enableManpages = true;
 
     settings.vim = {
