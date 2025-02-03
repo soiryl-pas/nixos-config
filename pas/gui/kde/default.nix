@@ -3,7 +3,7 @@
 {
   qt = {
     enable = true;
-    platformTheme.name = "qtct";
+    platformTheme.name = "qt5ct";
     #style.name = "breeze-dark";
   };
 }
