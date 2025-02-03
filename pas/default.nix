@@ -9,6 +9,7 @@
 
   imports = [
     inputs.nvf.homeManagerModules.default
+    inputs.plasma-manager.homeManagerModules.plasma-manager
     ./programs
     ./shell
     ./gui
