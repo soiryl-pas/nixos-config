@@ -8,5 +8,11 @@
     workspace = {
       lookAndFeel = "org.kde.breezedark.desktop";
     };
+
+    panels = [
+      {
+	height = 100;
+      }
+    ];
   };
 }
