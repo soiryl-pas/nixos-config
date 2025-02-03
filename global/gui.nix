@@ -27,10 +27,14 @@ in
 
   imports = [
     ./greetd.nix
-    ./kde.nix
   ];
 
   config = {
+
+    qt = {
+      enable = true;
+      platformTheme = "kde";
+    };
 
     programs.sway.enable = true;
     
