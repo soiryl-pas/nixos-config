@@ -1,5 +1,5 @@
 { config, lib, pkgs, ... }:
 
 {
-  qt.style.name = "breeze";
+  qt.style.name = "adwaita-dark";
 }
