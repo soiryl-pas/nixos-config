@@ -3,9 +3,10 @@
 {
   imports = [
     ./hyprland
+    ./kde
   ];
 
-  # Configure automatically generated files
+  # Configure automatically generated home-directories
   # To set configuration: Run xdg-user-dirs-update
   xdg.configFile."user-dirs.dirs".text = ''
     XDG_DESKTOP_DIR="$HOME/desktop"
