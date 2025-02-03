@@ -27,6 +27,7 @@ in
 
   imports = [
     ./greetd.nix
+    ./kde.nix
   ];
 
   config = {
