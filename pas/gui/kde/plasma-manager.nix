@@ -7,6 +7,7 @@
 
     workspace = {
       lookAndFeel = "org.kde.breezedark.desktop";
+      clickItemTo = "open";
     };
 
     panels = [
