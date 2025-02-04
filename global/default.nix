@@ -9,6 +9,7 @@
 
   environment.systemPackages = with pkgs; [
     tree
+    kitty
   ];
 
   security.polkit.enable = true;

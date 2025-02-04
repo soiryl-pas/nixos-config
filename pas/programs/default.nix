@@ -3,6 +3,7 @@
 {
   imports = [
     ./nvf-nvim.nix
+    ./kitty.nix
   ];
 
   home.packages = with pkgs; [
@@ -22,6 +23,5 @@
     firefox = {
       enable = true;
     };
-    alacritty.enable = true;
   };
 }
