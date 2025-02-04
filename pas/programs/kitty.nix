@@ -2,6 +2,6 @@
 
 {
   programs.kitty = {
-    
+    themeFile = "Dracula";    
   };
 }
