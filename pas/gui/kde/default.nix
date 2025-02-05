@@ -5,8 +5,4 @@
     ./plasma-manager.nix
   ];
 
-  qt = {
-    enable = true;
-    platformTheme.name = "qt6ct";
-  };
 }
