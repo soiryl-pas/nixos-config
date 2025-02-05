@@ -7,6 +7,6 @@
 
   qt = {
     enable = true;
-    platformTheme.name = "kde";
+    platformTheme.name = "qt6ct";
   };
 }
