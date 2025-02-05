@@ -4,6 +4,7 @@
   programs.plasma = {
     enable = true;
     overrideConfig = true;
+    immutableByDefault = true;
 
     workspace = {
       lookAndFeel = "org.kde.breezedark.desktop";

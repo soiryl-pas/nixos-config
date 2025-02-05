@@ -4,4 +4,9 @@
   imports = [
     ./plasma-manager.nix
   ];
+
+  qt = {
+    enable = true;
+    platformTheme.name = "kde";
+  };
 }
