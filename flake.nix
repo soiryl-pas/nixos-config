@@ -43,7 +43,7 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             backupFileExtension = "orig.home";
-            extraSpecialArgs = { inherit nvf; inherit inputs; };
+            extraSpecialArgs = { inherit nvf plasma-manager; };
             users.pas = import ./pas;
           };
         }
