@@ -13,8 +13,8 @@
         nativeBuildInputs = [ pkgs.makeWrapper ];
       } ''
         mkdir -p $out/bin/
-        ln -s ${pkgs.bash}/bin/bash $out/bin/cpp-shell
-        wrapProgram $out/bin/cpp-shell --prefix PATH : ${pkgs.lib.makeBinPath buildInputs}
+        ln -s ${pkgs.bash}/bin/sh $out/bin/cpp
+        wrapProgram $out/bin/cpp --prefix PATH : ${pkgs.lib.makeBinPath buildInputs}
       ''
     )
   ];
