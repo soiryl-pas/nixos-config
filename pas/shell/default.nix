@@ -3,5 +3,6 @@
 {
   imports = [
     ./bash.nix
+    ./cpp.nix
   ];
 }
