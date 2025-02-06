@@ -62,8 +62,6 @@
         trouble.enable = true;
       };
       */
-
-
     };
   };
 }

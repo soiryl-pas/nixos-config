@@ -12,7 +12,7 @@
   }: let
     system = "x86_64-linux";
   in {
-    devShells."${system}".cpp = let
+    devShells."${system}".default = let
       pkgs = import nixpkgs {inherit system;};
     in
       pkgs.mkShell {
