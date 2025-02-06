@@ -4,7 +4,7 @@
   ...
 }: {
   programs.nvf = {
-    enable = false;
+    enable = true;
     enableManpages = true;
 
     settings.vim = {
@@ -17,23 +17,6 @@
       telescope.enable = true;
 
       snippets.luasnip.enable = true;
-
-      autocomplete.nvim-cmp.enable = true;
-      autocomplete.nvim-cmp.sourcePlugins = [
-        "lspkind"
-      ];
-      ui.borders.plugins.nvim-cmp.enable = true;
-
-      lsp = {
-        enable = true;
-        formatOnSave = true;
-        lightbulb.enable = false;
-        lspSignature.enable = true;
-        lsplines.enable = true;
-        nvim-docs-view.enable = true;
-        otter-nvim.enable = false;
-        trouble.enable = true;
-      };
 
       theme = {
         enable = true;
@@ -55,6 +38,29 @@
         html.enable = true;
         bash.enable = true;
       };
+
+      /*
+      ui.borders.plugins.nvim-cmp.enable = true;
+      autocomplete.nvim-cmp.enable = true;
+      autocomplete.nvim-cmp.sourcePlugins = [
+        "lspkind"
+      ];
+      */
+
+      /*
+      lsp = {
+        enable = true;
+        formatOnSave = true;
+        lightbulb.enable = false;
+        lspSignature.enable = true;
+        lsplines.enable = true;
+        nvim-docs-view.enable = true;
+        otter-nvim.enable = false;
+        trouble.enable = true;
+      };
+      */
+
+
     };
   };
 }
