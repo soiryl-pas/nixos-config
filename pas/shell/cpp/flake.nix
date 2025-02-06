@@ -17,6 +17,7 @@
         ];
 
         shellHook = ''
+          export PS1="\n\e[1;34m== CPP: \w ==\n$\e[m "
           echo "clang++ `${pkgs.clang}/bin/clang++ --version`"
         '';
       };
