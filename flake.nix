@@ -25,8 +25,9 @@
     plasma-manager,
     ...
   }: {
-    nixosConfigurations.pas-nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.pas-nixos = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
+      specialArgs = { inherit nvf plasma-manager; };
       modules = [
         ./global
 
@@ -43,7 +44,8 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             backupFileExtension = "orig.home";
-            extraSpecialArgs = { inherit nvf plasma-manager; };
+            extraSpecialArgs = specialArgs;
+              #extraSpecialArgs = { inherit nvf plasma-manager; };
             users.pas = import ./pas;
           };
         }
