@@ -39,6 +39,11 @@
         bash.enable = true;
       };
 
+      lsp = {
+        enable = true;
+        formatOnSave = true;
+      };
+
       /*
       ui.borders.plugins.nvim-cmp.enable = true;
       autocomplete.nvim-cmp.enable = true;
@@ -49,8 +54,6 @@
 
       /*
       lsp = {
-        enable = true;
-        formatOnSave = true;
         lightbulb.enable = false;
         lspSignature.enable = true;
         lsplines.enable = true;
