@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./nvf-nvim.nix
     ./kitty.nix
@@ -16,7 +18,7 @@
       userName = "Someone0123-pas";
       userEmail = "Someone0123@gmx.at";
       extraConfig = {
-	advice.addIgnoredFile = false;
+        advice.addIgnoredFile = false;
       };
     };
     htop.enable = true;

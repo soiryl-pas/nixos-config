@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ./gui.nix
@@ -16,9 +19,9 @@
 
   nix = {
     settings = {
-      experimental-features = [ "nix-command" "flakes" ];
+      experimental-features = ["nix-command" "flakes"];
       auto-optimise-store = true;
-
+      warn-dirty = false;
     };
     gc = {
       automatic = true;
@@ -46,11 +49,10 @@
   };
 
   services = {
-
     xserver = {
       xkb = {
-	layout = "de";
-	options = "eurosign:e,caps:escape";
+        layout = "de";
+        options = "eurosign:e,caps:escape";
       };
     };
 
@@ -58,9 +60,7 @@
       enable = true;
       pulse.enable = true;
     };
-
   };
-
 
   programs.neovim = {
     enable = true;
@@ -74,7 +74,7 @@
 
   users.users.pas = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "input" "networkmanager" "vboxsf" ];
+    extraGroups = ["wheel" "input" "networkmanager" "vboxsf"];
   };
 
   # This option defines the first version of NixOS you have installed on this particular machine,
@@ -95,6 +95,4 @@
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "24.11"; # Did you read the comment?
-
 }
-

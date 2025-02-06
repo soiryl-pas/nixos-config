@@ -1,10 +1,6 @@
 {
   description = "A Nix-Flake-based C++-Environment-Shell";
 
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
-  };
-
   outputs = {
     self,
     nixpkgs,
