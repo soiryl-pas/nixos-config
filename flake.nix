@@ -31,6 +31,15 @@
       modules = [
         ./global
 
+        # Flakes in Registry
+        {
+          nix.registry = {
+            nixpkgs.flake = nixpkgs;
+            nvf.flake = nvf;
+            plasma-manager.flake = plasma-manager;
+          };
+        }
+
         # Custom Settings
         {
           custom = {
