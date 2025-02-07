@@ -25,6 +25,8 @@
         transparent = true;
       };
 
+      filetree.neo-tree.enable = true;
+
       languages = {
         enableLSP = true;
         enableTreesitter = true;
