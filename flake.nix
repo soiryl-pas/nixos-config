@@ -35,6 +35,7 @@
         {
           nix.registry = {
             nixpkgs.flake = nixpkgs;
+            home-manager.flake = home-manager;
             nvf.flake = nvf;
             plasma-manager.flake = plasma-manager;
           };
