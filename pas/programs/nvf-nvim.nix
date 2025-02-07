@@ -44,13 +44,11 @@
         formatOnSave = true;
       };
 
-      /*
       ui.borders.plugins.nvim-cmp.enable = true;
       autocomplete.nvim-cmp.enable = true;
       autocomplete.nvim-cmp.sourcePlugins = [
         "lspkind"
       ];
-      */
 
       /*
       lsp = {

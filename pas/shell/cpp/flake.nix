@@ -22,10 +22,5 @@
         echo -e "\nclang++ `${pkgs.clang}/bin/clang++ --version`"
       '';
     };
-    homeConfigurations."pas" = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
-      modules = [
-      ];
-    };
   };
 }
