@@ -42,13 +42,16 @@
       lsp = {
         enable = true;
         formatOnSave = true;
+        otter-nvim.enable = true;
       };
 
+      /*
       ui.borders.plugins.nvim-cmp.enable = true;
       autocomplete.nvim-cmp.enable = true;
       autocomplete.nvim-cmp.sourcePlugins = [
         "lspkind"
       ];
+      */
 
       /*
       lsp = {
