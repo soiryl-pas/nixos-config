@@ -42,23 +42,21 @@
       lsp = {
         enable = true;
         formatOnSave = true;
-        otter-nvim.enable = true;
+        lsplines.enable = true;
+        trouble.enable = true;
+        nvim-docs-view.enable = true;
       };
 
-      /*
       ui.borders.plugins.nvim-cmp.enable = true;
       autocomplete.nvim-cmp.enable = true;
       autocomplete.nvim-cmp.sourcePlugins = [
         "lspkind"
       ];
-      */
 
       /*
       lsp = {
         lightbulb.enable = false;
         lspSignature.enable = true;
-        lsplines.enable = true;
-        nvim-docs-view.enable = true;
         otter-nvim.enable = false;
         trouble.enable = true;
       };
