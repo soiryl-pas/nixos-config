@@ -33,7 +33,7 @@ in
     
     services = {
       # Desktop Environments / Window Managers
-      desktopManager.plasma6.enable = false;
+      desktopManager.plasma6.enable = true;
       xserver.windowManager.qtile.enable = true;
 
       # Xorg Conf
