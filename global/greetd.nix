@@ -36,6 +36,7 @@ in
     security.pam.services.greetd.kwallet = {
       enable = true;
       forceRun = true;
+      package = pkgs.kdePackages.kwallet-pam;
     };
     security.pam.services.login.kwallet = {
       enable = true;
