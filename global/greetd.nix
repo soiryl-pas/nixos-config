@@ -33,6 +33,10 @@ in
       systemPackages = [ pkgs.xorg.xinit ];
     };
 
+    security.pam.services.greetd.kwallet = {
+      enable = true;
+      forceRun = true;
+    };
     security.pam.services.login.kwallet = {
       enable = true;
       forceRun = true;
