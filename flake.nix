@@ -7,16 +7,11 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf = {
-      url = "github:notashelf/nvf/v0.7";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs @ {
     nixpkgs,
     home-manager,
-    nvf,
     ...
   }: {
     inherit nixpkgs;
@@ -30,7 +25,6 @@
           nix.registry = {
             nixpkgs.flake = nixpkgs;
             home-manager.flake = home-manager;
-            nvf.flake = nvf;
           };
         }
 
@@ -47,7 +41,6 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             backupFileExtension = "orig.home";
-            extraSpecialArgs = { inherit nvf; };
             users.pas = import ./pas;
           };
         }

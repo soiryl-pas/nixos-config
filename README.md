@@ -8,5 +8,6 @@ TODOs:
 * Let kwalletd6 run in TTY and QTile as well
 
 * Neovim Config - If possible, configurable per devshell-flake
+** telescope, nvim-cmp, language servers, formatters, treesitter, tokyonight, filetree
 
 * Implement all apps
