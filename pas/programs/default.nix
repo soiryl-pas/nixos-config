@@ -4,7 +4,6 @@
   ...
 }: {
   imports = [
-    ./nvf-nvim.nix
     ./kitty.nix
   ];
 
