@@ -15,7 +15,7 @@
     git = {
       enable = true;
       userName = "Someone0123-pas";
-      userEmail = "Someone0123@gmx.at";
+      userEmail = "Jemand0123@protonmail.at";
       extraConfig = {
         advice.addIgnoredFile = false;
       };
