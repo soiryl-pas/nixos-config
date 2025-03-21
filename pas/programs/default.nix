@@ -18,6 +18,7 @@
       userEmail = "Jemand0123@protonmail.at";
       extraConfig = {
         advice.addIgnoredFile = false;
+	pull.rebase = false;
       };
     };
     htop.enable = true;
