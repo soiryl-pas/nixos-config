@@ -11,7 +11,6 @@ in
 	"sddm"
 	"greetd"
 	"lightdm"
-	"ly"
       ];
       default = "none";
       description = ''
@@ -20,7 +19,6 @@ in
 	"sddm" (von KDE Plasma 6)
 	"greetd" (Terminal Display Manager)
 	"lightdm" (Light Display Manager)
-	"ly" (LY)
       '';
     };
   };
@@ -35,7 +33,7 @@ in
     
     services = {
       # Desktop Environments / Window Managers
-      desktopManager.plasma6.enable = true;
+      desktopManager.plasma6.enable = false;
       xserver.windowManager.qtile.enable = true;
 
       # Xorg Conf
@@ -49,8 +47,6 @@ in
 	enable = (cfg == "sddm");
 	wayland.enable = enable;
       };
-
-      displayManager.ly.enable = (cfg == "ly");
     };
   };
 }
