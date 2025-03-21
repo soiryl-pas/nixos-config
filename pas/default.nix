@@ -1,4 +1,4 @@
-{ config, pkgs, nvf, plasma-manager, ... }:
+{ config, pkgs, nvf, ... }:
 
 {
   home = {
@@ -9,7 +9,6 @@
 
   imports = [
     nvf.homeManagerModules.default
-    plasma-manager.homeManagerModules.plasma-manager
     ./programs
     ./shell
     ./gui

@@ -11,18 +11,12 @@
       url = "github:notashelf/nvf/v0.7";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
   };
 
   outputs = inputs @ {
     nixpkgs,
     home-manager,
     nvf,
-    plasma-manager,
     ...
   }: {
     inherit nixpkgs;
@@ -37,7 +31,6 @@
             nixpkgs.flake = nixpkgs;
             home-manager.flake = home-manager;
             nvf.flake = nvf;
-            plasma-manager.flake = plasma-manager;
           };
         }
 
@@ -54,7 +47,7 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             backupFileExtension = "orig.home";
-            extraSpecialArgs = {inherit nvf plasma-manager;};
+            extraSpecialArgs = { inherit nvf; };
             users.pas = import ./pas;
           };
         }

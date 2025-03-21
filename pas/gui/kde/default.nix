@@ -5,6 +5,5 @@
   ...
 }: {
   imports = [
-    ./plasma-manager.nix
   ];
 }
