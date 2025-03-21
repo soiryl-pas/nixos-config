@@ -37,7 +37,7 @@
         # Custom Settings
         {
           custom = {
-            defaultDisplayManager = "sddm";
+            defaultDisplayManager = "greetd";
           };
         }
 
