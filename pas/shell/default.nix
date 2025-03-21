@@ -5,6 +5,5 @@
 }: {
   imports = [
     ./bash.nix
-    ./devshells.nix
   ];
 }
