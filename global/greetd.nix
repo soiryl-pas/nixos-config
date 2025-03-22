@@ -33,14 +33,13 @@ in
       systemPackages = [ pkgs.xorg.xinit ];
     };
 
-    # Override default packages to ensure compatibility
-    # -> could potentially break
-
     security.pam.services.greetd.kwallet = {
       enable = true;
       forceRun = true;
-      package = pkgs.kdePackages.kwallet-pam;
+      package = config.security.pam.services.login.kwallet.package;
     };
+
+    # TTY-Pam, depends on Plasma enabling pam.services.login.kwallet
     security.pam.services.login.kwallet.forceRun = true;
 
   };
