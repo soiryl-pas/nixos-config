@@ -33,6 +33,9 @@ in
       systemPackages = [ pkgs.xorg.xinit ];
     };
 
+    # Override default packages to ensure compatibility
+    # -> could potentially break
+
     security.pam.services.greetd.kwallet = {
       enable = true;
       forceRun = true;
@@ -41,6 +44,7 @@ in
     security.pam.services.login.kwallet = {
       enable = true;
       forceRun = true;
+      package = lib.mkForce pkgs.kdePackages.kwallet-pam;
     };
   };
 }
