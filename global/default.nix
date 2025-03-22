@@ -13,6 +13,7 @@
   environment.systemPackages = with pkgs; [
     tree
     kitty
+    kdePackages.kwallet
   ];
 
   security.polkit.enable = true;
