@@ -35,8 +35,7 @@ in
     security.pam.services.login.kwallet.forceRun = true;
     systemd.user.services.kwallet-pam-unlock = {
       enable = true;
-      after = [ "basic.target" ];
-      wantedBy = [ "default.target" ];
+      after = [ "default.target" ];
       description = "Unlocks kwallet with pam credentials, even if other plasma services aren't running";
       serviceConfig = {
 	Type = "simple";
