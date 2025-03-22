@@ -41,9 +41,7 @@ in
       forceRun = true;
       package = pkgs.kdePackages.kwallet-pam;
     };
-    security.pam.services.login.kwallet = {
-      enable = true;
-      forceRun = true;
-    };
+    security.pam.services.login.kwallet.forceRun = true;
+
   };
 }
