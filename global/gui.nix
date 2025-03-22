@@ -33,7 +33,7 @@ in
     
     # Enable kwallet-pam for tty and qtile sessions as well, depends on Plasma enabling pam.service.login.kwallet
     security.pam.services.login.kwallet.forceRun = true;
-    systemd.services.kwallet-pam-unlock = {
+    systemd.user.services.kwallet-pam-unlock = {
       enable = true;
       after = [ "basic.target" ];
       wantedBy = [ "default.target" ];
