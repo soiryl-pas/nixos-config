@@ -31,18 +31,18 @@ in
 
     programs.sway.enable = true;
     
-    services = {
-      # Desktop Environments / Window Managers
-      desktopManager.plasma6.enable = true;
-      xserver.windowManager.qtile.enable = true;
+    # Enable kwallet-pam for tty and qtile sessions as well, depends on Plasma enabling pam.service.login.kwallet
+    security.pam.services.login.kwallet.forceRun = true;
 
+    services = {
       # Xorg Conf
       xserver.enable = true;
       xserver.videoDrivers = [ "amdgpu" "modesetting" "fbdev" ];
-      
-      # Display Managers
-      xserver.displayManager.startx.enable = (cfg == "none");
 
+      # Desktop Environments / Window Managers / Display Managers
+      desktopManager.plasma6.enable = true;
+      xserver.windowManager.qtile.enable = true;
+      xserver.displayManager.startx.enable = (cfg == "none");
       displayManager.sddm = rec { 
 	enable = (cfg == "sddm");
 	wayland.enable = enable;

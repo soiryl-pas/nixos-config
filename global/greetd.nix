@@ -38,9 +38,5 @@ in
       forceRun = true;
       package = config.security.pam.services.login.kwallet.package;
     };
-
-    # TTY-Pam, depends on Plasma enabling pam.services.login.kwallet
-    security.pam.services.login.kwallet.forceRun = true;
-
   };
 }
