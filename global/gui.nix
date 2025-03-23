@@ -35,13 +35,12 @@ in
     security.pam.services.login.kwallet.forceRun = true;
     systemd.user.services.kwallet-pam-unlock = {
       enable = true;
-      #after = [ "basic.target" ];
       wantedBy = [ "default.target" ];
       description = "Unlocks kwallet with pam credentials, even if other plasma services aren't running";
-      environment = { QT_QPA_PLATFORM = "offscreen"; };
+      #environment = { QT_QPA_PLATFORM = "offscreen"; };
       serviceConfig = {
 	Type = "simple";
-	ExecStart = "${config.security.pam.services.login.kwallet.package}/libexec/pam_kwallet_init";
+	ExecStart = "QT_QPA_PLATFORM=offscreen ${config.security.pam.services.login.kwallet.package}/libexec/pam_kwallet_init";
       };
     };
 
