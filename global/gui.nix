@@ -40,7 +40,7 @@ in
       #environment = { QT_QPA_PLATFORM = "offscreen"; };
       serviceConfig = {
 	Type = "simple";
-	ExecStart = "QT_QPA_PLATFORM=offscreen ${config.security.pam.services.login.kwallet.package}/libexec/pam_kwallet_init";
+	ExecStart = "/usr/bin/env QT_QPA_PLATFORM=offscreen ${config.security.pam.services.login.kwallet.package}/libexec/pam_kwallet_init";
       };
     };
 
