@@ -9,6 +9,6 @@ TODOs:
 - It seems it doesn't like to be run in a Qt-free environment, but right now it doesn't work on QTile either
 
 * Neovim Config - If possible, configurable per devshell-flake
-** telescope, nvim-cmp, language servers, formatters, treesitter, tokyonight, filetree
+** telescope, nvim-cmp, language servers, formatters, treesitter, tokyonight, NvimTree
 
 * Implement all apps
