@@ -34,18 +34,20 @@ in
     # Enable kwallet-pam for tty and qtile sessions as well, depends on Plasma enabling pam.service.login.kwallet
     security.pam.services.login.kwallet.forceRun = true;
 
+    /*
     systemd.user.services.kwallet-pam-unlock = {
       enable = true;
       wantedBy = [ "default.target" ];
       description = "Unlocks kwallet with pam credentials, even if other plasma services aren't running";
       #environment = { QT_QPA_PLATFORM = "offscreen"; };
       serviceConfig = {
-	Slice = "background.slice";
-	Type = "simple";
 	ExecStart = "${config.security.pam.services.login.kwallet.package}/libexec/pam_kwallet_init";
-	Restart = "always";
+	Type = "simple";
+	Slice = "background.slice";
+	Restart = "no";
       };
     };
+    */
 
     services = {
       # Xorg Conf
