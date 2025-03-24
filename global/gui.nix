@@ -34,8 +34,6 @@ in
     # Enable kwallet-pam for tty and qtile sessions as well, depends on Plasma enabling pam.service.login.kwallet
     security.pam.services.login.kwallet.forceRun = true;
 
-    #environment.loginShellInit = "export QT_QPA_PLATFORM=offscreen\n";
-    /*
     systemd.user.services.kwallet-pam-unlock = {
       enable = true;
       wantedBy = [ "default.target" ];
@@ -45,9 +43,9 @@ in
 	Slice = "background.slice";
 	Type = "simple";
 	ExecStart = "${config.security.pam.services.login.kwallet.package}/libexec/pam_kwallet_init";
+	TimeoutStartSec=1;
       };
     };
-    */
 
     services = {
       # Xorg Conf
