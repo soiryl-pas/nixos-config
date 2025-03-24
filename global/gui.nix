@@ -33,7 +33,7 @@ in
     
     # Enable kwallet-pam for tty and qtile sessions as well, depends on Plasma enabling pam.service.login.kwallet
     security.pam.services.login.kwallet.forceRun = true;
-    environment.loginShellInit = "QT_QPA_PLATFORM=offscreen";
+    environment.loginShellInit = "export QT_QPA_PLATFORM=offscreen\n";
 
     /*
     systemd.user.services.kwallet-pam-unlock = {
