@@ -42,7 +42,9 @@ in
       serviceConfig = {
 	Slice = "background.slice";
 	Type = "simple";
-	ExecStart = "/bin/sh -c ${config.security.pam.services.login.kwallet.package}/libexec/pam_kwallet_init";
+	ExecStart = "${config.security.pam.services.login.kwallet.package}/libexec/pam_kwallet_init";
+	StandardOutput = "syslog";
+	StandardError = "syslog";
       };
     };
 
