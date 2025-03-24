@@ -38,12 +38,12 @@ in
       enable = true;
       wantedBy = [ "default.target" ];
       description = "Unlocks kwallet with pam credentials, even if other plasma services aren't running";
-      environment = { QT_QPA_PLATFORM = "offscreen"; };
+      #environment = { QT_QPA_PLATFORM = "offscreen"; };
       serviceConfig = {
 	Slice = "background.slice";
 	Type = "simple";
 	ExecStart = "${config.security.pam.services.login.kwallet.package}/libexec/pam_kwallet_init";
-	TimeoutStartSec=1;
+	UnitFileState = "linked-runtime";
       };
     };
 
