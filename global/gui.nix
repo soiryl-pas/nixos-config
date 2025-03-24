@@ -43,8 +43,7 @@ in
 	Slice = "background.slice";
 	Type = "simple";
 	ExecStart = "${config.security.pam.services.login.kwallet.package}/libexec/pam_kwallet_init";
-	StandardOutput = "syslog";
-	StandardError = "syslog";
+	TimeoutStart = 5;
       };
     };
 
