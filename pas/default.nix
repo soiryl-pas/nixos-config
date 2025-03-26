@@ -14,15 +14,5 @@
     ./gui
   ];
 
-  programs.home-manager.enable = true;
-
-  programs.plasma = {
-    enable = true;
-    overrideConfig = true;
-    immutableByDefault = true;
-
-    panels = [
-      { height = 44; location = "bottom"; }
-    ];
-  };
+  programs.home-manager.enable = false;
 }
