@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   home = {
@@ -8,10 +8,17 @@
   };
 
   imports = [
+    inputs.plasma-manager.homeManagerModules.plasma-manager
     ./programs
     ./shell
     ./gui
   ];
 
   programs.home-manager.enable = true;
+
+  programs.plasma = {
+    enable = true;
+    overrideConfig = true;
+    immutableByDefault = true;
+  };
 }
