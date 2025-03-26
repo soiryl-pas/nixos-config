@@ -8,11 +8,8 @@
   };
 
   imports = [
-    inputs.plasma-manager.homeManagerModules.plasma-manager
     ./programs
     ./shell
     ./gui
   ];
-
-  programs.home-manager.enable = false;
 }
