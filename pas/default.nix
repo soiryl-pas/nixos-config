@@ -20,5 +20,9 @@
     enable = true;
     overrideConfig = true;
     immutableByDefault = true;
+
+    panels = [
+      { height = 44; location = "bottom"; }
+    ];
   };
 }
