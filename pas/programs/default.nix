@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./kitty.nix
+    ./vscodium.nix
   ];
 
   home.packages = with pkgs; [

@@ -3,10 +3,10 @@
 {
   programs.vscode = {
     enable = true;
-    package = vscodium;
+    package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
       vscodevim.vim
-      ms-python.vscode-pylance
+      ms-python.python
     ];
   };
 }
