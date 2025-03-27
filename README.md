@@ -2,6 +2,8 @@
 
 ## TODOs
 
+* Get locale correctly: LANG to en_GB.UTF-8, everything else to de_AT.UTF-8
+
 * Neovim Config - If possible, configurable per devshell-flake
     * telescope, nvim-cmp, language servers, formatters, treesitter, tokyonight, NvimTree
 
