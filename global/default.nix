@@ -45,6 +45,10 @@
     extraLocaleSettings = {
       LANG = "en_GB.UTF-8";
     };
+    supportedLocales = [
+      "de_AT.UTF-8/UTF-8"
+      "en_GB.UTF-8/UTF-8"
+    ];
   };
   console = {
     font = "Lat2-Terminus16";
