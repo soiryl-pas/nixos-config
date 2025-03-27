@@ -7,7 +7,7 @@
     extensions = with pkgs.vscode-extensions; [
       vscodevim.vim
       ms-python.python
-      #ms-python.vscode-pylance
+      ms-python.vscode-pylance
     ];
   };
 }

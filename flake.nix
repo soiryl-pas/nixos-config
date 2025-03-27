@@ -15,9 +15,9 @@
     ...
   }: {
     inherit nixpkgs;
-    nixosConfigurations.pas-nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.pas-nixos = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
+      specialArgs = { pkgs = import nixpkgs { inherit system; config.allowUnfree = true; }; };
       modules = [
 	./global
 
@@ -42,7 +42,6 @@
 	    useGlobalPkgs = true;
 	    useUserPackages = true;
 	    backupFileExtension = "orig.home";
-	    extraSpecialArgs = { inherit inputs; };
 	    users.pas = import ./pas;
 	  };
 	}
