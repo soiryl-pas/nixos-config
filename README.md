@@ -2,10 +2,6 @@
 
 ## TODOs
 
-* Run Plasma Commands on Startup to ensure panel position, clock widget, dolphin theme, breezedark, clickItemTo open
-
-* Remap Plasma CTRL+ALT+T to Kitty, if possible
-
 * Neovim Config - If possible, configurable per devshell-flake
     * telescope, nvim-cmp, language servers, formatters, treesitter, tokyonight, NvimTree
 
@@ -13,3 +9,11 @@
 
 ## Caveats
 * User service plasma-kwallet-pam.service consistently fails as its functionality is implemented in /etc/profile. This should be irrelevant, but could lead to unexplained behaviour in Plasma.
+
+## Imperative Configuration:
+* Plasma:
+    * Theme to Breezedark
+    * Panel Position to Right and Size 50
+    * Clock to ISO Date
+    * clickItemTo open
+* Dolphin: Green Theme
