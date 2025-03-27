@@ -41,9 +41,9 @@
   time.timeZone = "Europe/Vienna";
 
   i18n = {
-    defaultLocale = "en_US.UTF-8";
+    defaultLocale = "de_AT.UTF-8";
     extraLocaleSettings = {
-      LC_TIME = "de_AT.UTF-8";
+      LANG = "en_GB.UTF-8";
     };
   };
   console = {
