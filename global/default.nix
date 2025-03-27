@@ -43,7 +43,7 @@
   i18n = {
     defaultLocale = "de_AT.UTF-8";
     extraLocaleSettings = {
-      #LANG = "en_GB.UTF-8";
+      LANG = "en_GB.UTF-8";
     };
   };
   console = {
