@@ -17,34 +17,35 @@
     inherit nixpkgs;
     nixosConfigurations.pas-nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
+      specialArgs = { inherit inputs; };
       modules = [
-        ./global
+	./global
 
-        # Flakes in Registry
-        {
-          nix.registry = {
-            nixpkgs.flake = nixpkgs;
-            home-manager.flake = home-manager;
-          };
-        }
+	# Flakes in Registry
+	{
+	  nix.registry = {
+	    nixpkgs.flake = nixpkgs;
+	    home-manager.flake = home-manager;
+	  };
+	}
 
-        # Custom Settings
-        {
-          custom = {
-            defaultDisplayManager = "greetd";
-          };
-        }
+	# Custom Settings
+	{
+	  custom = {
+	    defaultDisplayManager = "greetd";
+	  };
+	}
 
-        home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            backupFileExtension = "orig.home";
-	    extraSpecialArgs = { inherit inputs; };
-            users.pas = import ./pas;
-          };
-        }
+	home-manager.nixosModules.home-manager
+	{
+	  home-manager = {
+	    useGlobalPkgs = true;
+	    useUserPackages = true;
+	    backupFileExtension = "orig.home";
+	    #extraSpecialArgs = { inherit inputs; };
+	    users.pas = import ./pas;
+	  };
+	}
       ];
     };
   };
