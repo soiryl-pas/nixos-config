@@ -7,6 +7,7 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
   outputs = inputs @ {
@@ -17,7 +18,7 @@
     inherit nixpkgs;
     nixosConfigurations.pas-nixos = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
-      specialArgs = { pkgs = import nixpkgs { inherit system; config.allowUnfree = true; }; };
+      specialArgs = { inherit inputs; pkgs = import nixpkgs { inherit system; config.allowUnfree = true; }; };
       modules = [
 	./global
 
