@@ -13,12 +13,18 @@
   outputs = inputs @ {
     nixpkgs,
     home-manager,
+    zen-browser,
     ...
   }: {
     inherit nixpkgs;
-    nixosConfigurations.pas-nixos = nixpkgs.lib.nixosSystem rec {
+    nixosConfigurations.pas-nixos = 
+    let
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; pkgs = import nixpkgs { inherit system; config.allowUnfree = true; }; };
+      pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
+      specialArgs = { inherit inputs; inherit system; inherit pkgs; };
+    in nixpkgs.lib.nixosSystem {
+      inherit system;
+      inherit specialArgs;
       modules = [
 	./global
 
@@ -27,6 +33,7 @@
 	  nix.registry = {
 	    nixpkgs.flake = nixpkgs;
 	    home-manager.flake = home-manager;
+	    zen-browser.flake = zen-browser;
 	  };
 	}
 
@@ -43,6 +50,7 @@
 	    useGlobalPkgs = true;
 	    useUserPackages = true;
 	    backupFileExtension = "orig.home";
+	    extraSpecialArgs = specialArgs;
 	    users.pas = import ./pas;
 	  };
 	}

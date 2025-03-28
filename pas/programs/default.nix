@@ -1,8 +1,6 @@
+{ config, pkgs, inputs, system, ... }:
+
 {
-  config,
-  pkgs,
-  ...
-}: {
   imports = [
     ./kitty.nix
     ./vscodium.nix
@@ -10,6 +8,8 @@
 
   home.packages = with pkgs; [
     neofetch
+  ] ++ [
+    inputs.zen-browser.packages."${system}".default
   ];
 
   programs = {
