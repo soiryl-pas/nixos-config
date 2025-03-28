@@ -41,14 +41,17 @@
   time.timeZone = "Europe/Vienna";
 
   i18n = {
-    defaultLocale = "de_AT.UTF-8";
-    extraLocaleSettings = {
-      LANG = "en_GB.UTF-8";
-    };
-    supportedLocales = [
-      "de_AT.UTF-8/UTF-8"
-      "en_GB.UTF-8/UTF-8"
-    ];
+    defaultLocale = "en_GB.UTF-8";
+    extraLocaleSettings = lib.attrsets.genAttrs [
+      "LC_NUMERIC"
+      "LC_TIME"
+      "LC_MONETARY"
+      "LC_PAPER"
+      "LC_NAME"
+      "LC_ADDRESS"
+      "LC_TELEPHONE"
+      "LC_MEASUREMENT"
+    ] (locale: "de_AT.UTF-8");
   };
   console = {
     font = "Lat2-Terminus16";
