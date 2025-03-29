@@ -16,6 +16,8 @@
     godot_4
     onlyoffice-desktopeditors
     ghidra
+    mangohud
+    geogebra6
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
