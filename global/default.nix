@@ -70,6 +70,10 @@
       enable = true;
       pulse.enable = true;
     };
+
+    stirling-pdf = {
+      enable = true;
+    };
   };
 
   programs.neovim = {
