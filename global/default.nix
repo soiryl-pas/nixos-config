@@ -83,6 +83,8 @@
   };
   programs.vim.enable = true;
 
+  programs.partition-manager.enable = true;
+
   users.users.pas = {
     isNormalUser = true;
     extraGroups = ["wheel" "input" "networkmanager" "vboxsf"];
