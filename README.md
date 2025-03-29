@@ -6,6 +6,8 @@
 
 * Keeping certain Dotfiles mutable in HomeManager
 
+* Custom Qt6 Theme in all DEs and WMs
+
 * Neovim Config - If possible, configurable per devshell-flake
     * telescope, nvim-cmp, language servers, formatters, treesitter, tokyonight-theme, NvimTree
 

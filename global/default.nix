@@ -78,6 +78,7 @@
     viAlias = true;
     configure.customRC = ''
       set shiftwidth=2
+      set number
     '';
   };
   programs.vim.enable = true;
