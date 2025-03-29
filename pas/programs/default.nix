@@ -12,6 +12,8 @@
     dolphin-emu
     desmume
     mgba
+    aseprite
+    godot_4
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
