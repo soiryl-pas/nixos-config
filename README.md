@@ -4,6 +4,8 @@
 
 * Implement all apps
 
+* Keeping certain Dotfiles mutable in HomeManager
+
 * Neovim Config - If possible, configurable per devshell-flake
     * telescope, nvim-cmp, language servers, formatters, treesitter, tokyonight-theme, NvimTree
 

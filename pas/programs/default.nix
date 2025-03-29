@@ -9,6 +9,9 @@
   home.packages = with pkgs; [
     neofetch
     discord
+    dolphin-emu
+    desmume
+    mgba
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
