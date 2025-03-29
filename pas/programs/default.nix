@@ -15,6 +15,7 @@
     aseprite
     godot_4
     onlyoffice-desktopeditors
+    ghidra
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
