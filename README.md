@@ -18,8 +18,8 @@ This section lists things to be done imperatively, as these systems are either i
     * Clock to ISO Date
     * clickItemTo open
     * Locale
+    * Theme Colour: Purple
 * Dolphin:
-    * Theme: Green
     * Make Location Bar Editable, Show Full Path
     * Remember Display Style for Each Directory
     * Date Style: Absolute
