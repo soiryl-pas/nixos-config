@@ -13,6 +13,8 @@
 
 * Include https://github.com/pudii/gba-ghidra-loader in Ghidra
 
+* .desktop-file for Stirling PDF
+
 ## Imperative Configuration:
 This section lists things to be done imperatively, as these systems are either in a highly volatile developing stage, rendering the declerative paradigm unreasonable (Zen), or simply too complex to bother (KDE).
 
