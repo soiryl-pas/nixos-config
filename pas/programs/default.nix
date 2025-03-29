@@ -14,6 +14,7 @@
     mgba
     aseprite
     godot_4
+    onlyoffice-desktopeditors
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
