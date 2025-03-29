@@ -2,8 +2,6 @@
 
 ## TODOs
 
-* Implement all apps
-
 * Keeping certain Dotfiles mutable in HomeManager
 
 * Custom Qt6 Theme in all DEs and WMs
@@ -12,6 +10,8 @@
     * telescope, nvim-cmp, language servers, formatters, treesitter, tokyonight-theme, NvimTree
 
 * Hyprland Setup (Alternatively, QTile)
+
+* Include https://github.com/pudii/gba-ghidra-loader in Ghidra
 
 ## Imperative Configuration:
 This section lists things to be done imperatively, as these systems are either in a highly volatile developing stage, rendering the declerative paradigm unreasonable (Zen), or simply too complex to bother (KDE).
