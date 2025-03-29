@@ -31,6 +31,8 @@ This section lists things to be done imperatively, as these systems are either i
     * Show on Startup: Home-Directory
 * Zen:
     * All Settings, especially Keyboard Shortcuts, Look and Feel, Search, Security
+* OnlyOffice:
+    * Change to Dark Mode
 
 ## Caveats
 * User service plasma-kwallet-pam.service consistently fails as its functionality is implemented in /etc/profile. This should be irrelevant, but could lead to unexplained behaviour in Plasma.
