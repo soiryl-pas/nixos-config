@@ -16,7 +16,6 @@
     zen-browser,
     ...
   }: {
-    inherit nixpkgs;
     nixosConfigurations.pas-nixos = 
     let
       system = "x86_64-linux";
