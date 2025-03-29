@@ -8,6 +8,7 @@
 
   home.packages = with pkgs; [
     neofetch
+    discord
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
