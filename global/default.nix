@@ -13,7 +13,6 @@
   environment.systemPackages = with pkgs; [
     tree
     kitty
-    noto-fonts
   ];
 
   nix = {
@@ -58,6 +57,10 @@
     font = "Lat2-Terminus16";
     useXkbConfig = true;
   };
+
+  fonts.packages = with pkgs; [
+    noto-fonts
+  ];
 
   services = {
     xserver = {
