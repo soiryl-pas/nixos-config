@@ -52,6 +52,14 @@
       "LC_TELEPHONE"
       "LC_MEASUREMENT"
     ] (locale: "de_AT.UTF-8");
+
+    inputMethod = {
+      enable = true;
+      type = "fcitx5";
+      fcitx5.addons = with pkgs; [
+	fcitx5-mozc
+      ];
+    };
   };
   console = {
     font = "Lat2-Terminus16";
