@@ -18,7 +18,7 @@
     ghidra
     mangohud
     geogebra6
-    modrinth-app
+    prismlauncher
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
