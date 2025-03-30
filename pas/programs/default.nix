@@ -18,6 +18,7 @@
     ghidra
     mangohud
     geogebra6
+    modrinth-app
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];

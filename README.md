@@ -25,6 +25,7 @@ This section lists things to be done imperatively, as these systems are either i
     * clickItemTo open
     * Locale
     * Theme Colour: Purple
+    * Change CTRL+Alt+t and Default Terminal to Kitty
 * Dolphin:
     * Make Location Bar Editable, Show Full Path
     * Remember Display Style for Each Directory
