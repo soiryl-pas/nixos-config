@@ -82,20 +82,22 @@
     };
   };
 
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    viAlias = true;
-    configure.customRC = ''
-      set shiftwidth=2
-      set number
-    '';
+  programs = {
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+      viAlias = true;
+      configure.customRC = ''
+	set shiftwidth=2
+	set number
+      '';
+    };
+    vim.enable = true;
+
+    partition-manager.enable = true;
   };
-  programs.vim.enable = true;
 
-  programs.partition-manager.enable = true;
-
-  users.users.pas = {
+    users.users.pas = {
     isNormalUser = true;
     extraGroups = ["wheel" "input" "networkmanager" "vboxsf"];
   };
