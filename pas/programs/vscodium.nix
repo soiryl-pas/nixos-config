@@ -8,6 +8,7 @@
       vscodevim.vim
       ms-python.python
       ms-python.vscode-pylance
+      llvm-vs-code-extensions.vscode-clangd
     ];
     keybindings = [
       {
