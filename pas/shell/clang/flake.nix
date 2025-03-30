@@ -10,7 +10,10 @@
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; };
   in {
-    devShells."${system}".default = pkgs.mkShellNoCC {
+    devShells."${system}".default = pkgs.mkShell.override {
+      #stdenv = (pkgs.callPackage pkgs.mini-compile-commands {}).wrap pkgs.clangStdenv;
+      stdenv = pkgs.clangStdenv;
+    } {
       packages = with pkgs; [
 	clang
       ];
