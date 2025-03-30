@@ -53,6 +53,7 @@
       "LC_MEASUREMENT"
     ] (locale: "de_AT.UTF-8");
 
+/*
     inputMethod = {
       enable = true;
       type = "fcitx5";
@@ -62,6 +63,7 @@
       ];
       fcitx5.waylandFrontend = true;
     };
+*/
   };
   console = {
     font = "Lat2-Terminus16";
