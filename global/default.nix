@@ -95,6 +95,12 @@
     vim.enable = true;
 
     partition-manager.enable = true;
+
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = true;
+    };
   };
 
     users.users.pas = {
