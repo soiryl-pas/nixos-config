@@ -2,6 +2,10 @@
 
 ## TODOs
 
+* direnv and vscodium
+    * Doesn't have access to flake.nix envvars and aliasses (or throws errors)
+    * compile_commands.json must be specified
+
 * Keeping certain Dotfiles mutable in HomeManager
 
 * Custom Qt6 Theme in all DEs and WMs
