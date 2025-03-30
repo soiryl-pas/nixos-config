@@ -79,6 +79,8 @@
         layout = "de";
         options = "eurosign:e,caps:escape";
       };
+
+      desktopManager.runXdgAutostartIfNone = true; # for Fcitx5 to work in WMs
     };
 
     pipewire = {
