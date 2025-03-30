@@ -6,4 +6,8 @@
   imports = [
     ./bash.nix
   ];
+
+  programs.direnv = {
+    enable = true;
+  };
 }
