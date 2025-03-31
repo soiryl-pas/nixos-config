@@ -22,6 +22,8 @@
 ## Imperative Configuration:
 This section lists things to be done imperatively, as these systems are either in a highly volatile developing stage, rendering the declerative paradigm unreasonable (Zen), or simply too complex to bother (KDE).
 
+* XDG-Directories
+    * Immediately make all Home-Directories as specified in the custom user-dirs.dirs and remove already created user-dirs.dirs.home.orig files -> Otherwise, HomeManager likes to make backups and then crash, as it doesn't like to override already made backups.
 * Plasma
     * Theme to Breezedark
     * Panel Position to Right and Size 50
