@@ -36,5 +36,8 @@
 	command = "workbench.action.openWalkthrough";
       }
     ];
+    userSettings = {
+      "editor.defaultFormatter" = "xaver.clang-format";
+    };
   };
 }
