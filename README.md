@@ -2,9 +2,6 @@
 
 ## TODOs
 
-* direnv and vscodium
-    * compile_commands.json must be specified
-
 * Keeping certain Dotfiles mutable in HomeManager
 
 * Custom Qt6 Theme in all DEs and WMs
