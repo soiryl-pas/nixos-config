@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./bash.nix
+    ./devflakes.nix
   ];
 
   programs.direnv = {
