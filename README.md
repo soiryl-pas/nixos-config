@@ -2,6 +2,8 @@
 
 ## TODOs
 
+* DevShells: Change Indentation either with flake.nix-devShell, .gitattributes, .clang-format or .editorconfig
+
 * Keeping certain Dotfiles mutable in HomeManager
 
 * Custom Qt6 Theme in all DEs and WMs
@@ -45,3 +47,4 @@ This section lists things to be done imperatively, as these systems are either i
 * User service plasma-kwallet-pam.service consistently fails as its functionality is implemented in /etc/profile. This should be irrelevant, but could lead to unexplained behaviour in Plasma.
 * In the current setup, TTY Environments cannot declare and save new passwords, only graphical interfaces can. After decleration and saving in kwallet, they are however available in the TTY as well. This is due to QT\_QPA\_ENVIRONMENT=offscreen (necessary for using kwallet in TTYs) misbehaving for new passwords.
 * The official minecraft launcher is tagged as broken and nonfunctional, and Modrinth doesn't really work as well. The official nixos-wiki recommends Prismlauncher.
+* Home-Manager likes to break .desktop-file-icons on the Plasma-Taskbar when rebuilding
