@@ -6,6 +6,7 @@
 * Custom Qt6 Theme in all DEs and WMs
 * Setup Fcitx5 correctly
 * Include https://github.com/pudii/gba-ghidra-loader in Ghidra
+   * Writing the .nix-file analogously to [other nixpkgs-ghidra-extensions](https://github.com/NixOS/nixpkgs/blob/nixos-24.11/pkgs/tools/security/ghidra/extensions/ghidra-golanganalyzerextension/default.nix#L18) should probably work.
 * .desktop-file for Stirling PDF
 
 * Keeping certain Dotfiles mutable in HomeManager
@@ -38,10 +39,10 @@ This section lists things to be done imperatively, as these systems are either i
 * OnlyOffice
     * Change to Dark Mode
 * Prismlauncher
-    * Setup, giving Minecraft 16GB of RAM should be totally fine.
+    * Setup, Mods and Worlds - Giving Minecraft 16GB of RAM should be totally fine.
 
 ## Caveats
 * User service plasma-kwallet-pam.service consistently fails as its functionality is implemented in /etc/profile. This should be irrelevant, but could lead to unexplained behaviour in Plasma.
 * In the current setup, TTY Environments cannot declare and save new passwords, only graphical interfaces can. After decleration and saving in kwallet, they are however available in the TTY as well. This is due to QT\_QPA\_ENVIRONMENT=offscreen (necessary for using kwallet in TTYs) misbehaving for new passwords. It is thus also not recommended to start graphical sessions in TTYs, as they will inherit this environmental variable and (probably) disable all QT-Applications (or the whole of Plasma).
 * The official minecraft launcher is tagged as broken and nonfunctional, and Modrinth doesn't really work as well. The official nixos-wiki recommends Prismlauncher.
-* Home-Manager likes to break .desktop-file-icons on the Plasma-Taskbar when rebuilding
+* Home-Manager likes to break .desktop-file-icons on the Plasma-Taskbar when rebuilding.
