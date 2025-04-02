@@ -7,6 +7,8 @@
     stateVersion = "24.11"; # Do not change
   };
 
+  xsession.numlock.enable = true;
+
   imports = [
     ./programs
     ./shell
