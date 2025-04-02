@@ -94,6 +94,8 @@
       enable = true;
       environment = { SERVER_PORT = 8081; };
     };
+
+    blueman.enable = true;
   };
 
   programs = {
@@ -117,9 +119,16 @@
     };
   };
 
-    users.users.pas = {
+  users.users.pas = {
     isNormalUser = true;
     extraGroups = ["wheel" "input" "networkmanager" "vboxsf"];
+  };
+
+  hardware = {
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
   };
 
   # This option defines the first version of NixOS you have installed on this particular machine,
