@@ -8,7 +8,6 @@
       vscodevim.vim
       ms-python.python
       ms-python.vscode-pylance
-      llvm-vs-code-extensions.vscode-clangd
       xaver.clang-format
       ms-vscode.cpptools
       mkhl.direnv
