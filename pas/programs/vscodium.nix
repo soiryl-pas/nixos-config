@@ -11,6 +11,7 @@
       llvm-vs-code-extensions.vscode-clangd
       xaver.clang-format
       mkhl.direnv
+      github.vscode-github-actions
     ];
     keybindings = [
       {
@@ -38,6 +39,7 @@
     ];
     userSettings = {
       "editor.defaultFormatter" = "xaver.clang-format";
+      "git.confirmSync" = false;
     };
   };
 }
