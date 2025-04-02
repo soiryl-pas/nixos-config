@@ -3,21 +3,16 @@
 ## TODOs
 
 * DevShells: Change Indentation either with flake.nix-devShell, .gitattributes, .clang-format or .editorconfig
-
-* Keeping certain Dotfiles mutable in HomeManager
-
 * Custom Qt6 Theme in all DEs and WMs
-
-* Neovim Config - If possible, configurable per devshell-flake
-    * telescope, nvim-cmp, language servers, formatters, treesitter, tokyonight-theme, NvimTree
-
-* Hyprland Setup (Alternatively, QTile)
-
+* Setup Fcitx5 correctly
 * Include https://github.com/pudii/gba-ghidra-loader in Ghidra
-
 * .desktop-file for Stirling PDF
 
-* Setup Fcitx5 correctly
+* Keeping certain Dotfiles mutable in HomeManager
+* Neovim Config - If possible, configurable per devshell-flake
+    * telescope, nvim-cmp, language servers, formatters, treesitter, tokyonight-theme, NvimTree
+* Hyprland Setup (Alternatively, QTile)
+
 
 ## Imperative Configuration:
 This section lists things to be done imperatively, as these systems are either in a highly volatile developing stage, rendering the declerative paradigm unreasonable (Zen), or simply too complex to bother (KDE).
@@ -47,6 +42,6 @@ This section lists things to be done imperatively, as these systems are either i
 
 ## Caveats
 * User service plasma-kwallet-pam.service consistently fails as its functionality is implemented in /etc/profile. This should be irrelevant, but could lead to unexplained behaviour in Plasma.
-* In the current setup, TTY Environments cannot declare and save new passwords, only graphical interfaces can. After decleration and saving in kwallet, they are however available in the TTY as well. This is due to QT\_QPA\_ENVIRONMENT=offscreen (necessary for using kwallet in TTYs) misbehaving for new passwords.
+* In the current setup, TTY Environments cannot declare and save new passwords, only graphical interfaces can. After decleration and saving in kwallet, they are however available in the TTY as well. This is due to QT\_QPA\_ENVIRONMENT=offscreen (necessary for using kwallet in TTYs) misbehaving for new passwords. It is thus also not recommended to start graphical sessions in TTYs, as they will inherit this environmental variable and (probably) disable all QT-Applications (or the whole of Plasma).
 * The official minecraft launcher is tagged as broken and nonfunctional, and Modrinth doesn't really work as well. The official nixos-wiki recommends Prismlauncher.
 * Home-Manager likes to break .desktop-file-icons on the Plasma-Taskbar when rebuilding
