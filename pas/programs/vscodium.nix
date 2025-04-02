@@ -36,6 +36,11 @@
 	key = "ctrl+o";
 	command = "workbench.action.openWalkthrough";
       }
+      {
+	key = "ctrl+shift+space";
+	command = "editor.action.triggerSuggest";
+	when = "editorHasCompletionItemProvider && textInputFocus && !editorReadonly";
+      }
     ];
     userSettings = {
       "editor.defaultFormatter" = "xaver.clang-format";
