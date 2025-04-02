@@ -10,6 +10,7 @@
       ms-python.vscode-pylance
       llvm-vs-code-extensions.vscode-clangd
       xaver.clang-format
+      ms-vscode.cpptools
       mkhl.direnv
       github.vscode-github-actions
     ];
