@@ -19,6 +19,8 @@
     mangohud
     geogebra6
     prismlauncher
+    mdbook
+    yt-dlp
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
