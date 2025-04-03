@@ -15,7 +15,9 @@
     aseprite
     godot_4
     onlyoffice-desktopeditors
-    ghidra
+    (ghidra.withExtensions (p: [
+      p.ret-sync
+    ]))
     mangohud
     geogebra6
     prismlauncher
