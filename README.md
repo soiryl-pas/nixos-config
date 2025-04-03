@@ -4,8 +4,6 @@
 
 * Custom Qt6 Theme in all DEs and WMs
 * Setup Fcitx5 correctly
-* Include https://github.com/pudii/gba-ghidra-loader in Ghidra
-   * Writing the .nix-file analogously to [other nixpkgs-ghidra-extensions](https://github.com/NixOS/nixpkgs/blob/nixos-24.11/pkgs/tools/security/ghidra/extensions/ghidra-golanganalyzerextension/default.nix#L18) should probably work.
 * .desktop-file for Stirling PDF
 
 * Keeping certain Dotfiles mutable in HomeManager
@@ -39,6 +37,8 @@ This section lists things to be done imperatively, as these systems are either i
     * Change to Dark Mode
 * Prismlauncher
     * Setup, Mods and Worlds - Giving Minecraft 16GB of RAM should be totally fine.
+* Ghidra
+    * Add [GBA-Loader](https://github.com/pudii/gba-ghidra-loader)
 
 ## Caveats
 * User service plasma-kwallet-pam.service consistently fails as its functionality is implemented in /etc/profile. This should be irrelevant, but could lead to unexplained behaviour in Plasma.
