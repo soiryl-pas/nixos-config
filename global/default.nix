@@ -101,6 +101,11 @@
     envfs.enable = true;
   };
 
+  # For envfs
+  environment.shellInit = ''
+    export ENVFS_RESOLVE_ALWAYS=1
+  '';
+
   programs = {
     neovim = {
       enable = true;
