@@ -16,7 +16,8 @@
     godot_4
     onlyoffice-desktopeditors
     (ghidra.withExtensions (p: [
-      p.ret-sync
+#      import ./ghidra-gba-loader.nix
+      p.ghidra-golanganalyzerextension
     ]))
     mangohud
     geogebra6
