@@ -7,7 +7,7 @@
     stateVersion = "24.11"; # Do not change
   };
 
-  xsession.numlock.enable = true;
+  manual.manpages.enable = true;
 
   imports = [
     ./programs

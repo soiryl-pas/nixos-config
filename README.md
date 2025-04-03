@@ -2,7 +2,6 @@
 
 ## TODOs
 
-* DevShells: Change Indentation either with flake.nix-devShell, .gitattributes, .clang-format or .editorconfig
 * Custom Qt6 Theme in all DEs and WMs
 * Setup Fcitx5 correctly
 * Include https://github.com/pudii/gba-ghidra-loader in Ghidra
