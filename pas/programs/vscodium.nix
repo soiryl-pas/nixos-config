@@ -12,6 +12,7 @@
       ms-vscode.cpptools
       mkhl.direnv
       github.vscode-github-actions
+      dracula-theme.theme-dracula
     ];
     keybindings = [
       {
