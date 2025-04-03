@@ -21,6 +21,7 @@
     prismlauncher
     mdbook
     yt-dlp
+    clang-manpages
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];

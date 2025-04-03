@@ -2,7 +2,7 @@
   description = "Nix-Flake based C and C++ Environment with Clang";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
   };
 
   outputs = inputs@{self, nixpkgs, ...}:
