@@ -98,7 +98,7 @@
     };
 
     blueman.enable = true;
-    envfs.enable = true;
+    #envfs.enable = true;
   };
 
   programs = {
