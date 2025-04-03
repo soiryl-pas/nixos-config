@@ -119,6 +119,8 @@
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
     };
+
+    appimage.enable = true;
   };
 
   users.users.pas = {
