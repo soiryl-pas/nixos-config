@@ -15,10 +15,7 @@
     aseprite
     godot_4
     onlyoffice-desktopeditors
-    (ghidra.withExtensions (p: [
-#      import ./ghidra-gba-loader.nix
-      p.ghidra-golanganalyzerextension
-    ]))
+    ghidra
     mangohud
     geogebra6
     prismlauncher
