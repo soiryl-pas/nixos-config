@@ -8,7 +8,7 @@
   outputs = inputs@{self, nixpkgs, ...}:
   let
     system = "x86_64-linux";
-    pkgs = import nixpkgs { inherit system; };
+    pkgs = nixpkgs.legacyPackages."${system}";
     PS1 = ''\n \[\e[1;34m\]== CLANG: \w ==\n $\[\e[m\] '';
   in {
     devShells."${system}".default = pkgs.mkShell.override {
