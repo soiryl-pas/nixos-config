@@ -47,6 +47,7 @@
       "editor.defaultFormatter" = "xaver.clang-format";
       "git.confirmSync" = false;
       "git.autofetch" = true;
+      "workbench.colorTheme" = "Dracula Theme";
     };
   };
 }
