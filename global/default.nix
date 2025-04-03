@@ -120,7 +120,10 @@
       dedicatedServer.openFirewall = true;
     };
 
-    appimage.enable = true;
+    appimage = {
+      enable = true;
+      binfmt = true;
+    };
   };
 
   users.users.pas = {
