@@ -98,8 +98,7 @@
     };
 
     blueman.enable = true;
-    #envfs.enable = true;
-    # Unfortunately doesn't work in devShells
+    envfs.enable = true;
   };
 
   programs = {

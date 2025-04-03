@@ -26,6 +26,7 @@
 	perl
 	libpng
 	devkitarm
+	bash
       ];
 
       DEVKITPRO = "${devkitarm}";
