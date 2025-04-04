@@ -55,7 +55,6 @@
       "git.confirmSync" = false;
       "git.autofetch" = true;
       "workbench.colorTheme" = "Dracula Theme";
-      "window.menuBarVisibility" = "compact";
     };
   };
 }
