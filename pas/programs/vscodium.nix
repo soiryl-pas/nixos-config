@@ -13,6 +13,13 @@
       mkhl.direnv
       github.vscode-github-actions
       dracula-theme.theme-dracula
+    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+      {
+	name = "ARM";
+	publisher = "dan-c-underwood";
+	version = "1.4.0";
+	sha256 = "sha256-atDbLgc2R+X/wyGAxA6M0lDa03L5yFX1rbfpyZ8oKUU=";
+      }
     ];
     keybindings = [
       {
