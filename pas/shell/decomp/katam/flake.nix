@@ -33,6 +33,8 @@
 	libpng
 	devkitarm
 	bashInteractive
+	mgba
+	gcc-arm-embedded
       ];
 
       DEVKITPRO = "${devkitarm}";
