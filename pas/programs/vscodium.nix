@@ -49,6 +49,10 @@
 	command = "editor.action.triggerSuggest";
 	when = "editorHasCompletionItemProvider && textInputFocus && !editorReadonly";
       }
+      {
+	key = "ctrl+shift+f12";
+	command = "editor.action.revealDeclaration";
+      }
     ];
     userSettings = {
       "editor.defaultFormatter" = "xaver.clang-format";
