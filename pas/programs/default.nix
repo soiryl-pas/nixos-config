@@ -22,6 +22,7 @@
     mdbook
     yt-dlp
     clang-manpages
+    okteta
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
