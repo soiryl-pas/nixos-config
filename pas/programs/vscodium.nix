@@ -63,6 +63,7 @@
       "git.confirmSync" = false;
       "git.autofetch" = true;
       "workbench.colorTheme" = "Dracula Theme";
+      "direnv.restart.automatic" = true;
     };
   };
 }
