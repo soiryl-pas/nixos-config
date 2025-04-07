@@ -53,6 +53,10 @@
 	key = "ctrl+shift+f12";
 	command = "editor.action.revealDeclaration";
       }
+      {
+	key = "ctrl+[Backslash]";
+	command = "direnv.reset";
+      }
     ];
     userSettings = {
       "editor.defaultFormatter" = "xaver.clang-format";

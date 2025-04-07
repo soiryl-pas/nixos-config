@@ -34,7 +34,7 @@
 	devkitarm
 	bashInteractive
 	mgba
-	gcc-arm-embedded
+	gcc-arm-embedded-10
       ];
 
       DEVKITPRO = "${devkitarm}";
