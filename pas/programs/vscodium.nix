@@ -13,6 +13,7 @@
       mkhl.direnv
       github.vscode-github-actions
       dracula-theme.theme-dracula
+      ms-vscode.hexeditor
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
 	name = "ARM";

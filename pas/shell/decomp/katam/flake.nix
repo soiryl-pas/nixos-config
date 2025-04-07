@@ -9,7 +9,6 @@
   # 2) Add to your nixos-configuration:
   # 	* "services.envfrs.enable = true;"
   #	* "environment.shellInit = export ENVFS_RESOLVE_ALWAYS=1"
-  # This is unfortunately not possible to capture in this flake, as far as I know
 
   description = "Nix flake development shell for Kirby and the amazing mirror decompilation";
   inputs = {
@@ -35,6 +34,7 @@
 	bashInteractive
 	mgba
 	gcc-arm-embedded-10
+	clang-tools
       ];
 
       DEVKITPRO = "${devkitarm}";
