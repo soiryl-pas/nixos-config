@@ -12,7 +12,7 @@
 
   description = "Nix flake development shell for Kirby and the amazing mirror decompilation";
   inputs = {
-    devkitnix.url = "github:knarkzel/devkitnix";
+    devkitnix.url = "github:GeeLeonidas/devkitnix";
     devkitnix.inputs.nixpkgs.follows = "nixpkgs";
   };
   

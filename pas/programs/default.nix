@@ -23,6 +23,7 @@
     yt-dlp
     clang-manpages
     okteta
+    kdePackages.kfind
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
