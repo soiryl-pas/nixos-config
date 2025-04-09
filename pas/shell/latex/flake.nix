@@ -14,7 +14,7 @@
       packages = with pkgs; [
 	(texliveBasic.withPackages (ps: with texlivePackages; [
 	  beamer ucs babel-german multirow listings ulem times
-	))]
+	]))
       ];
     };
   };
