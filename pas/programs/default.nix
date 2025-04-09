@@ -30,7 +30,7 @@
     ]))
     */
     (texliveSmall.withPackages (ps: with texlivePackages; [
-      ucs multirow
+      ucs multirow times
     ]))
   ] ++ [
     inputs.zen-browser.packages."${system}".default
