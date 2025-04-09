@@ -25,7 +25,7 @@
     okteta
     kdePackages.kfind
     ( texliveBasic.withPackages (ps: with texlivePackages; [
-      beamer utf8add
+      beamer inputenx
     ]))
   ] ++ [
     inputs.zen-browser.packages."${system}".default
