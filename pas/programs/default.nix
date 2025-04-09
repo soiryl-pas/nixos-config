@@ -24,7 +24,7 @@
     clang-manpages
     okteta
     kdePackages.kfind
-    texliveMinimal
+    texliveBasic
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
