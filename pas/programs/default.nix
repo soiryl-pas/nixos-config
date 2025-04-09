@@ -29,7 +29,7 @@
       beamer ucs babel-german inputenx multirow listings ulem times
     ]))
     */
-    texliveSmall
+    texliveMedium
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
