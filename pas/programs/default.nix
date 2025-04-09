@@ -25,7 +25,7 @@
     okteta
     kdePackages.kfind
     ( texliveBasic.withPackages (ps: with texlivePackages; [
-      beamer ucs babel-german
+      beamer ucs babel-german inputenx multirow listings ulem
     ]))
   ] ++ [
     inputs.zen-browser.packages."${system}".default
