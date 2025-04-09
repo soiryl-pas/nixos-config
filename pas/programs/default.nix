@@ -24,9 +24,12 @@
     clang-manpages
     okteta
     kdePackages.kfind
+    /*
     ( texliveBasic.withPackages (ps: with texlivePackages; [
       beamer ucs babel-german inputenx multirow listings ulem times
     ]))
+    */
+    texliveSmall
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
