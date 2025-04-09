@@ -24,8 +24,9 @@
     clang-manpages
     okteta
     kdePackages.kfind
-    texliveBasic
-    texlivePackages.beamer
+    ( texliveBasic.withPackages (ps: with texlivePackages; [
+      beamer
+    ]))
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
