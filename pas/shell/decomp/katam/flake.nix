@@ -1,6 +1,7 @@
 {
   # Modelled after https://github.com/pret/pmd-sky/blob/main/flake.nix
-  # This build only works for x86_64-linux systems, as devkitnix is only available as such
+  # This build was tested on an x86_64 system. If you use a different one, make sure to change that attribute
+  # DevkitNix is system agnostic, so it could work for other systems as well, but this hasn't been tested yet for this repository
   # The nixpkgs flake from the local nix registry will be used
 
   # Some tools require /bin/bash to be present, which is not the case per default on NixOS.
@@ -12,33 +13,40 @@
 
   description = "Nix flake development shell for Kirby and the amazing mirror decompilation";
   inputs = {
-    devkitnix.url = "github:GeeLeonidas/devkitnix";
-    devkitnix.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs-old.url = "github:NixOS/nixpkgs/nixos-24.11";
+    devkitNix.url = "github:bandithedoge/devkitNix";
   };
   
-  outputs = { self, nixpkgs, devkitnix }:
+  outputs = { self, nixpkgs, nixpkgs-old, devkitNix }:
   let
     name = "katam-shell";
     system = "x86_64-linux";
-    devkitarm = devkitnix.packages.${system}.devkitARM;
-    pkgs = nixpkgs.legacyPackages.${system};
+    pkgs-old = nixpkgs-old.legacyPackages."${system}";
+    pkgs = import nixpkgs {
+      inherit system;
+      overlays = [devkitNix.overlays.default];
+    };
+    devkitarm = pkgs.devkitNix.devkitARM;
+    DEVKITPRO = "${devkitarm}/opt/devkitpro";
+    DEVKITARM = "${DEVKITPRO}/devkitARM";
   in {
     devShells."${system}".default = pkgs.mkShell {
-      inherit name;
+      inherit name DEVKITPRO DEVKITARM;
 
       packages = with pkgs; [
+	devkitarm
 	git
+	bc
 	perl
 	libpng
-	devkitarm
 	bashInteractive
 	mgba
-	gcc-arm-embedded-10
 	clang-tools
+      ] ++ [
+	pkgs-old.gcc-arm-embedded-10 # This gdb version just works with VSCode breakpoints, so we'll just keep it
       ];
 
-      DEVKITPRO = "${devkitarm}";
-      DEVKITARM = "${devkitarm}/devkitARM";
     };
   };
 }
