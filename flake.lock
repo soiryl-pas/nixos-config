@@ -60,6 +60,22 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1744463964,
+        "narHash": "sha256-LWqduOgLHCFxiTNYi3Uj5Lgz0SR+Xhw3kr/3Xd0GPTM=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "2631b0b7abcea6e640ce31cd78ea58910d31e650",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1743448293,
         "narHash": "sha256-bmEPmSjJakAp/JojZRrUvNcDX2R5/nuX6bm+seVaGhs=",
         "owner": "nixos",
@@ -74,17 +90,33 @@
         "type": "github"
       }
     },
+    "qt-custom": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-mQYCPByxFQqtcZGRUQJj/QPPqbqNWkRhjJCsaxN1YKo=",
+        "path": "/nix/store/z81kzv4ggch7j2c96vr89l7a297v3qmv-source/pas/shell/qt",
+        "type": "path"
+      },
+      "original": {
+        "path": "/nix/store/z81kzv4ggch7j2c96vr89l7a297v3qmv-source/pas/shell/qt",
+        "type": "path"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
+        "qt-custom": "qt-custom",
         "zen-browser": "zen-browser"
       }
     },
     "zen-browser": {
       "inputs": {
         "home-manager": "home-manager_2",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
         "lastModified": 1744219028,

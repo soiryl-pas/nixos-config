@@ -1,5 +1,5 @@
 {
-  description = "VM Config";
+  description = "Someone0123-pas NixOS Configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
@@ -8,12 +8,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+
+    qt-custom.url = "./pas/shell/qt";
   };
 
   outputs = inputs @ {
     nixpkgs,
     home-manager,
     zen-browser,
+    qt-custom,
     ...
   }: {
     nixosConfigurations.pas-nixos = 
