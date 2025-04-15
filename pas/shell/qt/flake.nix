@@ -27,7 +27,7 @@
     apps."${system}".qtcreator = {
       type = "app";
       program = "${pkgs.qtcreator}/bin/qtcreator";
-      package = "${pkgs.qtcreator}";
+      xdgData = "${pkgs.qtcreator}/share";
     };
   };
 }

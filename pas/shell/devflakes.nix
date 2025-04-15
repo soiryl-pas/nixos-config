@@ -11,6 +11,6 @@ in {
 
   # Application file for qtcreator in ./qt
   xdg.systemDirs.data = [
-    inputs.qt-custom.apps."${system}".qtcreator.package
+    inputs.qt-custom.apps."${system}".qtcreator.xdgData
   ];
 }
