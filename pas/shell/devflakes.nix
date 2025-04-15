@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, system, inputs, ... }:
 let
   devshelldir = "/home/pas/nixos-config/pas/shell";
 in {
@@ -8,4 +8,9 @@ in {
   programs.bash.shellAliases = {
     c = "nix develop ${devshelldir}/clang";
   };
+
+  # Application file for qtcreator in ./qt
+  xdg.systemDirs.data = [
+    inputs.qt-custom.apps."${system}".qtcreator.package
+  ];
 }
