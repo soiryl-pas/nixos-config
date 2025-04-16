@@ -11,7 +11,6 @@ in {
 
   # Application file for qtcreator in ./qt
   /*
-  TODO: Fix running "qtcreator" in .desktop, it should run the flake with "nix run"
   xdg.systemDirs.data = [
     inputs.qt-custom.apps."${system}".qtcreator.xdgData
   ];

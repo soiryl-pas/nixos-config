@@ -9,6 +9,7 @@
     };
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
+    # My own flakes with apps that need non-global dependencies
     qt-custom.url = "./pas/shell/qt";
   };
 

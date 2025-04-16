@@ -24,6 +24,7 @@
     clang-manpages
     okteta
     kdePackages.kfind
+    qtcreator
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
