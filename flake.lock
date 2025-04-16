@@ -97,11 +97,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-+cefBvL7IOmjy3Fo/b+i3xcusYff19mi1DtHywl2fM0=",
-        "path": "/nix/store/d57gk1l0vxqnnqv8gnrp4djj5hl0mkwd-source/pas/shell/qt",
+        "path": "/nix/store/fvyd61x5fs6a4y0n6x67gwgbkp3saxqr-source/pas/shell/qt",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/d57gk1l0vxqnnqv8gnrp4djj5hl0mkwd-source/pas/shell/qt",
+        "path": "/nix/store/fvyd61x5fs6a4y0n6x67gwgbkp3saxqr-source/pas/shell/qt",
         "type": "path"
       }
     },
