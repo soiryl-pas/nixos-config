@@ -21,6 +21,12 @@
 	version = "1.4.0";
 	sha256 = "sha256-atDbLgc2R+X/wyGAxA6M0lDa03L5yFX1rbfpyZ8oKUU=";
       }
+      {
+	name = "qt";
+	publisher = "TheQtCompany";
+	version = "1.2.0";
+	sha256 = "sha256-GBMx5pPVPgH56RioV5wZLyNrLQUBcIwjjfOuvwLPtZc=";
+      }
     ];
     keybindings = [
       {

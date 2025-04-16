@@ -12,18 +12,22 @@
     qt = with pkgs.qt6; env "qt-${qtbase.version}" [
       qtwayland
     ];
-    qtcreator = pkgs.qtcreator.override { inherit (pkgs.qt6) wrapQtAppsHook; };
   in {
     devShells."${system}".default = pkgs.mkShell {
       packages = (with pkgs; [
 	libGL
-      ]) ++ [ qt qtcreator ];
+	gdb
+	cmake
+	bashInteractive
+      ]) ++ [ qt ];
     };
 
+/*
     apps."${system}".qtcreator = {
       type = "app";
       program = "${pkgs.qtcreator}/bin/qtcreator";
       xdgData = "${pkgs.qtcreator}/share";
     };
+    */
   };
 }
