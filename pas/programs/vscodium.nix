@@ -14,6 +14,8 @@
       github.vscode-github-actions
       dracula-theme.theme-dracula
       ms-vscode.hexeditor
+      twxs.cmake
+      ms-vscode.cmake-tools
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
 	name = "ARM";
