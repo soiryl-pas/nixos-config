@@ -47,6 +47,8 @@
 	wayland
 	wayland-protocols
 	wayland-scanner
+	gtk3
+	valgrind-light
       ] ++ [
 	customfltk
       ];
