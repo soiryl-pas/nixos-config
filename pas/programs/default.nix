@@ -24,7 +24,7 @@
     clang-manpages
     okteta
     kdePackages.kfind
-    #qtcreator
+    haruna
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
