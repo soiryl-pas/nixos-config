@@ -24,7 +24,7 @@
     clang-manpages
     okteta
     kdePackages.kfind
-    #haruna
+    haruna
     vlc
     cdrtools
   ] ++ [
