@@ -26,6 +26,7 @@
     kdePackages.kfind
     #haruna
     vlc
+    cdrtools
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
