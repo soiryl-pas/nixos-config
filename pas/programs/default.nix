@@ -24,7 +24,8 @@
     clang-manpages
     okteta
     kdePackages.kfind
-    haruna
+    #haruna
+    vlc
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
