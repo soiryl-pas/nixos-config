@@ -9,11 +9,20 @@
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages."${system}";
+    dotnet-sdk = pkgs.dotnetCorePackages.dotnet_8.sdk;
   in {
     devShells."${system}".default = pkgs.mkShell {
       packages = with pkgs; [
-	dotnetCorePackages.dotnet_9.sdk
+      ] ++ [
+	dotnet-sdk
       ];
+      DOTNET_ROOT = "${dotnet-sdk}/share/dotnet";
+      /*
+      NIX_LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath ([
+	pkgs.stdenv.cc.cc
+      ]);
+      NIX_LD = "${pkgs.stdenv.cc.libc_bin}/bin/ld.so";
+      */
     };
   };
 }
