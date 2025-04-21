@@ -17,6 +17,7 @@
       packages = with pkgs; [
 	clang-tools
 	cmake
+	valgrind
       ];
 
       shellHook = ''

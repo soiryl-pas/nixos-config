@@ -5,10 +5,11 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = inputs@{nixpkgs, ...}:
+  outputs = inputs@{self, nixpkgs, ...}:
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages."${system}";
+    fltk = self.packages."${system}".fltk;
     /*
     nixpkgs-repo = pkgs.fetchFromGitHub {
       owner = "nixos";
@@ -25,17 +26,30 @@
       inherit (pkgs) ApplicationServices Carbon Cocoa OpenGL;
     };
     */
-    customfltk = (pkgs.fltk.overrideAttrs (finalAttrs: previousAttrs: {
-      version = "1.4.2";
+  in {
+    packages."${system}".fltk = (pkgs.fltk.overrideAttrs (finalAttrs: previousAttrs: {
+      version = "1.4.2";  
       src = pkgs.fetchFromGitHub {
 	inherit (previousAttrs.src) owner repo;
 	rev = "release-${finalAttrs.version}";
 	sha256 = "sha256-sh0bu/bdb4WBM3m6D0t4UaZuL08zuqITvzV+ej7B79s=";
       };
-    })).override { withDocs = false; withPango = true; };
-  in {
-    inherit inputs;
-    inherit customfltk;
+      cmakeFlags = previousAttrs.cmakeFlags ++ [
+	"-DFLTK_OPTION_STD=ON"
+	#"-DOPTION_BUILD_HTML_DOCUMENTATION=ON"
+	#"-DOPTION_INSTALL_HTML_DOCUMENTATION=ON"
+      ];
+      propagatedBuildInputs = previousAttrs.propagatedBuildInputs ++ [
+	pkgs.libxkbcommon
+	pkgs.wayland
+	pkgs.wayland-protocols
+	pkgs.wayland-scanner
+      ];
+    })).override {
+      withDocs = false;
+      withPango = true;
+    };
+
     devShells."${system}".default = pkgs.mkShell {
       packages = with pkgs; [
 	cmake
@@ -43,17 +57,13 @@
 	libGL
 	libGLU
 	glew
-	libxkbcommon
-	wayland
-	wayland-protocols
-	wayland-scanner
 	gtk3
 	valgrind-light
       ] ++ [
-	customfltk
+	fltk
       ];
 
-      FLTKPATH = "${customfltk}";
+      FLTKPATH = "${fltk}";
     };
   };
 }
