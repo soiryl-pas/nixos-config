@@ -18,6 +18,7 @@
     man-pages
     man-pages-posix
     inputs.nix-alien.packages."${system}".nix-alien
+    qemu
   ];
 
   nix = {
