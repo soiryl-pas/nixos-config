@@ -13,6 +13,8 @@
   in {
     devShells."${system}".default = pkgs.mkShell {
       packages = with pkgs; [
+	libGL
+	glew
       ] ++ [
 	dotnet-sdk
       ];

@@ -38,6 +38,7 @@
 	    nixpkgs.flake = nixpkgs;
 	    home-manager.flake = home-manager;
 	    zen-browser.flake = zen-browser;
+	    nix-alien.flake = nix-alien;
 	  };
 	}
 

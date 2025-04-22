@@ -3,6 +3,7 @@
   lib,
   pkgs,
   inputs,
+  system,
   ...
 }: {
   imports = [
@@ -16,7 +17,7 @@
     kitty
     man-pages
     man-pages-posix
-    inputs.nix-alien.packages.x86_64-linux.nix-alien
+    inputs.nix-alien.packages."${system}".nix-alien
   ];
 
   nix = {
