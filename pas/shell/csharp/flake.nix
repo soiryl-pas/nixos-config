@@ -13,18 +13,20 @@
   in {
     devShells."${system}".default = pkgs.mkShell {
       packages = with pkgs; [
-	libGL
-	glew
+	mono
       ] ++ [
 	dotnet-sdk
       ];
-      DOTNET_ROOT = "${dotnet-sdk}/share/dotnet";
-      /*
-      NIX_LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath ([
-	pkgs.stdenv.cc.cc
+      LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath (with pkgs; [
+	icu
+	freetype
+	libGL
+	pulseaudio
+	xorg.libX11
+	xorg.libXrandr
+	dotnet-sdk
       ]);
-      NIX_LD = "${pkgs.stdenv.cc.libc_bin}/bin/ld.so";
-      */
+      DOTNET_ROOT = "${dotnet-sdk}/share/dotnet";
     };
   };
 }

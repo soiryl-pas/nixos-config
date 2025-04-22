@@ -137,9 +137,11 @@
     nix-ld.enable = true;
   };
 
+  virtualisation.docker.enable = true;
+
   users.users.pas = {
     isNormalUser = true;
-    extraGroups = ["wheel" "input" "networkmanager" "vboxsf"];
+    extraGroups = ["wheel" "input" "networkmanager" "vboxsf" "docker" ];
   };
 
   hardware = {
