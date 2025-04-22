@@ -27,6 +27,7 @@
     haruna
     vlc
     cdrtools
+    imhex
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];

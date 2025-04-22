@@ -3,9 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-  };
-
-  outputs = inputs@{self, nixpkgs, ...}:
+  }; outputs = inputs@{self, nixpkgs, ...}:
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages."${system}";
@@ -14,7 +12,6 @@
     devShells."${system}".default = pkgs.mkShell {
       packages = with pkgs; [
 	mono
-	wineWowPackages.full
       ] ++ [
 	dotnet-sdk
       ];
