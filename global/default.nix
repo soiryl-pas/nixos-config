@@ -19,6 +19,7 @@
     man-pages-posix
     inputs.nix-alien.packages."${system}".nix-alien
     qemu
+    quickemu
   ];
 
   nix = {
