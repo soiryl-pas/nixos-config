@@ -28,7 +28,7 @@
     vlc
     cdrtools
     imhex
-    joycond-cemuhook
+    #joycond-cemuhook
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
