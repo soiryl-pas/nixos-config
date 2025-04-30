@@ -47,6 +47,7 @@
 	pkgs-old.gcc-arm-embedded-10 # This gdb version just works with VSCode breakpoints, so we'll just keep it
       ];
 
+      LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [ pkgs-old.libtinfo ];
     };
   };
 }

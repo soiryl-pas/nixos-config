@@ -11,6 +11,7 @@
     pkgs = nixpkgs.legacyPackages."${system}";
     qt = with pkgs.qt6; env "qt-${qtbase.version}" [
       qtwayland
+      qtdeclarative
     ];
   in {
     devShells."${system}".default = pkgs.mkShell {
