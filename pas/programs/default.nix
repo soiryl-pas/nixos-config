@@ -24,11 +24,10 @@
     clang-manpages
     okteta
     kdePackages.kfind
+    kdePackages.kmail
     haruna
     vlc
     cdrtools
-    imhex
-    #joycond-cemuhook
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
