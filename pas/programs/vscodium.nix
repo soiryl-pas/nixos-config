@@ -80,6 +80,7 @@
       "direnv.restart.automatic" = true;
       "debug.allowBreakpointsEverywhere" = true;
       "vim.useSystemClipboard" = true;
+      "redhat.telemetry.enabled" = false;
     };
   };
 }
