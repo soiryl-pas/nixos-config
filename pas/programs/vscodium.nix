@@ -15,6 +15,7 @@
       ms-vscode.hexeditor
       twxs.cmake
       ms-vscode.cmake-tools
+      vscjava.vscode-java-pack
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
 	name = "ARM";
