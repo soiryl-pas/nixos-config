@@ -28,6 +28,7 @@
     haruna
     vlc
     cdrtools
+    zotero
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
