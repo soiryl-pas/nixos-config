@@ -29,10 +29,10 @@
 	sha256 = "sha256-atDbLgc2R+X/wyGAxA6M0lDa03L5yFX1rbfpyZ8oKUU=";
       }
       {
-	name = "qt-support";
-	publisher = "KylinIdeTeam";
-	version = "0.4.2";
-	sha256 = "sha256-vrZDZnTcql+1CtVn1RQfAqIe3VLnLOndfohj3SXuxSc=";
+	name = "qtvsctools";
+	publisher = "tonka3000";
+	version = "0.11.0";
+	sha256 = "sha256-/iJzPI4xJY+Vg9B/ah+zdErq988aXdN/UL1V3fR2nJ8=";
       }
     ];
     keybindings = [
