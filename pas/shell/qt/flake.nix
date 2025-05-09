@@ -2,7 +2,7 @@
   description = "Nix-Flake based Qt6 Development";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
   };
 
   outputs = inputs@{self, nixpkgs, ...}:
@@ -16,19 +16,11 @@
   in {
     devShells."${system}".default = pkgs.mkShell {
       packages = (with pkgs; [
-	libGL
 	gdb
-	cmake
 	bashInteractive
+	qtcreator
+	libGL
       ]) ++ [ qt ];
     };
-
-/*
-    apps."${system}".qtcreator = {
-      type = "app";
-      program = "${pkgs.qtcreator}/bin/qtcreator";
-      xdgData = "${pkgs.qtcreator}/share";
-    };
-    */
   };
 }
