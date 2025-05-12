@@ -29,7 +29,6 @@
     vlc
     cdrtools
     zotero
-    wineWowPackages.waylandFull
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];

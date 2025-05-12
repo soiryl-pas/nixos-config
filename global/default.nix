@@ -20,6 +20,7 @@
     inputs.nix-alien.packages."${system}".nix-alien
     qemu
     quickemu
+    wineWowPackages.waylandFull
   ];
 
   nix = {
