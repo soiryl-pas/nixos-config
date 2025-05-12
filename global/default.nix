@@ -21,6 +21,7 @@
     qemu
     quickemu
     wineWowPackages.waylandFull
+    winetricks
   ];
 
   nix = {
