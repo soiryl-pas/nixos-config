@@ -15,11 +15,13 @@
     ];
   in {
     devShells."${system}".default = pkgs.mkShell {
+      QTPATH = qt;
       packages = (with pkgs; [
 	gdb
 	bashInteractive
 	qtcreator
 	libGL
+  clang-tools
       ]) ++ [ qt ];
     };
   };
