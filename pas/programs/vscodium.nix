@@ -47,7 +47,7 @@
       }
       {
 	key = "f4";
-	command = "workbench.action.terminal.new";
+	command = "workbench.action.terminal.toggleTerminal";
       }
       {
 	key = "shift+f4";
