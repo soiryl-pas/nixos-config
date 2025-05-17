@@ -13,7 +13,7 @@
     desmume
     mgba
     aseprite
-    godot_4
+    godot_4-mono
     onlyoffice-desktopeditors
     ghidra
     mangohud

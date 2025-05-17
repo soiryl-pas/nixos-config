@@ -24,7 +24,12 @@
     nixosConfigurations.pas-nixos = 
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
+      pkgs = import nixpkgs { inherit system;
+	config = {
+	  allowUnfree = true;
+	  permittedInsecurePackages = ["dotnet-sdk-6.0.428"];
+	};
+      };
       specialArgs = { inherit inputs; inherit system; inherit pkgs; };
     in nixpkgs.lib.nixosSystem {
       inherit system;
