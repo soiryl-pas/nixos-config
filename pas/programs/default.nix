@@ -30,6 +30,7 @@
     cdrtools
     zotero
     musescore
+    lmms
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
