@@ -29,9 +29,16 @@
     vlc
     cdrtools
     zotero
-    musescore
+    (musescore.overrideAttrs (finalAttrs: prevAttrs: {
+      version = "4.5.2";
+      src = pkgs.fetchFromGitHub {
+	inherit (prevAttrs.src) owner repo;
+	rev = "v${finalAttrs.version}";
+	sha256 = "sha256-9jafh9zyf+tuC+WU6nQIMBVm+Gqqcig8jS2R1h/YnIo=";
+      };
+      postInstall = "";
+    }))
     lmms
-    muse-sounds-manager
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
