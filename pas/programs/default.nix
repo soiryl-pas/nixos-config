@@ -55,7 +55,7 @@
     name = "MuseScore 4";
     comment = "Music Notation Application";
     icon = ./musescore.png;
-    exec = "mscore %U";
+    exec = "musescore %U";
     mimeType = [
       "application/x-musescore"
       "x-scheme-handler/musescore"
