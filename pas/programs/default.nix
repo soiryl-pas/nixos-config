@@ -50,4 +50,20 @@
       enable = true;
     };
   };
+
+  xdg.desktopEntries.musescore = {
+    name = "MuseScore 4";
+    comment = "Music Notation Application";
+    icon = ./musescore.png;
+    exec = "mscore %U";
+    mimeType = [
+      "application/x-musescore"
+      "x-scheme-handler/musescore"
+      "application/x-sf2"
+      "application/x-sf3"
+    ];
+    categories = [
+      "Audio" "Midi" "Qt"
+    ];
+  };
 }
