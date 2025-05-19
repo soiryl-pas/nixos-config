@@ -31,6 +31,7 @@
     zotero
     musescore
     lmms
+    muse-sounds-manager
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
