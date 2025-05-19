@@ -30,11 +30,11 @@
     cdrtools
     zotero
     (musescore.overrideAttrs (finalAttrs: prevAttrs: {
-      version = "4.5";
+      version = "4.4.1";
       src = pkgs.fetchFromGitHub {
 	inherit (prevAttrs.src) owner repo;
 	rev = "v${finalAttrs.version}";
-	sha256 = "sha256-7sD9AAuuDT0+VycKLL19DYdmuSLmt0Uy2NmoKQ1+c3A=";
+	sha256 = "sha256-eLtpLgXSc8L5y1Mg3s1wrxr09+/vBxNqJEtl9IoKYSM=";
       };
       postInstall = "";
     }))
