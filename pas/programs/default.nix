@@ -29,15 +29,6 @@
     vlc
     cdrtools
     zotero
-    (musescore.overrideAttrs (finalAttrs: prevAttrs: {
-      version = "4.4.1";
-      src = pkgs.fetchFromGitHub {
-	inherit (prevAttrs.src) owner repo;
-	rev = "v${finalAttrs.version}";
-	sha256 = "sha256-eLtpLgXSc8L5y1Mg3s1wrxr09+/vBxNqJEtl9IoKYSM=";
-      };
-      postInstall = "";
-    }))
     lmms
   ] ++ [
     inputs.zen-browser.packages."${system}".default
