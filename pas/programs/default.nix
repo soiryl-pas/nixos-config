@@ -29,6 +29,7 @@
     vlc
     cdrtools
     zotero
+    musescore
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
