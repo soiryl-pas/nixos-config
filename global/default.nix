@@ -22,6 +22,7 @@
     quickemu
     wineWowPackages.waylandFull
     winetricks
+    distrobox
   ];
 
   nix = {
@@ -141,7 +142,12 @@
     nix-ld.enable = true;
   };
 
-  virtualisation.docker.enable = true;
+  virtualisation = {
+    docker.enable = true;
+    podman = {
+      enable = true;
+    };
+  };
 
   users.users.pas = {
     isNormalUser = true;
