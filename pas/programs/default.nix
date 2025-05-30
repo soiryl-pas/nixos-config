@@ -31,6 +31,7 @@
     zotero
     lmms
     (callPackage ./musescore.nix {})
+    kooha
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
