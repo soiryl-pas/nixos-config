@@ -23,6 +23,7 @@
     wineWowPackages.waylandFull
     winetricks
     distrobox
+    terraform-providers.bigip
   ];
 
   nix = {
