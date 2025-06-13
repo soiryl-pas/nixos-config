@@ -32,6 +32,7 @@
     lmms
     (callPackage ./musescore.nix {})
     kooha
+    foliate
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
