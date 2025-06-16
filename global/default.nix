@@ -96,6 +96,7 @@
     noto-fonts
     noto-fonts-cjk-sans
   ];
+  fonts.enableDefaultPackages = true;
 
   services = {
     xserver = {
