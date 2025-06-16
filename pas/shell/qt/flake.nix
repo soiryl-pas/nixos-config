@@ -21,7 +21,7 @@
 	bashInteractive
 	qtcreator
 	libGL
-  clang-tools
+	clang-tools
       ]) ++ [ qt ];
     };
   };
