@@ -68,6 +68,7 @@
       type = "fcitx5";
       fcitx5.addons = with pkgs; [
 	fcitx5-mozc
+	kdePackages.fcitx5-qt
       ];
     };
   };
