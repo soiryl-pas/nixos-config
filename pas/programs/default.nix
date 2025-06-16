@@ -53,6 +53,22 @@
     };
   };
 
+	
+  /* When switching to nixos-25.05
+  i18n.inputMethod.fcitx5.settings.inputMethod = {
+    GroupOrder."0" = "Default";
+    "Groups/0" = {
+      Name = "Default";
+      "Default Layout" = "de-e1";
+      DefaultIM = "mozc";
+    };
+    "Groups/0/Items/0".Name = "keyboard-de-e1";
+    "Groups/0/Items/1".Name = "mozc";
+    "Groups/0/Items/2".Name = "pinyin";
+  };
+  */
+  
+
   xdg.desktopEntries.musescore = {
     name = "MuseScore 4";
     comment = "Music Notation Application";
