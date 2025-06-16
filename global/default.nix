@@ -69,6 +69,8 @@
       fcitx5.addons = with pkgs; [
 	fcitx5-mozc
 	kdePackages.fcitx5-qt
+	kdePackages.fcitx5-chinese-addons
+	fcitx5-tokyonight
       ];
       fcitx5.waylandFrontend = true;
     };
