@@ -70,6 +70,7 @@
 	fcitx5-mozc
 	kdePackages.fcitx5-qt
       ];
+      fcitx5.waylandFrontend = true;
     };
   };
 
