@@ -3,19 +3,18 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs-24-11.url = "github:nixos/nixpkgs/nixos-24.11";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nix-alien.url = "github:thiagokokada/nix-alien";
-
-    # My own flakes with apps that need non-global dependencies
-    #qt-custom.url = "./pas/shell/qt";
   };
 
   outputs = inputs @ {
     nixpkgs,
+    nixpkgs-24-11,
     home-manager,
     zen-browser,
     nix-alien,
@@ -24,13 +23,11 @@
     nixosConfigurations.pas-nixos = 
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system;
-	config = {
-	  allowUnfree = true;
-	  permittedInsecurePackages = ["dotnet-sdk-6.0.428"];
-	};
+      pkgs = import nixpkgs { inherit system; };
+      pkgs-24-11 = import nixpkgs-24-11 { inherit system;
+	config = { allowUnfree = true; };
       };
-      specialArgs = { inherit inputs; inherit system; inherit pkgs; };
+      specialArgs = { inherit inputs; inherit system; inherit pkgs-24-11; };
     in nixpkgs.lib.nixosSystem {
       inherit system;
       inherit specialArgs;
@@ -52,6 +49,8 @@
 	  custom = {
 	    defaultDisplayManager = "greetd";
 	  };
+	  nixpkgs.config.allowUnfree = true;
+	  nixpkgs.config.permittedInsecurePackages = ["dotnet-sdk-6.0.428"];
 	}
 
 	home-manager.nixosModules.home-manager

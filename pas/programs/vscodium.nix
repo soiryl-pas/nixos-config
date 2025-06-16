@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-24-11, ... }:
 
 {
   programs.vscode = {
@@ -10,7 +10,6 @@
 	ms-python.python
 	ms-python.vscode-pylance
 	xaver.clang-format
-	ms-vscode.cpptools
 	mkhl.direnv
 	dracula-theme.theme-dracula
 	ms-vscode.hexeditor
@@ -22,7 +21,8 @@
 	vscjava.vscode-java-test
 	vscjava.vscode-java-debug
 	vscjava.vscode-java-dependency
-      ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+      ] ++ [ pkgs-24-11.vscode-extensions.ms-vscode.cpptools ] 
+      ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
 	{
 	  name = "ARM";
 	  publisher = "dan-c-underwood";
