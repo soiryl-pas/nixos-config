@@ -35,12 +35,6 @@
 	  version = "0.11.0";
 	  sha256 = "sha256-/iJzPI4xJY+Vg9B/ah+zdErq988aXdN/UL1V3fR2nJ8=";
 	}
-	{
-	  name = "memory-view";
-	  publisher = "mcu-debug";
-	  version = "0.0.25";
-	  sha256 = "sha256-Tck3MYKHJloiXChY/GbFvpBgLBzu6yFfcBd6VTpdDkc=";
-	}
       ];
       keybindings = [
 	{
