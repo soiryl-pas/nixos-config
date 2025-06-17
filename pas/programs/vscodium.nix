@@ -14,6 +14,7 @@
 	ms-python.vscode-pylance
 	ms-vscode.hexeditor
 	twxs.cmake
+	llvm-vs-code-extensions.vscode-clangd
 	ms-vscode.cmake-tools
 	redhat.java
 	vscjava.vscode-maven
