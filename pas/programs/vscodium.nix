@@ -39,7 +39,15 @@
       keybindings = [
 	{
 	  key = "f1";
+	  command = "workbench.action.showCommands";
+	}
+	{
+	  key = "ctrl+p";
 	  command = "workbench.action.quickOpenWithModes";
+	}
+	{
+	  key = "ctrl+p";
+	  command = "-extension.vim_ctrl+p";
 	}
 	{
 	  key = "shift+f1";
