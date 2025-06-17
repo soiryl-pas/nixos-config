@@ -7,7 +7,6 @@
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
 	vscodevim.vim
-	xaver.clang-format
 	mkhl.direnv
 	dracula-theme.theme-dracula
 	ms-python.python
@@ -75,7 +74,7 @@
 	}
       ];
       userSettings = {
-	"editor.defaultFormatter" = "xaver.clang-format";
+	"editor.defaultFormatter" = "llvm-vs-code-extensions.vscode-clangd";
 	"git.confirmSync" = false;
 	"git.autofetch" = true;
 	"workbench.colorTheme" = "Dracula Theme";
