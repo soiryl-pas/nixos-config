@@ -80,6 +80,10 @@
 	  key = "ctrl+[Backslash]";
 	  command = "direnv.reset";
 	}
+	{
+	  key = "ctrl+w";
+	  command = "-extension.vim_ctrl+w";
+	}
       ];
       userSettings = {
 	"editor.defaultFormatter" = "llvm-vs-code-extensions.vscode-clangd";
