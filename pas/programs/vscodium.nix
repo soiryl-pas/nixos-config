@@ -36,10 +36,10 @@
 	  sha256 = "sha256-/iJzPI4xJY+Vg9B/ah+zdErq988aXdN/UL1V3fR2nJ8=";
 	}
 	{
-	  name = "cppdebug";
-	  publisher = "kylinideteam";
-	  version = "0.0.9";
-	  sha256 = "sha256-g6hKN3urPaC+wqDHPKeBttI3TXMQUEJ8MD2bnfhRNck=";
+	  name = "debug";
+	  publisher = "webfreak";
+	  version = "0.27.0";
+	  sha256 = "sha256-p/k5UcXldXKFKbPbnW603Jsut53n01azeDhWMDSd4nw=";
 	}
       ];
       keybindings = [
