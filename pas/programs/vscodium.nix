@@ -98,6 +98,7 @@
 	"workbench.colorTheme" = "Dracula Theme";
 	"direnv.restart.automatic" = true;
 	"debug.allowBreakpointsEverywhere" = true;
+	"debug.openDebug" = "openOnSessionStart";
 	"vim.useSystemClipboard" = true;
 	"redhat.telemetry.enabled" = false;
       };
