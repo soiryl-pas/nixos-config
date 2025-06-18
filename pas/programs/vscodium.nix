@@ -36,10 +36,10 @@
 	  sha256 = "sha256-/iJzPI4xJY+Vg9B/ah+zdErq988aXdN/UL1V3fR2nJ8=";
 	}
 	{
-	  name = "debug";
-	  publisher = "webfreak";
-	  version = "0.27.0";
-	  sha256 = "sha256-p/k5UcXldXKFKbPbnW603Jsut53n01azeDhWMDSd4nw=";
+	  name = "vscode-lldb";
+	  publisher = "vadimcn";
+	  version = "1.11.5";
+	  sha256 = "sha256-AtUNfk2AFJ6NZnIRlnPXXXO8IluyI2/kg7UxQHrWg+w=";
 	}
       ];
       keybindings = [
