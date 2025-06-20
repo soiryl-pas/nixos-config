@@ -33,6 +33,7 @@
     (callPackage ./musescore.nix {})
     kooha
     foliate
+    gimp3
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
