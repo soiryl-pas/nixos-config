@@ -2,7 +2,6 @@
   # Modelled after https://github.com/pret/pmd-sky/blob/main/flake.nix
   # This build was tested on an x86_64 system. If you use a different one, make sure to change that attribute
   # DevkitNix is system agnostic, so it could work for other systems as well, but this hasn't been tested yet for this repository
-  # The nixpkgs flake from the local nix registry will be used
 
   # Some tools require /bin/bash to be present, which is not the case per default on NixOS.
   # This can be resolved with two methods:
@@ -44,10 +43,8 @@
 	mgba
 	clang-tools
       ] ++ [
-	pkgs-old.gcc-arm-embedded-10 # This gdb version just works with VSCode breakpoints, so we'll just keep it
+	pkgs-old.gcc-arm-embedded-10 # This gdb version just works with VSCode C-Cpp-Extension breakpoints, so we'll keep it
       ];
-
-      LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [ pkgs-old.libtinfo ];
     };
   };
 }
