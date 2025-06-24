@@ -29,11 +29,19 @@
 	  version = "1.4.0";
 	  sha256 = "sha256-atDbLgc2R+X/wyGAxA6M0lDa03L5yFX1rbfpyZ8oKUU=";
 	}
+	/*
 	{
 	  name = "qtvsctools";
 	  publisher = "tonka3000";
 	  version = "0.11.0";
 	  sha256 = "sha256-/iJzPI4xJY+Vg9B/ah+zdErq988aXdN/UL1V3fR2nJ8=";
+	}
+	*/
+	{
+	  name = "qt";
+	  publisher = "theqtcompany";
+	  version = "1.2.0";
+	  sha256 = "sha256-GBMx5pPVPgH56RioV5wZLyNrLQUBcIwjjfOuvwLPtZc=";
 	}
 	{
 	  name = "vscode-lldb";
