@@ -38,10 +38,28 @@
 	}
 	*/
 	{
-	  name = "qt";
+	  name = "qt-core";
 	  publisher = "theqtcompany";
-	  version = "1.2.0";
-	  sha256 = "sha256-GBMx5pPVPgH56RioV5wZLyNrLQUBcIwjjfOuvwLPtZc=";
+	  version = "1.4.0";
+	  sha256 = "sha256-QiZc6WNh4Q67beyFuiSqkG5G4zRMNmyjuZhWW7ZATO0=";
+	}
+	{
+	  name = "qt-cpp";
+	  publisher = "theqtcompany";
+	  version = "1.4.0";
+	  sha256 = "sha256-PDD0e8duM/5JEEidTMjOVewnYuV3wXJ+sZJSCDearx8=";
+	}
+	{
+	  name = "qt-qml";
+	  publisher = "theqtcompany";
+	  version = "1.4.0";
+	  sha256 = "sha256-9C0EC4vnulg0OjGNU0SfMA2R6+OaHVCqDsipY2TAqxo=";
+	}
+	{
+	  name = "qt-ui";
+	  publisher = "theqtcompany";
+	  version = "1.4.0";
+	  sha256 = "sha256-8BhwyI1nH24tiT7A8RHEq0ZrIElbcaDcUoqxQQ/SVPk=";
 	}
 	{
 	  name = "vscode-lldb";
