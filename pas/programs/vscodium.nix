@@ -129,6 +129,7 @@
 	"lldb.displayFormat" = "hex";
 	"lldb.dereferencePointers" = true;
 	"lldb.consoleMode" = "commands";
+	"qt-qml.doNotAskForQmllsDownload" = true;
       };
     };
   };
