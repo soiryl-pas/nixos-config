@@ -12,6 +12,7 @@
     dolphin-emu
     desmume
     retroarch
+    libretro.desmume
     mgba
     aseprite
     godot_4-mono
