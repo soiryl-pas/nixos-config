@@ -11,6 +11,7 @@
     discord
     dolphin-emu
     desmume
+    retroarch
     mgba
     aseprite
     godot_4-mono
