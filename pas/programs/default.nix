@@ -11,8 +11,9 @@
     discord
     dolphin-emu
     desmume
-    retroarch
-    libretro.desmume
+    (retroarch.withCores (cores: with cores; [
+      desmume
+    ]))
     mgba
     aseprite
     godot_4-mono
