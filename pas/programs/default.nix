@@ -10,10 +10,7 @@
     neofetch
     discord
     dolphin-emu
-    desmume
-    (retroarch.withCores (cores: with cores; [
-      desmume
-    ]))
+    melonDS
     mgba
     aseprite
     godot_4-mono
