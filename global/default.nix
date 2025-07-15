@@ -23,7 +23,6 @@
     wineWowPackages.waylandFull
     winetricks
     distrobox
-    kdePackages.qqc2-desktop-style
   ];
 
   nix = {
