@@ -42,8 +42,6 @@
   programs = {
     git = {
       enable = true;
-      userName = "Someone0123-pas";
-      userEmail = "Jemand0123@protonmail.com";
       extraConfig = {
         advice.addIgnoredFile = false;
 	pull.rebase = false;
@@ -52,6 +50,11 @@
     htop.enable = true;
     firefox = {
       enable = true;
+    };
+    neovim = {
+      plugins = with pkgs.vimPlugins; [
+	jedi-vim
+      ];
     };
   };
 
