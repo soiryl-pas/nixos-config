@@ -52,6 +52,7 @@
       enable = true;
     };
     neovim = {
+      enable = true;
       plugins = with pkgs.vimPlugins; [
 	jedi-vim
       ];
