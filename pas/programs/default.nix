@@ -12,6 +12,7 @@
     dolphin-emu
     melonDS
     mgba
+    mesen
     aseprite
     godot_4-mono
     onlyoffice-desktopeditors
