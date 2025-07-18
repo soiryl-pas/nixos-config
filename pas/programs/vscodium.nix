@@ -130,6 +130,7 @@
 	"lldb.dereferencePointers" = true;
 	"lldb.consoleMode" = "commands";
 	"qt-qml.doNotAskForQmllsDownload" = true;
+	"window.openFilesInNewWindow" = "on";
       };
     };
   };
