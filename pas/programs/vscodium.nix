@@ -67,6 +67,12 @@
 	  version = "1.11.5";
 	  sha256 = "sha256-AtUNfk2AFJ6NZnIRlnPXXXO8IluyI2/kg7UxQHrWg+w=";
 	}
+	{
+	  name = "vscode-pylance";
+	  publisher = "ms-python";
+	  version = "2023.6.40";
+	  sha256 = "sha256-J5nRoQjUVKaMqs0QJFY0vzutjWZ9dH6O7FXI+ZZIaBQ=";
+	}
       ];
       keybindings = [
 	{
@@ -131,6 +137,9 @@
 	"lldb.consoleMode" = "commands";
 	"qt-qml.doNotAskForQmllsDownload" = true;
 	"window.openFilesInNewWindow" = "on";
+	"python.analysis.inlayHints.functionReturnTypes" = true;
+	"python.analysis.inlayHints.variableTypes" = true;
+	"python.analysis.typeCheckingMode" = "strict";
       };
     };
   };
