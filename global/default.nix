@@ -135,6 +135,7 @@
       configure.customRC = ''
 	set shiftwidth=2
 	set number
+	set expandtab
       '';
     };
     vim.enable = true;
