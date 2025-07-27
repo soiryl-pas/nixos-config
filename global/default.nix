@@ -153,7 +153,10 @@
     };
 
     nix-ld.enable = true;
-    git.prompt.enable = true;
+    git = {
+      enable = true;
+      prompt.enable = true;
+    };
   };
 
   virtualisation = {

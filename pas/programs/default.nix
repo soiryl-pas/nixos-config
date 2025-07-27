@@ -17,6 +17,7 @@
     godot_4-mono
     onlyoffice-desktopeditors
     ghidra
+    cutter
     mangohud
     geogebra6
     prismlauncher
