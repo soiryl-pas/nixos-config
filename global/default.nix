@@ -154,6 +154,7 @@
 
     nix-ld.enable = true;
     git = {
+      enable = true;
       prompt.enable = true;
     };
   };
