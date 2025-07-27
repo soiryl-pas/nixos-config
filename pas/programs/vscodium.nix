@@ -122,6 +122,14 @@
 	  key = "ctrl+w";
 	  command = "-extension.vim_ctrl+w";
 	}
+        {
+          key = "f10";
+          command = "-extension.node-debug.startWithStopOnEntry";
+        }
+        {
+          key = "f10";
+          command = "workbench.action.tasks.runTask";
+        }
       ];
       userSettings = {
 	"editor.defaultFormatter" = "llvm-vs-code-extensions.vscode-clangd";
