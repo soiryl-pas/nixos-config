@@ -140,6 +140,7 @@
 	"python.analysis.inlayHints.functionReturnTypes" = true;
 	"python.analysis.inlayHints.variableTypes" = true;
 	"python.analysis.typeCheckingMode" = "strict";
+	"window.zoomLevel" = -1;
       };
     };
   };
