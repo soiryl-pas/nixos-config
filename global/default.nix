@@ -153,6 +153,7 @@
     };
 
     nix-ld.enable = true;
+    git.prompt.enable = true;
   };
 
   virtualisation = {
