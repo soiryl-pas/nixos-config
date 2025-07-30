@@ -36,6 +36,7 @@
     kooha
     foliate
     gimp3
+    element-desktop
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
