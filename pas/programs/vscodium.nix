@@ -129,6 +129,7 @@
         {
           key = "f10";
           command = "workbench.action.tasks.runTask";
+          when = "!inDebugMode";
         }
       ];
       userSettings = {
