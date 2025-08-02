@@ -8,35 +8,38 @@
 
   home.packages = with pkgs; [
     neofetch
+    onlyoffice-desktopeditors
     discord
+    element-desktop
+    geogebra6
+
     dolphin-emu
     melonDS
     mgba
     mesen
+    mdbook
+    mangohud
     aseprite
     godot_4-mono
-    onlyoffice-desktopeditors
+    okteta
     ghidra
-    cutter
-    mangohud
-    geogebra6
+    (cutter.withPlugins (ps: with ps; [ ]))
+    #(rizin.withPlugins (ps: with ps; [ jsdec rz-ghidra sigdb ]))
+
     prismlauncher
-    mdbook
     yt-dlp
     clang-manpages
-    okteta
     kdePackages.kfind
     kdePackages.kmail
     haruna
     vlc
     cdrtools
-    zotero
     lmms
-    (callPackage ./musescore.nix {})
     kooha
+    (callPackage ./musescore.nix {})
     foliate
     gimp3
-    element-desktop
+    zotero
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
