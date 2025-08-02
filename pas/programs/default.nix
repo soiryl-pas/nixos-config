@@ -23,8 +23,8 @@
     godot_4-mono
     okteta
     ghidra
-    (cutter.withPlugins (ps: with ps; [ ]))
-    #(rizin.withPlugins (ps: with ps; [ jsdec rz-ghidra sigdb ]))
+    (cutter.withPlugins (ps: with ps; [ jsdec rz-ghidra sigdb ]))
+    #(rizin.withPlugins (ps: with ps; [ ]))
 
     prismlauncher
     yt-dlp
