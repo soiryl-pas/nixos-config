@@ -150,6 +150,7 @@
 	"python.analysis.inlayHints.variableTypes" = true;
 	"python.analysis.typeCheckingMode" = "strict";
 	"window.zoomLevel" = -1;
+        "search.useIgnoreFiles" = false;
       };
     };
   };
