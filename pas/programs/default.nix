@@ -32,8 +32,9 @@
     kdePackages.kmail
     haruna
     vlc
+    fluidsynth
+
     cdrtools
-    lmms
     kooha
     (callPackage ./musescore.nix {})
     foliate
