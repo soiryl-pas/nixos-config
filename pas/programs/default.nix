@@ -33,11 +33,12 @@
     haruna
     vlc
     fluidsynth
+    (callPackage ./musescore.nix {})
+    (callPackage ./lmms.nix {})
+    rosegarden
 
     cdrtools
     kooha
-    (callPackage ./musescore.nix {})
-    (callPackage ./lmms.nix {})
     foliate
     gimp3
     zotero
