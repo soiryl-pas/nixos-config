@@ -37,6 +37,7 @@
     cdrtools
     kooha
     (callPackage ./musescore.nix {})
+    (callPackage ./lmms.nix {})
     foliate
     gimp3
     zotero
@@ -87,6 +88,19 @@
     ];
     categories = [
       "Audio" "Midi" "Qt"
+    ];
+  };
+
+  xdg.desktopEntries.lmms = {
+    name = "LMMS";
+    comment = "Digital audio workstation";
+    icon = ./lmms.png;
+    exec = "lmms %U";
+    mimeType = [
+      "audio/midi"
+    ];
+    categories = [
+      "Audio" "Midi"
     ];
   };
 }
