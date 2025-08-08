@@ -25,12 +25,12 @@
     ghidra
     rizin
     (conan.overrideAttrs (final: prev: {
-      version = "2.19.1";
+      version = "2.18.0";
       src = pkgs.fetchFromGitHub {
         owner = "conan-io";
         repo = "conan";
         tag = final.version;
-        hash = "sha256-ojBw8SIZSzKT3j0nQw7ZEPOeGucdnwg4lpc4MG81K/I=";
+        hash = "sha256-OTI/VPIHKSid9cXGjDJUJlPx58LSTTpVXnw95i4Oyvo=";
       };
       disabledTestPaths = prev.disabledTestPaths ++ [ "test/functional/command/test_new.py" ];
     }))
