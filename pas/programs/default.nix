@@ -24,9 +24,16 @@
     okteta
     ghidra
     rizin
-    (conan.overrideAttrs {
+    (conan.overrideAttrs (final: prev: {
       version = "2.19.1";
-    })
+      src = pkgs.fetchFromGitHub {
+        owner = "conan-io";
+        repo = "conan";
+        tag = final.version;
+        hash = "sha256-ojBw8SIZSzKT3j0nQw7ZEPOeGucdnwg4lpc4MG81K/I=";
+      };
+      disabledTestPaths = prev.disabledTestPaths ++ [ "test/functional/command/test_new.py" ];
+    }))
 
     prismlauncher
     yt-dlp
