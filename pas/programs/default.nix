@@ -24,7 +24,9 @@
     okteta
     ghidra
     rizin
-    conan
+    (conan.overrideAttrs {
+      version = "2.19.1";
+    })
 
     prismlauncher
     yt-dlp
