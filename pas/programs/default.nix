@@ -24,6 +24,7 @@
     okteta
     ghidra
     rizin
+    conan
 
     prismlauncher
     yt-dlp
