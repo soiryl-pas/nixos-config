@@ -25,15 +25,16 @@
     ghidra
     rizin
     (conan.overrideAttrs (final: prev: {
-      version = "2.18.0";
+      version = "2.19.1";
       src = pkgs.fetchFromGitHub {
         owner = "conan-io";
         repo = "conan";
         tag = final.version;
-        hash = "sha256-OTI/VPIHKSid9cXGjDJUJlPx58LSTTpVXnw95i4Oyvo=";
+        hash = "sha256-ojBw8SIZSzKT3j0nQw7ZEPOeGucdnwg4lpc4MG81K/I=";
       };
       disabledTestPaths = prev.disabledTestPaths ++ [ "test/functional/command/test_new.py" ];
     }))
+    cmake
 
     prismlauncher
     yt-dlp
