@@ -34,7 +34,6 @@
       };
       disabledTestPaths = prev.disabledTestPaths ++ [ "test/functional/command/test_new.py" ];
     }))
-    cmake
 
     prismlauncher
     yt-dlp
