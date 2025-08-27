@@ -32,7 +32,7 @@
       inherit system;
       inherit specialArgs;
       modules = [
-	./global
+	./pas-nixos
 
 	# Flakes in Registry
 	{
