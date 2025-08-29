@@ -52,7 +52,6 @@
     foliate
     gimp3
     zotero
-    remmina
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
