@@ -10,6 +10,7 @@
     };
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nix-alien.url = "github:thiagokokada/nix-alien";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs = inputs @ {
@@ -18,6 +19,7 @@
     home-manager,
     zen-browser,
     nix-alien,
+    nixos-hardware,
     ...
   }: {
     nixosConfigurations.pas-nixos = 
@@ -80,6 +82,7 @@
       inherit specialArgs;
       modules = [
         ./pas-p50
+        nixos-hardware.nixosModules.lenovo-thinkpad-p50
 
         # Flakes in Registry
 	{
