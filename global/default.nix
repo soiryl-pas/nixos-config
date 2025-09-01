@@ -43,7 +43,6 @@
   };
 
   networking = {
-    hostName = "pas-nixos";
     networkmanager.enable = true;
   };
 
