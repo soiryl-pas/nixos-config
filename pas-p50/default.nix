@@ -7,6 +7,11 @@
   networking.hostName = "pas-p50";
   services.xserver.dpi = 96;
 
+  hardware.nvidia.prime = {
+    offload.enable = false;
+    sync.enable = true;
+  };
+
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
   #
