@@ -1,5 +1,5 @@
 {
-  description = "Someone0123-pas NixOS Configuration";
+  description = "Soiryl-pas NixOS Configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
@@ -35,6 +35,53 @@
 	./pas-nixos
 
 	# Flakes in Registry
+	{
+	  nix.registry = {
+	    nixpkgs.flake = nixpkgs;
+	    home-manager.flake = home-manager;
+	    zen-browser.flake = zen-browser;
+	    nix-alien.flake = nix-alien;
+	  };
+	}
+
+	# Custom Settings
+	{
+	  custom = {
+	    defaultDisplayManager = "greetd";
+	  };
+	  nixpkgs.config.allowUnfree = true;
+	  nixpkgs.config.permittedInsecurePackages = ["dotnet-sdk-6.0.428"];
+	}
+
+	home-manager.nixosModules.home-manager
+	{
+	  home-manager = {
+	    useGlobalPkgs = true;
+	    useUserPackages = true;
+	    backupFileExtension = "orig.home";
+	    extraSpecialArgs = specialArgs;
+	    users.pas = import ./pas;
+	  };
+	}
+      ];
+    };
+
+    nixosConfigurations.pas-p50 =
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs { inherit system; };
+      pkgs-24-11 = import nixpkgs-24-11 {
+        inherit system;
+        config = { allowUnfree = true; };
+      };
+      specialArgs = { inherit inputs; inherit system; inherit pkgs-24-11; };
+    in nixpkgs.lib.nixosSystem {
+      inherit system;
+      inherit specialArgs;
+      modules = [
+        ./pas-p50
+
+        # Flakes in Registry
 	{
 	  nix.registry = {
 	    nixpkgs.flake = nixpkgs;
