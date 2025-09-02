@@ -10,8 +10,8 @@
 
   hardware.nvidia.open = false;
   hardware.nvidia.prime = {
-    offload.enable = false;
-    sync.enable = true;
+    #offload.enable = false;
+    #sync.enable = true;
   };
 
   # This option defines the first version of NixOS you have installed on this particular machine,
