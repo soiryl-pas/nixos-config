@@ -6,9 +6,8 @@
 
   networking.hostName = "pas-p50";
   services.xserver.dpi = 96;
-  services.xserver.videoDrivers = [ "nvidia" ];
 
-  hardware.nvidia.open = false;
+  hardware.nvidia.open = true;
   hardware.nvidia.prime = {
     #offload.enable = false;
     #sync.enable = true;
