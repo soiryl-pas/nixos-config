@@ -75,7 +75,7 @@
 	GroupOrder."0" = "Default";
 	"Groups/0" = {
 	  Name = "Default";
-	  "Default Layout" = "de-e1";
+	  "Default Layout" = "eu";
 	  DefaultIM = "mozc";
 	};
 	"Groups/0/Items/0".Name = "keyboard-de-e1";
