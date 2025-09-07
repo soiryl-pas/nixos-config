@@ -81,7 +81,7 @@
 	"Groups/0/Items/0".Name = "keyboard-de-e1";
 	"Groups/0/Items/1".Name = "mozc";
 	"Groups/0/Items/2".Name = "pinyin";
-        "Groups/0/Items/3".Name = "keyboard-eurkey";
+        "Groups/0/Items/3".Name = "keyboard-eu";
       };
     };
   };
