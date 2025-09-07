@@ -94,6 +94,7 @@
         "Groups/1/Items/0".Name = "keyboard-eu";
         "Groups/1/Items/1".Name = "mozc";
         "Groups/1/Items/2".Name = "pinyin";
+        "Groups/1/Items/3".Name = "keyboard-de";
       };
     };
   };
@@ -113,7 +114,7 @@
     xserver = {
       xkb = {
         layout = "de";
-        options = "eurosign:e";
+        options = "eurosign:e,capslock:esc";
       };
 
       desktopManager.runXdgAutostartIfNone = true; # for Fcitx5 to work in WMs
