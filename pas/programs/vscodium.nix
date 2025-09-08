@@ -154,11 +154,14 @@
         "search.collapseResults" = "alwaysCollapse";
         "keyboard.dispatch" = "keyCode";
         "workbench.colorCustomizations" = {
-          "statusBar.background" = "#005f5f";
+          "statusBar.background" = "#280942";
           "statusBar.noFolderBackground" = "#005f5f";
-          "statusBar.debuggingBackground" = "#005f5f";
+          "statusBar.debuggingBackground" = "#013a19";
           "statusBar.foreground" = "#ffffff";
           "statusBar.debuggingForeground" = "#ffffff";
+        };
+        "vim" = {
+          "statusBarColors.insert" = [ "#660e70" "#ffffff" ];
         };
       };
     };
