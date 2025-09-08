@@ -114,7 +114,7 @@
     xserver = {
       xkb = {
         layout = "de";
-        options = "eurosign:e,caps:escape";
+        options = "eurosign:e,caps:swapescape";
       };
 
       desktopManager.runXdgAutostartIfNone = true; # for Fcitx5 to work in WMs
