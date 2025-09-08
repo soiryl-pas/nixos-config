@@ -153,6 +153,13 @@
         "search.useIgnoreFiles" = false;
         "search.collapseResults" = "alwaysCollapse";
         "keyboard.dispatch" = "keyCode";
+        "workbench.colorCustomizations" = {
+          "statusBar.background" = "#005f5f";
+          "statusBar.noFolderBackground" = "#005f5f";
+          "statusBar.debuggingBackground" = "#005f5f";
+          "statusBar.foreground" = "#ffffff";
+          "statusBar.debuggingForeground" = "#ffffff";
+        };
       };
     };
   };
