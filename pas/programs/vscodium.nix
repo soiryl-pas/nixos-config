@@ -160,9 +160,7 @@
           "statusBar.foreground" = "#ffffff";
           "statusBar.debuggingForeground" = "#ffffff";
         };
-        "vim" = {
-          "statusBarColors.insert" = [ "#660e70" "#ffffff" ];
-        };
+        "vim.statusBarColors.insert" = [ "#660e70" "#ffffff" ];
       };
     };
   };
