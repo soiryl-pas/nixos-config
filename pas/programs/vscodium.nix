@@ -161,6 +161,13 @@
           "statusBar.foreground" = "#ffffff";
           "statusBar.debuggingForeground" = "#ffffff";
         };
+        "vim.handleKeys" = {
+          "<C-f>" = false;
+        };
+        "editor.semanticTokenColorCustomizations.rules" = {
+          "enumMember" = "#f04b72";
+          "macro" = "#05c79a";
+        };
       };
     };
   };
