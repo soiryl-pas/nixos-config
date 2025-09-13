@@ -164,7 +164,7 @@
         "vim.handleKeys" = {
           "<C-f>" = false;
         };
-        "editor.semanticTokenColorCustomizations.rules" = {
+        "editor.semanticTokenColorCustomizations"."rules" = {
           "enumMember" = "#f04b72";
           "macro" = "#05c79a";
         };
