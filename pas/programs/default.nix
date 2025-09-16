@@ -35,6 +35,7 @@
       };
       disabledTestPaths = prev.disabledTestPaths ++ [ "test/functional/command/test_new.py" ];
     }))
+    jetbrains.rider
 
     prismlauncher
     yt-dlp
