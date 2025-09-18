@@ -6,8 +6,11 @@
 
   networking.hostName = "pas-nixos";
 
-  hardware.graphics.extraPackages = with pkgs; [
-    amdvlk
+  environment.systemPackages = [
+    (pkgs.writeShellScriptBin "amdvlk-run" ''
+      export VK_DRIVER_FILES="${pkgs.amdvlk}/share/vulkan/icd.d/amd_icd64.json:${pkgs.driversi686Linux.amdvlk}/share/vulkan/icd.d/amd_icd32.json"
+      exec "$@"
+    '')
   ];
 
   # This option defines the first version of NixOS you have installed on this particular machine,
