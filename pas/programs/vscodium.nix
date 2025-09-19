@@ -95,7 +95,7 @@
 	}
 	{
 	  key = "f4";
-	  command = "workbench.action.terminal.toggleTerminal";
+          command = "workbench.action.createTerminalEditorSide";
 	}
 	{
 	  key = "shift+f4";
