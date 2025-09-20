@@ -175,6 +175,9 @@
     git = {
       enable = true;
       prompt.enable = true;
+      config = {
+        init.defaultBranch = "main";
+      };
     };
   };
 
