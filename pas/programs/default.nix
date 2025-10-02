@@ -9,7 +9,7 @@
 
   home.packages = with pkgs; [
     devenv
-    nixfmt-classic
+    nixfmt-rfc-style
     nixd
     neofetch
     onlyoffice-desktopeditors
