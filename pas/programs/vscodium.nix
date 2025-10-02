@@ -168,6 +168,11 @@
           "enumMember" = "#f04b72";
           "macro" = "#05c79a";
         };
+        "nix" = {
+          "serverPath" = "nixd";
+          "enableLanguageServer" = true;
+          "formatterPath" = "nixfmt";
+        };
       };
     };
   };
