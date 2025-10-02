@@ -9,6 +9,8 @@
 
   home.packages = with pkgs; [
     devenv
+    nixfmt-classic
+    nixd
     neofetch
     onlyoffice-desktopeditors
     discord

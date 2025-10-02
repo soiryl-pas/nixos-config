@@ -22,6 +22,7 @@
 	vscjava.vscode-java-debug
 	vscjava.vscode-java-dependency
         rust-lang.rust-analyzer
+        jnoortheen.nix-ide
       ] ++ [ pkgs-24-11.vscode-extensions.ms-vscode.cpptools ] 
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
 	{
