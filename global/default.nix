@@ -48,6 +48,7 @@
 
   networking = {
     networkmanager.enable = true;
+    wireguard.enable = true;
   };
 
   time.timeZone = "Europe/Vienna";
