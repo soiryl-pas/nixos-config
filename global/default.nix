@@ -22,6 +22,7 @@
     wineWowPackages.waylandFull
     winetricks
     distrobox
+    wireguard-tools
   ];
 
   nix = {
