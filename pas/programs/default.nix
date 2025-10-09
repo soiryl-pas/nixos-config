@@ -15,7 +15,7 @@
     onlyoffice-desktopeditors
     discord
     element-desktop
-    mattermost
+    mattermost-desktop
     geogebra6
 
     dolphin-emu
