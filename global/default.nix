@@ -183,6 +183,8 @@
         init.defaultBranch = "main";
       };
     };
+
+    gnupg.agent.enable = true;
   };
 
   virtualisation = {
