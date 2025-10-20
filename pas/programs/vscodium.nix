@@ -133,6 +133,10 @@
           command = "workbench.action.tasks.runTask";
           when = "!inDebugMode";
         }
+        {
+          key = "capslock";
+          command = "extension.vim_escape";
+        }
       ];
       userSettings = {
 	"git.confirmSync" = false;
