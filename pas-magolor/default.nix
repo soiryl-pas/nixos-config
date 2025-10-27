@@ -4,7 +4,7 @@
     ../global/default.nix
   ];
 
-  networking.hostName = "pas-nixos";
+  networking.hostName = "pas-magolor";
 
   environment.systemPackages = [
     (pkgs.writeShellScriptBin "amdvlk-run" ''

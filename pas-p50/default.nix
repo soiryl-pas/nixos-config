@@ -4,7 +4,7 @@
     ../global/default.nix
   ];
 
-  networking.hostName = "pas-p50";
+  networking.hostName = "pas-waddledee";
   services.xserver.dpi = 128;
 
   hardware.nvidia.prime = {

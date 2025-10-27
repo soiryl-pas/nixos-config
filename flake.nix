@@ -22,7 +22,7 @@
     nixos-hardware,
     ...
   }: {
-    nixosConfigurations.pas-nixos = 
+    nixosConfigurations.pas-magolor = 
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
@@ -34,7 +34,7 @@
       inherit system;
       inherit specialArgs;
       modules = [
-	./pas-nixos
+	./pas-magolor
 
 	# Flakes in Registry
 	{
@@ -68,7 +68,7 @@
       ];
     };
 
-    nixosConfigurations.pas-p50 =
+    nixosConfigurations.pas-waddledee =
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
@@ -81,7 +81,7 @@
       inherit system;
       inherit specialArgs;
       modules = [
-        ./pas-p50
+        ./pas-waddledee
         nixos-hardware.nixosModules.lenovo-thinkpad-p50
 
         # Flakes in Registry
