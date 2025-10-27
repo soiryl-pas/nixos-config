@@ -110,7 +110,7 @@
 	    useUserPackages = true;
 	    backupFileExtension = "orig.home";
 	    extraSpecialArgs = specialArgs;
-	    users.pas = import ./pas-p50/home-manager-configuration.nix;
+	    users.pas = import ./pas-waddledee/home-manager-configuration.nix;
 	  };
 	}
       ];
