@@ -12,16 +12,16 @@ in
 
       greetd = {
 	enable = true;
-	vt = 7;
 	settings = {
 	  default_session.command = ''
-	    ${pkgs.greetd.tuigreet}/bin/tuigreet \
+	    ${pkgs.tuigreet}/bin/tuigreet \
 	    --sessions ${config.services.displayManager.sessionData.desktops}/share/wayland-sessions \
 	    --xsessions ${config.services.displayManager.sessionData.desktops}/share/xsessions \
 	    --time \
 	    --asterisks \
 	    --user-menu
 	  '';
+          terminal.vt = lib.mkForce 7;
 	};
       };
     };

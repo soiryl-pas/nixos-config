@@ -64,7 +64,7 @@
   programs = {
     git = {
       enable = true;
-      extraConfig = {
+      settings = {
         advice.addIgnoredFile = false;
 	pull.rebase = false;
       };
