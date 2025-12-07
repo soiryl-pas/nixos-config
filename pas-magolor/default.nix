@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, system, ... }: {
+{ config, lib, pkgs, inputs, system, pkgs-25-05, ... }: {
   imports = [
     ./hardware-configuration.nix
     ../global/default.nix
@@ -8,7 +8,7 @@
 
   environment.systemPackages = [
     (pkgs.writeShellScriptBin "amdvlk-run" ''
-      export VK_DRIVER_FILES="${pkgs.amdvlk}/share/vulkan/icd.d/amd_icd64.json:${pkgs.driversi686Linux.amdvlk}/share/vulkan/icd.d/amd_icd32.json"
+      export VK_DRIVER_FILES="${pkgs-25-05.amdvlk}/share/vulkan/icd.d/amd_icd64.json:${pkgs-25-05.driversi686Linux.amdvlk}/share/vulkan/icd.d/amd_icd32.json"
       exec "$@"
     '')
   ];
