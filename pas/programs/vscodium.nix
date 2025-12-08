@@ -138,8 +138,9 @@
           command = "extension.vim_escape";
         }
         {
-          key = "capslock";
-          command = "-vim.toggleCapsLock";
+          key = "escape";
+          command = "-extension.vim_escape";
+          when = "editorTextFocus && vim.active && !inDebugRepl";
         }
       ];
       userSettings = {
