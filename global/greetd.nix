@@ -21,7 +21,7 @@ in
 	    --asterisks \
 	    --user-menu
 	  '';
-          #terminal.vt = lib.mkForce 7;
+          terminal.vt = lib.mkForce 7;
 	};
       };
     };
