@@ -137,6 +137,10 @@
           key = "capslock";
           command = "extension.vim_escape";
         }
+        {
+          key = "capslock";
+          command = "-vim.toggleCapsLock";
+        }
       ];
       userSettings = {
 	"git.confirmSync" = false;
