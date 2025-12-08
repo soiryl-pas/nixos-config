@@ -157,7 +157,7 @@
 	"window.zoomLevel" = -1;
         "search.useIgnoreFiles" = false;
         "search.collapseResults" = "alwaysCollapse";
-        "keyboard.dispatch" = "code";
+        "keyboard.dispatch" = "keyCode";
         "workbench.colorCustomizations" = {
           "statusBar.background" = "#280942";
           "statusBar.noFolderBackground" = "#005f5f";
