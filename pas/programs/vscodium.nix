@@ -173,9 +173,6 @@
         "vim.handleKeys" = {
           "<C-f>" = false;
         };
-        "vim.handleKeys" = {
-          "<CapsLock>" = false;
-        };
         "editor.semanticTokenColorCustomizations"."rules" = {
           "enumMember" = "#f04b72";
           "macro" = "#05c79a";
