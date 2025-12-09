@@ -110,7 +110,7 @@
     description = "Sets xkbMap as specified services.xserver.xkb.options for Electron apps under XWayland.";
     wantedBy = [ "graphical-session.target" ];
     script = ''
-      ${pkgs.xorg.setxkbmap} -option ${config.services.xserver.xkb.options}
+      ${pkgs.xorg.setxkbmap}/bin/setxkbmap -option ${config.services.xserver.xkb.options}
     '';
   };
 
