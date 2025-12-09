@@ -105,6 +105,15 @@
     };
   };
 
+  # Fix for Electron Apps under XWayland that ignore XKB_DEFAULT_OPTIONS and localectl
+  systemd.user.services.setxkbmap-xwayland-fix = {
+    description = "Sets xkbMap as specified services.xserver.xkb.options for Electron apps under XWayland.";
+    wantedBy = [ "graphical-session.target" ];
+    script = ''
+      ${pkgs.runtimeShell} -c "setxkbmap -option ${config.services.xserver.xkb.options}"
+    '';
+  };
+
   console = {
     font = "Lat2-Terminus16";
     useXkbConfig = true;
