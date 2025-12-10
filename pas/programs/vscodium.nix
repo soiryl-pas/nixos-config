@@ -133,10 +133,6 @@
           command = "workbench.action.tasks.runTask";
           when = "!inDebugMode";
         }
-        {
-          key = "capslock";
-          command = "extension.vim_escape";
-        }
       ];
       userSettings = {
 	"git.confirmSync" = false;
@@ -157,7 +153,7 @@
 	"window.zoomLevel" = -1;
         "search.useIgnoreFiles" = false;
         "search.collapseResults" = "alwaysCollapse";
-        "keyboard.dispatch" = "code";
+        "keyboard.dispatch" = "keyCode";
         "workbench.colorCustomizations" = {
           "statusBar.background" = "#280942";
           "statusBar.noFolderBackground" = "#005f5f";
