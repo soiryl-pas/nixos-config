@@ -209,7 +209,7 @@
 
   users.users.pas = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "input" "networkmanager" "vboxsf" "docker" ];
+    extraGroups = [ "input" "uinput" "wheel" "input" "networkmanager" "vboxsf" "docker" ];
   };
 
   hardware = {
