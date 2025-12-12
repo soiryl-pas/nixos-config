@@ -221,7 +221,6 @@
       enable = true;
       enable32Bit = true;
     };
-    uinput.enable = true;
   };
 
   documentation.dev.enable = true;
