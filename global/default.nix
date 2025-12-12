@@ -120,7 +120,7 @@
     xserver = {
       xkb = {
         layout = "de";
-        options = "eurosign:e,caps:swapescape";
+        options = "";
       };
 
       desktopManager.runXdgAutostartIfNone = true; # for Fcitx5 to work in WMs
@@ -140,6 +140,19 @@
     envfs.enable = true;
 
     resolved.enable = true;
+
+    keyd = {
+      enable = true;
+      keyboards.default = {
+        ids = ["*"];
+        settings = {
+          main = {
+            capslock = "esc";
+            esc = "capslock";
+          };
+        };
+      };
+    };
   };
 
   # For envfs
