@@ -207,12 +207,9 @@
     };
   };
 
-  # For keyd
-  users.groups.keyd = {};
-
   users.users.pas = {
     isNormalUser = true;
-    extraGroups = [ "keyd" "wheel" "input" "networkmanager" "vboxsf" "docker" ];
+    extraGroups = [ "wheel" "input" "networkmanager" "vboxsf" "docker" ];
   };
 
   hardware = {
