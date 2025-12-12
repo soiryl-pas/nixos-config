@@ -119,8 +119,7 @@
   services = {
     xserver = {
       xkb = {
-        layout = "de";
-        options = "";
+        layout = "eu";
       };
 
       desktopManager.runXdgAutostartIfNone = true; # for Fcitx5 to work in WMs
