@@ -72,7 +72,7 @@
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
-      pkgs-24-11 = import nixpkgs-24-11 { inherit system; };
+      pkgs-24-11 = import nixpkgs-24-11 { inherit system; config.allowUnfree = true; };
       specialArgs = { inherit inputs system pkgs-24-11; };
     in nixpkgs.lib.nixosSystem {
       inherit system specialArgs;
