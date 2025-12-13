@@ -5,6 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs-24-11.url = "github:nixos/nixpkgs/nixos-24.11";
     nixpkgs-25-05.url = "github:nixos/nixpkgs/nixos-25.05";
+
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -55,7 +56,6 @@
 	    defaultDisplayManager = "greetd";
 	  };
 	  nixpkgs.config.allowUnfree = true;
-	  #nixpkgs.config.permittedInsecurePackages = ["dotnet-sdk-6.0.428" "dotnet-runtime-6.0.36"];
 	}
 
 	home-manager.nixosModules.home-manager
@@ -77,7 +77,6 @@
       pkgs = import nixpkgs { inherit system; };
       pkgs-24-11 = import nixpkgs-24-11 {
         inherit system;
-        config = { allowUnfree = true; };
       };
       specialArgs = { inherit inputs; inherit system; inherit pkgs-24-11; };
     in nixpkgs.lib.nixosSystem {
@@ -103,7 +102,6 @@
 	    defaultDisplayManager = "greetd";
 	  };
 	  nixpkgs.config.allowUnfree = true;
-	  nixpkgs.config.permittedInsecurePackages = ["dotnet-sdk-6.0.428" "dotnet-runtime-6.0.36"];
 	}
 
 	home-manager.nixosModules.home-manager
