@@ -168,6 +168,7 @@
 	set number
 	set expandtab
       '';
+      viAlias = true;
     };
     vim.enable = true;
 
