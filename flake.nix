@@ -55,7 +55,7 @@
 	    defaultDisplayManager = "greetd";
 	  };
 	  nixpkgs.config.allowUnfree = true;
-	  nixpkgs.config.permittedInsecurePackages = ["dotnet-sdk-6.0.428" "dotnet-runtime-6.0.36"];
+	  #nixpkgs.config.permittedInsecurePackages = ["dotnet-sdk-6.0.428" "dotnet-runtime-6.0.36"];
 	}
 
 	home-manager.nixosModules.home-manager

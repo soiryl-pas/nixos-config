@@ -3,7 +3,6 @@
 {
   imports = [
     ./hyprland
-    ./kde
   ];
 
   # Configure automatically generated home-directories

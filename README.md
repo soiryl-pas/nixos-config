@@ -2,13 +2,14 @@
 
 ## TODOs
 
-* Custom Qt6 Theme in all DEs and WMs
-* .desktop-file for Stirling PDF
-
-* Keeping certain Dotfiles mutable in HomeManager
 * Neovim Config - If possible, configurable per devshell-flake
     * telescope, nvim-cmp, language servers, formatters, treesitter, tokyonight-theme, NvimTree
-* Hyprland Setup (Alternatively, QTile)
+
+* Hyprland Setup
+
+* Custom Qt6 Theme in all DEs and WMs
+
+* Keeping certain Dotfiles mutable in HomeManager
 
 
 ## Imperative Configuration:

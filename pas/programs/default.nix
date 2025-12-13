@@ -8,7 +8,6 @@
   ];
 
   home.packages = with pkgs; [
-    devenv
     nixfmt-rfc-style
     nixd
     neofetch
