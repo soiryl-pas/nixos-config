@@ -28,17 +28,12 @@
     nixosConfigurations.pas-magolor = 
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-      };
-      pkgs-24-11 = import nixpkgs-24-11 { inherit system;
-	config = { allowUnfree = true; };
-      };
+      pkgs = import nixpkgs { inherit system; };
+      pkgs-24-11 = import nixpkgs-24-11 { inherit system; config.allowUnfree = true; };
       pkgs-25-05 = import nixpkgs-25-05 { inherit system; };
       specialArgs = { inherit inputs system pkgs-24-11 pkgs-25-05; };
     in nixpkgs.lib.nixosSystem {
-      inherit system;
-      inherit specialArgs;
+      inherit system specialArgs;
       modules = [
 	./pas-magolor
 
@@ -77,13 +72,10 @@
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
-      pkgs-24-11 = import nixpkgs-24-11 {
-        inherit system;
-      };
-      specialArgs = { inherit inputs; inherit system; inherit pkgs-24-11; };
+      pkgs-24-11 = import nixpkgs-24-11 { inherit system; };
+      specialArgs = { inherit inputs system pkgs-24-11; };
     in nixpkgs.lib.nixosSystem {
-      inherit system;
-      inherit specialArgs;
+      inherit system specialArgs;
       modules = [
         ./pas-waddledee
         nixos-hardware.nixosModules.lenovo-thinkpad-p50
