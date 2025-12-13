@@ -2,9 +2,9 @@
   description = "Soiryl-pas NixOS Configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs-24-11.url = "github:nixos/nixpkgs/nixos-24.11";
     nixpkgs-25-05.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
@@ -28,12 +28,14 @@
     nixosConfigurations.pas-magolor = 
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; };
+      pkgs = import nixpkgs {
+        inherit system;
+      };
       pkgs-24-11 = import nixpkgs-24-11 { inherit system;
 	config = { allowUnfree = true; };
       };
       pkgs-25-05 = import nixpkgs-25-05 { inherit system; };
-      specialArgs = { inherit inputs; inherit system; inherit pkgs-24-11; inherit pkgs-25-05; };
+      specialArgs = { inherit inputs system pkgs-24-11 pkgs-25-05; };
     in nixpkgs.lib.nixosSystem {
       inherit system;
       inherit specialArgs;
