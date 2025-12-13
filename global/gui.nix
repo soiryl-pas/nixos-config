@@ -14,9 +14,9 @@ in
       ];
       default = "none";
       description = ''
-	Auswahl des Displaymanagers:
-	"none" (TTY mit startx, das xterm startet, und Skripten der einzelnen Desktop Environments)
-	"sddm" (von KDE Plasma 6)
+	Choose display manager:
+	"none" (TTY with startx, that starts xterm, and scripts of other DEs)
+	"sddm" (KDE Plasma 6)
 	"greetd" (Terminal Display Manager)
 	"lightdm" (Light Display Manager)
       '';
@@ -28,7 +28,6 @@ in
   ];
 
   config = {
-
     programs.sway.enable = true;
     
     # Enable kwallet-pam for qtile sessions as well, depends on:
