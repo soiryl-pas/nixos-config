@@ -10,7 +10,6 @@
     # Aliases
     shellAliases = {
       rm = "rm -i";
-      vi = "nvim";
     };
 
     # Environmental Variables
