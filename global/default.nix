@@ -196,6 +196,8 @@
     };
 
     gnupg.agent.enable = true;
+
+    nix-index.enable = true;
   };
 
   virtualisation = {
