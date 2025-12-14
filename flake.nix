@@ -42,6 +42,7 @@
       inherit system specialArgs;
       modules = [
 	./pas-magolor
+        nix-index-database.nixosModules.default
 
 	# Flakes in Registry
 	{
