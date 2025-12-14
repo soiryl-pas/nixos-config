@@ -8,6 +8,11 @@
   };
 
   manual.manpages.enable = true;
+
+  programs.nix-index = {
+    enable = true;
+    enableBashIntegration = true;
+  };
   
   imports = [
     ./programs

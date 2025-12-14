@@ -10,6 +10,11 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nix-alien.url = "github:thiagokokada/nix-alien";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
@@ -20,6 +25,7 @@
     nixpkgs-24-11,
     nixpkgs-25-05,
     home-manager,
+    nix-index-database,
     zen-browser,
     nix-alien,
     nixos-hardware,
@@ -79,6 +85,7 @@
       modules = [
         ./pas-waddledee
         nixos-hardware.nixosModules.lenovo-thinkpad-p50
+        nix-index-database.nixosModules.default
 
         # Flakes in Registry
 	{
