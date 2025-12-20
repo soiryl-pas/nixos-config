@@ -22,6 +22,7 @@
     winetricks
     distrobox
     wireguard-tools
+    manix
   ];
 
   nix = {
