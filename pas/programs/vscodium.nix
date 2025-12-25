@@ -23,6 +23,7 @@
 	vscjava.vscode-java-dependency
         rust-lang.rust-analyzer
         jnoortheen.nix-ide
+        firefox-devtools.vscode-firefox-debug
       ] ++ [ pkgs-24-11.vscode-extensions.ms-vscode.cpptools ] 
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
 	{
