@@ -5,6 +5,7 @@
     ./kitty.nix
     ./vscodium.nix
     ./rider.nix
+    ./nixvim
   ];
 
   home.packages = with pkgs; [
