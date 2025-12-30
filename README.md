@@ -2,9 +2,6 @@
 
 ## TODOs
 
-* Neovim Config - If possible, configurable per devshell-flake
-    * telescope, nvim-cmp, language servers, formatters, treesitter, tokyonight-theme, NvimTree
-
 * Hyprland Setup
 
 * Custom Qt6 Theme in all DEs and WMs
