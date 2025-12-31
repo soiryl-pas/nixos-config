@@ -10,7 +10,6 @@
   home.packages =
     with pkgs;
     [
-      ydiff
       tree-sitter
     ]
     ++ [
@@ -25,7 +24,7 @@
       enable = true;
       settings = {
         git.pagers = [
-          { pager = "ydiff -p cat -s --wrap --width={{columnWidth}}"; }
+          { pager = "${pkgs.delta}/bin/delta --dark --paging=never"; }
         ];
       };
     };
