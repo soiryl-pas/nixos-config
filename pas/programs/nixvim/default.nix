@@ -22,7 +22,7 @@
   programs.lazygit = {
     enable = true;
     settings = {
-      git.pagers.pager = "${pkgs.ydiff}/bin/ydiff -p cat -s --wrap --width={{columnWidth}}";
+      git.pagers.pager = ''${pkgs.ydiff}/bin/ydiff -p cat -s --wrap --width={{columnWidth}}'';
     };
   };
 }
