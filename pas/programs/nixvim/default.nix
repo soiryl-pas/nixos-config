@@ -24,7 +24,7 @@
       enable = true;
       settings = {
         git.pagers = [
-          { pager = "${pkgs.delta}/bin/delta --dark --paging=never"; }
+          { pager = "${pkgs.delta}/bin/delta --syntax-theme=Dracula --paging=never"; }
         ];
       };
     };
