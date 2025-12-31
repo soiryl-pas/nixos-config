@@ -10,7 +10,7 @@
   home.packages =
     with pkgs;
     [
-      fd
+      ydiff
       tree-sitter
     ]
     ++ [
@@ -19,10 +19,13 @@
 
   home.shellAliases.vi = "nvim";
 
-  programs.lazygit = {
-    enable = true;
-    settings = {
-      git.pagers.pager = ''${pkgs.ydiff}/bin/ydiff -p cat -s --wrap --width={{columnWidth}}'';
+  programs = {
+    fd.enable = true;
+    lazygit = {
+      enable = true;
+      settings = {
+        git.pagers.pager = "ydiff -p cat -s --wrap --width={{columnWidth}}";
+      };
     };
   };
 }
