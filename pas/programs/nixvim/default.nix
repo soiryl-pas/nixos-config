@@ -10,4 +10,8 @@
   ];
 
   home.shellAliases.vi = "nvim";
+
+  programs.lazygit.settings = {
+    git.pagers.pager = "${pkgs.ydiff}/bin/ydiff -p cat -s --wrap --width={{columnWidth}}";
+  };
 }
