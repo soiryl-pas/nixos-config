@@ -25,7 +25,7 @@
       enable = true;
       settings = {
         git.pagers = [
-          { pager = "${pkgs.ydiff}/bin/ydiff -p cat -s --wrap --width={{columnWidth}}"; }
+          { pager = "ydiff -p cat -s --wrap --width={{columnWidth}}"; }
         ];
       };
     };
