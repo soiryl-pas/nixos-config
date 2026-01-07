@@ -425,6 +425,10 @@
         outline = {
           layout = "float";
         };
+        lightbulb = {
+          sign = false;
+          debounce = 0;
+        };
       };
     };
 
