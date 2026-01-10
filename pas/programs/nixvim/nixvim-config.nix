@@ -319,7 +319,6 @@
           "<C-b>" = "cmp.mapping.scroll_docs(-4)";
           "<C-f>" = "cmp.mapping.scroll_docs(4)";
           "<C-c>" = "cmp.mapping.complete()"; # Call autocomplete
-          "<CR>" = "cmp.mapping.confirm({ select = true })";
         };
       };
     };
