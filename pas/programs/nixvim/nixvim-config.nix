@@ -2,6 +2,12 @@
 {
   globals.mapleader = " "; # <leader> mapping
 
+  highlight = {
+    DapBreakpoint = {
+      bg = "#4b2c5b";
+    };
+  };
+
   keymaps = [
     {
       # Open and close Filetree
@@ -327,7 +333,10 @@
     dap = {
       enable = true;
       signs = {
-        dapBreakpoint.text = "";
+        dapBreakpoint = {
+          text = "";
+          linehl = "DapBreakpoint";
+        };
       };
       # Systemwide configurations here
     };
