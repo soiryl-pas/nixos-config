@@ -211,6 +211,26 @@
       action = "<cmd>OverseerShell<CR>";
       key = "<leader>os";
     }
+    {
+      # Stage and unstage text hunk to git
+      action = "<cmd>Gitsigns stage_hunk<CR>";
+      key = "<leader>gs";
+    }
+    {
+      # Show full git blame on the side
+      action = "<cmd>Gitsigns blame<CR>";
+      key = "<leader>gf";
+    }
+    {
+      # Show git blame per line
+      action = "<cmd>Gitsigns toggle_current_line_blame<CR>";
+      key = "<leader>gb";
+    }
+    {
+      # Show diff per word inline
+      action = "<cmd>Gitsigns toggle_word_diff<CR>";
+      key = "<leader>gw";
+    }
   ]
   ++ pkgs.lib.lists.forEach [ "h" "j" "k" "l" ] (char: {
     # Making window manoeuvring more hasslefree with the leader key
@@ -523,6 +543,7 @@
     lazygit = {
       enable = true;
     };
+    gitsigns.enable = true;
 
     floaterm = {
       enable = true;
