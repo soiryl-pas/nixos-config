@@ -610,6 +610,6 @@
       end
     end
 
-    save_nvimlua_load()
+    secure_nvimlua_load()
   '';
 }
