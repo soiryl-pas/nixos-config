@@ -584,4 +584,32 @@
     luaLib = true;
     nvimRuntime = true;
   };
+
+  extraConfigLua = ''
+    -- Reading trusted .nvim.lua files in project directories, as opts.exrc
+    -- isn't supported on Nixvim (see https://github.com/nix-community/nixvim/issues/3506)
+    local function secure_nvimlua_load()
+      local path
+
+      -- Find first directory with .git/ upwards, else use cwd
+      local git_dir = vim.fs.find('.git', { upward = true, type = 'directory' })[1]
+      if git_dir then
+        path = vim.fs.dirname(git_dir) .. '/.nvim.lua'
+      else
+        path = vim.fn.getcwd() .. '/.nvim.lua'
+      end
+
+      -- If no .nvim.lua found, silently fail, else notify
+      if vim.fn.filereadable(path) == 1 then
+        if vim.secure.read(path) ~= nil then
+          local ok, err = pcall(dofile, path)
+          if not ok then vim.notify('.nvim.lua error: ' .. err, vim.log.levels.ERROR) end
+        else
+          vim.notify('.nvim.lua not trusted: ' .. path, vim.log.levels.WARN)
+        end
+      end
+    end
+
+    save_nvimlua_load()
+  '';
 }
