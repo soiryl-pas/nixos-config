@@ -8,6 +8,7 @@
 }: {
   imports = [
     ./gui.nix
+    ./ccache.nix
     ../pas/shell/scripts.nix
   ];
 
