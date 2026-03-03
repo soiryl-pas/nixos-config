@@ -11,7 +11,7 @@
   keymaps = [
     {
       # Open and close Filetree
-      action = "<cmd>Neotree toggle<CR>";
+      action = "<cmd>Neotree toggle .<CR>";
       key = "<leader>nf";
     }
     {
