@@ -502,7 +502,7 @@
         };
         filesystem = {
           hijackNetrwBehavior = "open_current";
-          bindToCwd = false;
+          bindToCwd = true;
         };
       };
     };
