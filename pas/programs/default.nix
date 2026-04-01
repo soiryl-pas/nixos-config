@@ -51,6 +51,7 @@
     (callPackage ./musescore.nix {})
     (callPackage ./lmms.nix {})
     rosegarden
+    blender
 
     cdrtools
     kooha
