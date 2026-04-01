@@ -131,6 +131,7 @@
         enable = true;
         support32Bit = true;
       };
+      jack.enable = true;
       wireplumber.extraConfig = {
         "11-bluetooth-policy" = {
           "wireplumber.settings" = {
