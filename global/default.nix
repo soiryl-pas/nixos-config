@@ -127,6 +127,10 @@
     pipewire = {
       enable = true;
       pulse.enable = true;
+      alsa = {
+        enable = true;
+        support32Bit = true;
+      };
       wireplumber.extraConfig = {
         "11-bluetooth-policy" = {
           "wireplumber.settings" = {
@@ -231,6 +235,9 @@
       enable32Bit = true;
     };
   };
+
+  # For PipeWire performance
+  security.rtkit.enable = true;
 
   documentation.dev.enable = true;
 }
