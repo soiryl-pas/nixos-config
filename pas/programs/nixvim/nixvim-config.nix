@@ -552,6 +552,8 @@
         keymap_next = "<F11>";
         keymap_prev = "<F10>";
         keymap_kill = "<F9>";
+        height = 0.9;
+        width = 0.9;
       };
     };
 
