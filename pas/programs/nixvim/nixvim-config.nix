@@ -273,7 +273,7 @@
       event = [
         "Filetype"
       ];
-      pattern = [ "nix" ];
+      pattern = [ "nix" "haskell" ];
     }
 
     {
