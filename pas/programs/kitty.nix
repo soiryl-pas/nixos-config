@@ -5,7 +5,8 @@
     enable = true;
     themeFile = "Dracula";    
     font = {
-      name = "FreeMono";
+      name = "Unifont";
+      size = 16;
     };
   };
 }
