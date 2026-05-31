@@ -4,11 +4,9 @@
   programs.kitty = {
     enable = true;
     themeFile = "Dracula";    
-    /*
     font = {
-      package = pkgs.unifont_upper;
-      #name = "Unifont";
+      package = pkgs.unifont;
+      name = "Unifont-JP";
     };
-    */
   };
 }
