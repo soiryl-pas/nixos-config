@@ -12,12 +12,10 @@
     settings = {
     };
     extraConfig = ''
-font_family      family="Unifont"
+font_family      Unifont Sans-Serif
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
-modify_font cell_width 1px
-font_size 16.0
     '';
   };
 }
