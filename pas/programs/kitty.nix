@@ -16,6 +16,7 @@ font_family      family="Unifont"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
+modify_font cell_width 8px
     '';
   };
 }
