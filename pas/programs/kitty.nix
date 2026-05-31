@@ -8,7 +8,6 @@
       name = "Unifont";
     };
     settings = {
-      adjust_cell_width = "-90%";
     };
   };
 }
