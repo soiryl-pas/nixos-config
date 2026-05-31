@@ -5,7 +5,7 @@
     enable = true;
     themeFile = "Dracula";    
     font = {
-      name = "Unifont-JP";
+      name = "family=\"Unifont\"";
     };
   };
 }
