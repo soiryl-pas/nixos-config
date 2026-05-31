@@ -9,7 +9,7 @@
       name = "Unifont";
     };
     settings = {
-      modify_font = "cell_width 8px";
+      modify_font = "cell_width 4px";
     };
   };
 }
