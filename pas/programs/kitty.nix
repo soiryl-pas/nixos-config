@@ -6,7 +6,10 @@
     themeFile = "Dracula";    
     font = {
       package = pkgs.unifont;
-      name = "family=Unifont-JP postscript_name=Unifont-JP";
+      name = "Unifont";
+    };
+    settings = {
+      modify_font = "cell_width 8px";
     };
   };
 }
