@@ -27,6 +27,7 @@ in
 
   imports = [
     ./greetd.nix
+    ./gnome.nix
   ];
 
   config = {
@@ -46,7 +47,6 @@ in
 
       # Desktop Environments / Window Managers / Display Managers
       desktopManager.plasma6.enable = (cfg != "gdm");
-      desktopManager.gnome.enable = (cfg == "gdm");
       xserver.windowManager.qtile.enable = true;
       xserver.displayManager.startx.enable = (cfg == "none");
       displayManager = {
@@ -54,15 +54,6 @@ in
           enable = (cfg == "sddm");
           wayland.enable = enable;
         };
-        gdm = {
-          enable = (cfg == "gdm");
-        };
-      };
-
-      gnome = {
-        core-apps.enable = false;
-        core-developer-tools.enable = false;
-        games.enable = false;
       };
     };
   };
