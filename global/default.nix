@@ -1,191 +1,22 @@
 {
-  config,
-  lib,
   pkgs,
-  inputs,
-  system,
   ...
 }: {
   imports = [
+    ./base.nix
     ./gui.nix
     ./ccache.nix
     ../pas/shell/scripts.nix
   ];
 
-  environment.systemPackages = with pkgs; [
-    tree
-    kitty
-    man-pages
-    man-pages-posix
-    inputs.nix-alien.packages."${system}".nix-alien
-    qemu_full
-    wineWowPackages.waylandFull
-    winetricks
-    distrobox
-    wireguard-tools
-    manix
-  ];
-
-  nix = {
-    settings = {
-      experimental-features = ["nix-command" "flakes"];
-      auto-optimise-store = true;
-      warn-dirty = false;
-    };
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 30d";
-    };
-    extraOptions = ''
-    '';
-  };
-
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-  };
-
-  networking = {
-    networkmanager.enable = true;
-    wireguard.enable = true;
-  };
-
-  time.timeZone = "Europe/Vienna";
-
-  i18n = {
-    defaultLocale = "en_GB.UTF-8";
-    extraLocaleSettings = lib.attrsets.genAttrs [
-      "LC_NUMERIC"
-      "LC_TIME"
-      "LC_MONETARY"
-      "LC_PAPER"
-      "LC_NAME"
-      "LC_ADDRESS"
-      "LC_TELEPHONE"
-      "LC_MEASUREMENT"
-    ] (locale: "de_AT.UTF-8");
-
-    inputMethod = {
-      enable = true;
-      type = "fcitx5";
-      fcitx5.addons = with pkgs; [
-	fcitx5-mozc
-	kdePackages.fcitx5-qt
-	kdePackages.fcitx5-chinese-addons
-	fcitx5-tokyonight
-      ];
-      fcitx5.waylandFrontend = true;
-      fcitx5.ignoreUserConfig = true;
-
-      fcitx5.settings.inputMethod = {
-        GroupOrder."0" = "EU";
-        GroupOrder."1" = "DE";
-
-        "Groups/0" = {
-          Name = "DE";
-          "Default Layout" = "de-e1";
-          DefaultIM = "mozc";
-        };
-        "Groups/0/Items/0".Name = "keyboard-de-e1";
-        "Groups/0/Items/1".Name = "mozc";
-        "Groups/0/Items/2".Name = "pinyin";
-        
-        "Groups/1" = {
-          Name = "EU";
-          "Default Layout" = "eu";
-          DefaultIM = "mozc";
-        };
-        "Groups/1/Items/0".Name = "keyboard-eu";
-        "Groups/1/Items/1".Name = "mozc";
-        "Groups/1/Items/2".Name = "pinyin";
-        "Groups/1/Items/3".Name = "keyboard-de";
-      };
-    };
-  };
-
-  console = {
-    font = "Lat2-Terminus16";
-    useXkbConfig = true;
-  };
-
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk-sans
-  ];
-  fonts.enableDefaultPackages = true;
-
   services = {
-    xserver = {
-      xkb = {
-        layout = "eu";
-      };
-
-      desktopManager.runXdgAutostartIfNone = true; # for Fcitx5 to work in WMs
-    };
-
-    pipewire = {
-      enable = true;
-      pulse.enable = true;
-      alsa = {
-        enable = true;
-        support32Bit = true;
-      };
-      jack.enable = true;
-      wireplumber.extraConfig = {
-        "11-bluetooth-policy" = {
-          "wireplumber.settings" = {
-            "bluetooth.autoswitch-to-headset-profile" = false;
-          };
-        };
-      };
-    };
-
     stirling-pdf = {
       enable = true;
       environment = { SERVER_PORT = 8081; };
     };
-
-    blueman.enable = true;
-    envfs.enable = true;
-
-    # systemd-resolved
-    resolved.enable = true;
-
-    keyd = {
-      enable = true;
-      keyboards.default = {
-        ids = ["*"];
-        settings = {
-          main = {
-            capslock = "esc";
-            esc = "capslock";
-          };
-        };
-      };
-    };
   };
 
-  # For envfs
-  environment.shellInit = ''
-    export ENVFS_RESOLVE_ALWAYS=1
-  '';
-
   programs = {
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-      configure.customRC = ''
-	set shiftwidth=2
-	set number
-	set expandtab
-      '';
-      viAlias = true;
-    };
-    vim.enable = true;
-
-    partition-manager.enable = true;
-
     steam = {
       enable = true;
       remotePlay.openFirewall = true;
@@ -194,51 +25,5 @@
         proton-ge-bin
       ];
     };
-
-    appimage = {
-      enable = true;
-      binfmt = true;
-    };
-
-    nix-ld.enable = true;
-    git = {
-      enable = true;
-      prompt.enable = true;
-      config = {
-        init.defaultBranch = "main";
-      };
-    };
-
-    gnupg.agent.enable = true;
-
-    nix-index.enable = true;
   };
-
-  virtualisation = {
-    docker.enable = true;
-    podman = {
-      enable = true;
-    };
-  };
-
-  users.users.pas = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" "input" "networkmanager" "vboxsf" "docker" "kvm" ];
-  };
-
-  hardware = {
-    bluetooth = {
-      enable = true;
-      powerOnBoot = true;
-    };
-    graphics = {
-      enable = true;
-      enable32Bit = true;
-    };
-  };
-
-  # For PipeWire performance
-  security.rtkit.enable = true;
-
-  documentation.dev.enable = true;
 }
