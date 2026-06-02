@@ -17,6 +17,7 @@
     element-desktop
     mattermost-desktop
     geogebra6
+    xournalpp
 
     dolphin-emu
     melonds

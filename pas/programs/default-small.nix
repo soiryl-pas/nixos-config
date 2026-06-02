@@ -17,6 +17,7 @@
     discord
     element-desktop
     geogebra6
+    xournalpp
 
     mgba
     mdbook
