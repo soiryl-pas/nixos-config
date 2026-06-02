@@ -102,7 +102,7 @@
       environment = { SERVER_PORT = 8081; };
     };
 
-    blueman.enable = true;
+    #blueman.enable = true;
     envfs.enable = true;
 
     # systemd-resolved
