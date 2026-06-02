@@ -19,4 +19,9 @@
   */
 
   hardware.sensor.iio.enable = true;
+  systemd = {
+    user.extraConfig = ''
+      DefaultTimeoutStopSec=15s
+    '';
+  };
 }
