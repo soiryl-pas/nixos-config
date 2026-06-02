@@ -16,4 +16,6 @@
     maliit-keyboard
     kdePackages.qtvirtualkeyboard
   ];
+
+  hardware.sensor.iio.enable = true;
 }
