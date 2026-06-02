@@ -14,11 +14,11 @@ in
       ];
       default = "none";
       description = ''
-	Choose display manager:
-	"none" (TTY with startx, that starts xterm, and scripts of other DEs)
-	"sddm" (KDE Plasma 6)
-	"greetd" (Terminal Display Manager)
-	"lightdm" (Light Display Manager)
+        Choose display manager:
+        "none" (TTY with startx, that starts xterm, and scripts of other DEs)
+        "sddm" (KDE Plasma 6)
+        "greetd" (Terminal Display Manager)
+        "lightdm" (Light Display Manager)
       '';
     };
   };
@@ -47,8 +47,8 @@ in
       xserver.windowManager.qtile.enable = true;
       xserver.displayManager.startx.enable = (cfg == "none");
       displayManager.sddm = rec { 
-	enable = (cfg == "sddm");
-	wayland.enable = enable;
+        enable = (cfg == "sddm");
+        wayland.enable = enable;
       };
     };
   };
