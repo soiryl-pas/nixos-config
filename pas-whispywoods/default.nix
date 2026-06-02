@@ -14,7 +14,7 @@
 
   environment.systemPackages = with pkgs; [
     maliit-keyboard
-    kdePackages.qtvirtualkeyboard
+    squeekboard
   ];
 
   hardware.sensor.iio.enable = true;
