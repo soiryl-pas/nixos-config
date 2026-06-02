@@ -147,7 +147,7 @@
         # Custom Settings
         {
           custom = {
-            defaultDisplayManager = "sddm";
+            defaultDisplayManager = "gdm";
           };
           nixpkgs.config.allowUnfree = true;
         }

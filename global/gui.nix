@@ -7,10 +7,11 @@ in
   options = {
     custom.defaultDisplayManager = lib.mkOption {
       type = lib.types.enum [
-	"none"
-	"sddm"
-	"greetd"
-	"lightdm"
+        "none"
+        "sddm"
+        "greetd"
+        "lightdm"
+        "gdm"
       ];
       default = "none";
       description = ''
@@ -19,6 +20,7 @@ in
         "sddm" (KDE Plasma 6)
         "greetd" (Terminal Display Manager)
         "lightdm" (Light Display Manager)
+        "gdm" (Gnome Display Manager)
       '';
     };
   };
@@ -43,12 +45,24 @@ in
       xserver.videoDrivers = [ "amdgpu" "modesetting" "fbdev" ];
 
       # Desktop Environments / Window Managers / Display Managers
-      desktopManager.plasma6.enable = true;
+      desktopManager.plasma6.enable = (cfg != "gdm");
+      desktopManager.gnome.enable = (cfg == "gdm");
       xserver.windowManager.qtile.enable = true;
       xserver.displayManager.startx.enable = (cfg == "none");
-      displayManager.sddm = rec { 
-        enable = (cfg == "sddm");
-        wayland.enable = enable;
+      displayManager = {
+        sddm = rec { 
+          enable = (cfg == "sddm");
+          wayland.enable = enable;
+        };
+        gdm = {
+          enable = (cfg == "gdm");
+        };
+      };
+
+      gnome = {
+        core-apps.enable = false;
+        core-developer-tools.enable = false;
+        games.enable = false;
       };
     };
   };
