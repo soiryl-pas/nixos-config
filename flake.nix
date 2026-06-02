@@ -45,7 +45,7 @@
     in nixpkgs.lib.nixosSystem {
       inherit system specialArgs;
       modules = [
-	./pas-magolor
+        ./pas-magolor
         nix-index-database.nixosModules.default
 
 	# Flakes in Registry
@@ -120,6 +120,47 @@
 	    users.pas = import ./pas-waddledee/home-manager-configuration.nix;
 	  };
 	}
+      ];
+    };
+
+    nixosConfigurations.pas-whispywoods =
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs { inherit system; };
+      specialArgs = { inherit inputs system; };
+    in nixpkgs.lib.nixosSystem {
+      inherit system specialArgs;
+      modules = [
+        ./pas-whispywoods
+        nix-index-database.nixosModules.default
+
+        # Flakes in registry
+        {
+          nix.registry = {
+            nixpkgs.flake = nixpkgs;
+            home-manager.flake = home-manager;
+            zen-browser.flake = zen-browser;
+            nix-alien.flake = nix-alien;
+          };
+        }
+
+        # Custom Settings
+        {
+          custom = {
+            defaultDisplayManager = "sddm";
+          };
+          nixpkgs.config.allowUnfree = true;
+        }
+
+        home-manager.nixosModules.home-manager {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            backupFileExtension = "orig.home";
+            extraSpecialArgs = specialArgs;
+            users.pas = import ./pas-whispywoods/home-manager-configuration.nix;
+          };
+        }
       ];
     };
   };
