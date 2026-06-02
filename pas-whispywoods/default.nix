@@ -13,7 +13,6 @@
 
   environment.systemPackages = with pkgs; [
     maliit-keyboard
-    squeekboard
   ];
 
   hardware.sensor.iio.enable = true;

@@ -8,7 +8,6 @@ let
 in {
   config = lib.mkIf (cfg == "gdm") {
     services = {
-      desktopManager.gnome.enable = true;
       displayManager.gdm.enable = true;
     };
   };
