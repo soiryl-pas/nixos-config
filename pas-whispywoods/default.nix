@@ -7,6 +7,8 @@
     ./hardware-configuration.nix
     ../global/default-small.nix
 
-    # TODO: Add state version
   ];
+
+  networking.hostName = "pas-whispywoods";
+  system.stateVersion = "26.05"; # Do not change
 }
