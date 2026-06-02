@@ -9,7 +9,7 @@
   ];
 
   home.packages = with pkgs; [
-    nixfmt-rfc-style
+    nixfmt
     nixd
     hyfetch
     onlyoffice-desktopeditors
@@ -19,7 +19,7 @@
     geogebra6
 
     dolphin-emu
-    melonDS
+    melonds
     mgba
     mesen
     mdbook
@@ -75,6 +75,7 @@
     htop.enable = true;
     firefox = {
       enable = true;
+      configPath = "${config.xdg.configHome}/mozilla/firefox";
     };
   };
 

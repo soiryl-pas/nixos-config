@@ -28,9 +28,9 @@ in
 
     environment = {
       etc."X11/xinit/xserverrc".source = pkgs.writeShellScript "xserverrc" ''
-	exec ${pkgs.xorg.xorgserver}/bin/X ${toString config.services.xserver.displayManager.xserverArgs} "$@"
+	exec ${pkgs.xorgserver}/bin/X ${toString config.services.xserver.displayManager.xserverArgs} "$@"
       '';
-      systemPackages = [ pkgs.xorg.xinit ];
+      systemPackages = [ pkgs.xinit ];
     };
 
     security.pam.services.greetd.kwallet = {

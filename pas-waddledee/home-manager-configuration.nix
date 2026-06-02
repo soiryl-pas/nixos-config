@@ -2,5 +2,5 @@
 {
   imports = [ ../pas ];
 
-  programs.vscode.profiles.default.userSettings."window.zoomLevel" = pkgs.lib.mkForce 0;
+  programs.vscodium.profiles.default.userSettings."window.zoomLevel" = pkgs.lib.mkForce 0;
 }
