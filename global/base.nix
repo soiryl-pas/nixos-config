@@ -12,7 +12,7 @@
     man-pages-posix
     inputs.nix-alien.packages."${system}".nix-alien
     qemu_full
-    wineWowPackages.waylandFull
+    wineWow64Packages.waylandFull
     winetricks
     distrobox
     wireguard-tools

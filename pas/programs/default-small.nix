@@ -12,7 +12,7 @@
   home.packages = with pkgs; [
     nixfmt-rfc-style
     nixd
-    neofetch
+    hyfetch
     onlyoffice-desktopeditors
     discord
     element-desktop

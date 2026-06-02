@@ -11,7 +11,7 @@
   home.packages = with pkgs; [
     nixfmt-rfc-style
     nixd
-    neofetch
+    hyfetch
     onlyoffice-desktopeditors
     discord
     element-desktop
@@ -29,6 +29,7 @@
     okteta
     ghidra
     rizin
+    /*
     (conan.overrideAttrs (final: prev: {
       version = "2.19.1";
       src = pkgs.fetchFromGitHub {
@@ -39,6 +40,7 @@
       };
       disabledTestPaths = prev.disabledTestPaths ++ [ "test/functional/command/test_new.py" ];
     }))
+    */
 
     prismlauncher
     yt-dlp
