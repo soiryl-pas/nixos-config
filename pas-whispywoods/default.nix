@@ -6,6 +6,7 @@
   imports = [
     ./hardware-configuration.nix
     ../global/default-small.nix
+    ../global/sddm-with-virtual-keyboard.nix
   ];
 
   networking.hostName = "pas-whispywoods";
@@ -13,6 +14,7 @@
 
   environment.systemPackages = with pkgs; [
     maliit-keyboard
+    maliit-framework
   ];
 
   hardware.sensor.iio.enable = true;

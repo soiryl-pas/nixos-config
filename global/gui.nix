@@ -46,7 +46,7 @@ in
       xserver.videoDrivers = [ "amdgpu" "modesetting" "fbdev" ];
 
       # Desktop Environments / Window Managers / Display Managers
-      desktopManager.plasma6.enable = true;
+      desktopManager.plasma6.enable = (cfg != "gdm");
       xserver.windowManager.qtile.enable = true;
       xserver.displayManager.startx.enable = (cfg == "none");
       displayManager = {
