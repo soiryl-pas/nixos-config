@@ -17,8 +17,20 @@
     maliit-framework
   ];
 
-  hardware.sensor.iio.enable = true;
+  hardware = {
+    sensor.iio.enable = true;
+    graphics.extraPackages = with pkgs; [
+      intel-media-driver
+      intel-vaapi-driver
+      libva-vdpau-driver
+      libvdpau-va-gl
+    ];
+  };
+
   systemd = {
+    settings.Manager = {
+      DefaultTimeoutStopSec = "15s";
+    };
     user.extraConfig = ''
       DefaultTimeoutStopSec=15s
     '';
