@@ -18,6 +18,7 @@
   ];
 
   hardware = {
+    enableAllFirmware = true;
     sensor.iio.enable = true;
     graphics.extraPackages = with pkgs; [
       intel-media-driver
