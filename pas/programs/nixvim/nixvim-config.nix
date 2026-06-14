@@ -432,15 +432,15 @@
       keymaps = {
         extra = [
           {
-            action = "<CMD>LspStop<Enter>";
+            action = "<CMD>lsp stop<Enter>";
             key = "<leader>sx";
           }
           {
-            action = "<CMD>LspStart<Enter>";
+            action = "<CMD>lsp start<Enter>";
             key = "<leader>ss";
           }
           {
-            action = "<CMD>LspRestart<Enter>";
+            action = "<CMD>lsp restart<Enter>";
             key = "<leader>sr";
           }
         ];
