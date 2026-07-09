@@ -71,6 +71,7 @@
 	    useGlobalPkgs = true;
 	    useUserPackages = true;
 	    backupFileExtension = "orig.home";
+        overwriteBackup = true;
 	    extraSpecialArgs = specialArgs;
 	    users.pas = import ./pas;
 	  };
@@ -115,6 +116,7 @@
 	    useGlobalPkgs = true;
 	    useUserPackages = true;
 	    backupFileExtension = "orig.home";
+        overwriteBackup = true;
 	    extraSpecialArgs = specialArgs;
 	    users.pas = import ./pas-waddledee/home-manager-configuration.nix;
 	  };
@@ -156,6 +158,7 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             backupFileExtension = "orig.home";
+            overwriteBackup = true;
             extraSpecialArgs = specialArgs;
             users.pas = import ./pas-whispywoods/home-manager-configuration.nix;
           };

@@ -31,14 +31,12 @@ in
   ];
 
   config = {
-    programs.sway.enable = true;
-    
     # Enable kwallet-pam for qtile sessions as well, depends on:
     ## Plasma enabling pam.service.login.kwallet
     ## interactive Bash shell being used
     # This breaks user service plasma-kwallet-pam.service when starting Plasma, but that shouldn't be too bad
-    security.pam.services.login.kwallet.forceRun = true;
-    environment.loginShellInit = "QT_QPA_PLATFORM=offscreen ${config.security.pam.services.login.kwallet.package}/libexec/pam_kwallet_init &> /dev/null";
+    #security.pam.services.login.kwallet.forceRun = true;
+    #environment.loginShellInit = "QT_QPA_PLATFORM=offscreen ${config.security.pam.services.login.kwallet.package}/libexec/pam_kwallet_init &> /dev/null";
 
     services = {
       # Xorg Conf
@@ -47,7 +45,6 @@ in
 
       # Desktop Environments / Window Managers / Display Managers
       desktopManager.plasma6.enable = (cfg != "gdm");
-      xserver.windowManager.qtile.enable = true;
       xserver.displayManager.startx.enable = (cfg == "none");
       displayManager = {
         sddm = rec { 
