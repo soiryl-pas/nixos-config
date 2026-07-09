@@ -5,11 +5,11 @@ input {
 }
 
 layout {
-    default-column-width { proportion 0.5 }
+    default-column-width { proportion 0.5; }
 }
 
 spawn-at-startup "waybar"
 
 binds {
-    Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty" }
+    Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
 }
