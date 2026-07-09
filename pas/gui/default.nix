@@ -14,5 +14,5 @@
     XDG_VIDEOS_DIR="$HOME/"
   '';
 
-  #xdg.configFile."niri/config.kdl".source = ./niri-config.kdl;
+  xdg.configFile."niri/config.kdl".source = ./niri-config.kdl;
 }
