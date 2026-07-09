@@ -12,6 +12,7 @@
     XDG_MUSIC_DIR="$HOME/music"
     XDG_PICTURES_DIR="$HOME/pictures"
     XDG_VIDEOS_DIR="$HOME/"
+    XDG_PROJECTS_DIR="$HOME/"
   '';
 
   xdg.configFile."niri/config.kdl".source = ./niri-config.kdl;
