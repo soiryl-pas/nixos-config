@@ -68,6 +68,9 @@
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans
+    unifont
+    unifont_upper
+    font-awesome
   ];
   fonts.enableDefaultPackages = true;
 
