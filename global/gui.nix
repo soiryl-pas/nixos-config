@@ -28,6 +28,7 @@ in
   imports = [
     ./greetd.nix
     ./gdm.nix
+    ./niri.nix
   ];
 
   config = {
