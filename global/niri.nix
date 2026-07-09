@@ -26,6 +26,7 @@ in {
       swayidle
       waybar
       xwayland-satellite
+      swaybg
     ];
   };
 }
