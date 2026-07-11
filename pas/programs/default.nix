@@ -6,6 +6,7 @@
     ./vscodium.nix
     ./rider.nix
     ./nixvim
+    ./fuzzel.nix
   ];
 
   home.packages = with pkgs; [
