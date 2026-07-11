@@ -48,7 +48,5 @@ in {
 
       wantedBy = [ "niri.service" ];
     };
-
-    qt.platformTheme = "gtk2";
   };
 }
