@@ -17,7 +17,7 @@
     };
 
     main = {
-      font = "Unifont";
+      font = "Unifont:size=15";
     };
   };
 }
