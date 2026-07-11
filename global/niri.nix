@@ -25,11 +25,28 @@ in {
       fuzzel
       swaylock
       mako
-      swayidle
       waybar
       xwayland-satellite
       swaybg
       networkmanagerapplet
     ];
+
+    systemd.user.services.swaybg = {
+      description = "SwayBG Wallpaper for Niri";
+      partOf = [ "graphical-session.target" ];
+      after = [ "graphical-session.target" ];
+      requisite = [ "graphical-session.target" ];
+
+      serviceConfig = {
+        ExecStart = ''
+          ${pkgs.swaybg}/bin/swaybg \
+            -m fill \
+            -i %h/pictures/WALLPAPER.png
+        '';
+        Restart = "on-failure";
+      };
+
+      wantedBy = [ "niri.service" ];
+    };
   };
 }
