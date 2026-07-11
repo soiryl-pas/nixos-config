@@ -424,8 +424,8 @@
         clangd.enable = true;
         rust_analyzer = {
           enable = true;
-          installCargo = true;
-          installRustc = true;
+          installCargo = false;
+          installRustc = false;
           installRustfmt = false;
         };
       };
@@ -436,7 +436,7 @@
             key = "<leader>sx";
           }
           {
-            action = "<CMD>lsp start<Enter>";
+            action = "<CMD>lsp enable<Enter>";
             key = "<leader>ss";
           }
           {
