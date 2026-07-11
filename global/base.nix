@@ -17,6 +17,7 @@
     distrobox
     wireguard-tools
     manix
+    playerctl
   ];
 
   nix = {
