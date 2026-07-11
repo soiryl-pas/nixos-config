@@ -16,4 +16,10 @@
   '';
 
   xdg.configFile."niri/config.kdl".source = ./niri-config.kdl;
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+  };
 }
