@@ -18,6 +18,7 @@
     mattermost-desktop
     geogebra6
     xournalpp
+    seahorse
 
     dolphin-emu
     melonds
@@ -51,7 +52,8 @@
     haruna
     vlc
     fluidsynth
-    (callPackage ./musescore.nix {})
+    #(callPackage ./musescore.nix {})
+    musescore
     (callPackage ./lmms.nix {})
     rosegarden
     blender

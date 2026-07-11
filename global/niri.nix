@@ -17,6 +17,8 @@ in {
     security = {
       polkit.enable = true;
       pam.services.swaylock = {};
+      pam.services.login.enableGnomeKeyring = true;
+      pam.services.greetd.enableGnomeKeyring = true;
     };
 
     environment.systemPackages = with pkgs; [
@@ -27,6 +29,7 @@ in {
       waybar
       xwayland-satellite
       swaybg
+      networkmanagerapplet
     ];
 
     programs.dconf.profiles.user.databases = [
