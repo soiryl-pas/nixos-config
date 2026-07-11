@@ -15,5 +15,9 @@
       selection-match = "5a41bfff";
       border = "180028ff";
     };
+
+    main = {
+      font = "Unifont";
+    };
   };
 }
