@@ -38,7 +38,9 @@
   */
   systemd.tmpfiles.rules = [
     "L+ /var/cache/ccache/ccache.conf - - - - ${pkgs.writeText "ccache-conf" ''
+      compression_level = 1
       sloppiness = random_seed
+      umask = 007
     ''}"
   ];
 }
