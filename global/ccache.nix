@@ -1,6 +1,7 @@
 {
   config,
   nixpkgs,
+  pkgs,
   ...
 }:
 {
@@ -27,5 +28,13 @@
         '';
       };
     })
+  ];
+
+  systemd.tmpfiles.rules = [
+    "L+ /var/cache/ccache/ccache.conf - - - - ${pkgs.writeText "ccache-conf" ''
+      umask = 007
+      compression = true
+      sloppiness = random_seed
+    ''}"
   ];
 }
