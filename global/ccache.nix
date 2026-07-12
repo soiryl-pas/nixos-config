@@ -32,6 +32,7 @@
 
   environment.etc."ccache.conf" = {
     text = ''
+      cache_dir = ${config.programs.ccache.cacheDir}
       umask = 007
       compression = true
       sloppiness = random_seed
