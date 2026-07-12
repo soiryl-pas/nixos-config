@@ -29,6 +29,7 @@ in {
       xwayland-satellite
       swaybg
       networkmanagerapplet
+      glib
       gsettings-desktop-schemas
     ];
 
