@@ -8,6 +8,7 @@ in {
 
   config = lib.mkIf cfg.with-niri {
     programs.niri.enable = true;
+    programs.dconf.enable = true;
     systemd.user.services.niri.enableDefaultPath = false;
 
     services = {
