@@ -29,6 +29,7 @@ in {
       xwayland-satellite
       swaybg
       networkmanagerapplet
+      gsettings-desktop-schemas
     ];
 
     systemd.user.services.swaybg = {
