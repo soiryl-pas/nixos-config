@@ -28,4 +28,10 @@
       };
     })
   ];
+
+  environment.sessionVariables = {
+    CCACHE_COMPRESS = 1;
+    CCACHE_DIR = config.programs.ccache.cacheDir;
+    CCACHE_UMASK = "007";
+  };
 }
