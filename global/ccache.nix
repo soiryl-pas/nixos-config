@@ -30,11 +30,17 @@
     })
   ];
 
-  systemd.tmpfiles.rules = [
-    "L+ /var/cache/ccache/ccache.conf - - - - ${pkgs.writeText "ccache-conf" ''
+  environment.etc."ccache.conf" = {
+    text = ''
       umask = 007
       compression = true
       sloppiness = random_seed
+    '';
+  };
+  /*
+  systemd.tmpfiles.rules = [
+    "L+ /var/cache/ccache/ccache.conf - - - - ${pkgs.writeText "ccache-conf" ''
     ''}"
   ];
+  */
 }
