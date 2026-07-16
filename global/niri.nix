@@ -30,6 +30,9 @@ in {
       xwayland-satellite
       swaybg
       networkmanagerapplet
+      wl-clipboard
+      cliphist
+      wl-clip-persist
     ];
 
     systemd.user.services.swaybg = {
