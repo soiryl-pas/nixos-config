@@ -8,6 +8,7 @@
   programs.ccache.enable = true;
   nix.settings.extra-sandbox-paths = [ config.programs.ccache.cacheDir ];
 
+  # Must be overlayed in every flake that wants to use ccache
   nixpkgs.overlays = [
     (self: super: {
       ccacheWrapper = super.ccacheWrapper.override {
@@ -19,7 +20,7 @@
             echo "=== Directory '$CCACHE_DIR' does not exist ==="
             echo "Create with"
             echo "  sudo mkdir -m0070 '$CCACHE_DIR'"
-            echo "  sudo chown root:nixbld '$CCACHe_DIR'"
+            echo "  sudo chown root:nixbld '$CCACHE_DIR'"
             exit 1
           fi
           if [ ! -w "$CCACHE_DIR" ]; then

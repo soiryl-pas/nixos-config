@@ -49,5 +49,10 @@ in {
 
       wantedBy = [ "niri.service" ];
     };
+
+    qt = {
+      enable = true;
+      style = "adwaita-dark";
+    };
   };
 }
