@@ -52,7 +52,7 @@ in {
 
     qt = {
       enable = true;
-      style = "adwaita-dark";
+      style = "kvantum";
     };
   };
 }
