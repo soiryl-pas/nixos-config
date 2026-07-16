@@ -17,7 +17,7 @@ spawn-at-startup "waybar"
 
 // Clipboard
 spawn-sh-at-startup "wl-clip-persist --clipboard both"
-spawn-sh-at-startup "wl-paste --type texxt --watch cliphist store"
+spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
 spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
 
 binds {
