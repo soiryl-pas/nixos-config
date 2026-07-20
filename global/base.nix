@@ -13,7 +13,6 @@
     inputs.nix-alien.packages."${system}".nix-alien
     qemu_full
     wineWow64Packages.waylandFull
-    wineWow64Packages.stable
     winetricks
     distrobox
     wireguard-tools
