@@ -22,7 +22,7 @@ spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
 
 binds {
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+B hotkey-overlay-title="Open the clipboard history: cliphist-fuzzel-img" { spawn "cliphist-fuzzel-img" }
+    Mod+B hotkey-overlay-title="Open the clipboard history: cliphist-fuzzel-img" { spawn "cliphist-fuzzel-img"; }
 
     // --- Default keybindings ---
     // Fetch XKB Names for keys with `wev`
