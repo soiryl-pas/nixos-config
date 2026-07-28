@@ -297,7 +297,14 @@ binds {
 
 output "Hewlett Packard HP ZR2440w CN4217015K" {
     transform "90"
+    position x=0 y=0
 }
 
 output "Hewlett Packard HP ZR2440w CN422000CB" {
+    position x=1200 y=0
+}
+
+// pas-waddledee main screen
+output "AU Optronics 0x21ED Unknown" {
+    position x=3120 y=0
 }

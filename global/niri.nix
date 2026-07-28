@@ -47,7 +47,10 @@ in {
         ExecStart = ''
           ${pkgs.swaybg}/bin/swaybg \
             -m fill \
-            -i %h/pictures/WALLPAPER.png
+            -i %h/pictures/WALLPAPER.png \
+            -o DP-8 \
+            -m fill \
+            -i %h/pictures/WALLPAPER2.png
         '';
         Restart = "on-failure";
       };
