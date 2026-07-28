@@ -308,3 +308,8 @@ output "Hewlett Packard HP ZR2440w CN422000CB" {
 output "AU Optronics 0x21ED Unknown" {
     position x=3120 y=0
 }
+
+// pas-magolor main screen
+output "PNP(AOC) AG275QXN VOKP7JA000489" {
+    mode "2560x1440@165.000"
+}
