@@ -294,3 +294,10 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 }
+
+output "Hewlett Packard HP ZR2440w CN4217015K" {
+    transform "90"
+}
+
+output "Hewlett Packard HP ZR2440w CN422000CB" {
+}

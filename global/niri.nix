@@ -33,6 +33,8 @@ in {
       wl-clipboard
       cliphist
       wl-clip-persist
+      brightnessctl
+      nautilus
     ];
 
     systemd.user.services.swaybg = {
