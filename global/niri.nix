@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, nixpkgs, ... }:
 let
   cfg = config.custom;
 in {
@@ -22,20 +22,26 @@ in {
       pam.services.greetd.enableGnomeKeyring = true;
     };
 
-    environment.systemPackages = with pkgs; [
-      fuzzel
-      swaylock
-      mako
-      waybar
-      xwayland-satellite
-      swaybg
-      networkmanagerapplet
-      wl-clipboard
-      cliphist
-      wl-clip-persist
-      brightnessctl
-      nautilus
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        fuzzel
+        swaylock
+        mako
+        waybar
+        xwayland-satellite
+        swaybg
+        networkmanagerapplet
+        wl-clipboard
+        cliphist
+        wl-clip-persist
+        brightnessctl
+        nautilus
+      ];
+
+      sessionVariables = {
+        QT_QPA_PLATFORMTHEME = "kde";
+      };
+    };
 
     systemd.user.services.swaybg = {
       description = "SwayBG Wallpaper for Niri";
@@ -62,5 +68,19 @@ in {
       enable = true;
       style = "breeze";
     };
+
+    nixpkgs.overlays = [
+      (final: prev: {
+        ghidra = prev.symlinkJoin {
+          name = "ghidra-nonreparenting";
+          paths = [ prev.ghidra ];
+          nativeBuildInputs = [ prev.makeWrapper ];
+          postBuild = ''
+            wrapProgram $out/lib/ghidra/support/launch.sh \
+              --set _JAVA_AWT_WM_NONREPARENTING 1
+          '';
+        };
+      })
+    ];
   };
 }
