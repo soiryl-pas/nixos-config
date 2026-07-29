@@ -76,7 +76,7 @@ in {
           paths = [ prev.ghidra ];
           nativeBuildInputs = [ prev.makeWrapper ];
           postBuild = ''
-            wrapProgram $out/lib/ghidra/support/launch.sh \
+            wrapProgram $out/bin/ghidra \
               --set _JAVA_AWT_WM_NONREPARENTING 1
           '';
         };
