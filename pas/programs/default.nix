@@ -32,6 +32,7 @@
     okteta
     ghidra
     rizin
+    imhex
     /*
     (conan.overrideAttrs (final: prev: {
       version = "2.19.1";
