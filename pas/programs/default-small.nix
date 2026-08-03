@@ -7,12 +7,12 @@
   imports = [
     ./kitty.nix
     ./nixvim
+    ./hyfetch.nix
   ];
 
   home.packages = with pkgs; [
     nixfmt
     nixd
-    hyfetch
     onlyoffice-desktopeditors
     discord
     element-desktop

@@ -7,12 +7,12 @@
     ./rider.nix
     ./nixvim
     ./fuzzel.nix
+    ./hyfetch.nix
   ];
 
   home.packages = with pkgs; [
     nixfmt
     nixd
-    hyfetch
     onlyoffice-desktopeditors
     discord
     element-desktop
