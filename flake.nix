@@ -135,6 +135,7 @@
       inherit system specialArgs;
       modules = [
         ./pas-whispywoods
+        nixos-hardware.nixosModules.dell-latitude-5490
         nix-index-database.nixosModules.default
 
         # Flakes in registry
