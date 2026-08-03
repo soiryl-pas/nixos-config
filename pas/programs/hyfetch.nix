@@ -22,4 +22,6 @@
       palette_type = null;
     };
   };
+
+  programs.fastfetch.enable = true;
 }

@@ -21,6 +21,8 @@
     enableAllFirmware = true;
     sensor.iio.enable = true;
     graphics.extraPackages = with pkgs; [
+      # Necessary such that /run/opengl-driver/lib/dri/iHD_drv_video.so is used for va-api
+      # Check with `vainfo`
       intel-media-driver
       intel-vaapi-driver
       libva-vdpau-driver
