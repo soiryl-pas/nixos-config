@@ -20,6 +20,7 @@
     geogebra6
     xournalpp
     seahorse
+    pavucontrol
 
     dolphin-emu
     melonds
