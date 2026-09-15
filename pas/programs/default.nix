@@ -21,6 +21,7 @@
     xournalpp
     seahorse
     pavucontrol
+    unzip
 
     dolphin-emu
     melonds

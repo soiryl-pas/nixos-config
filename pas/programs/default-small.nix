@@ -18,6 +18,7 @@
     element-desktop
     geogebra6
     xournalpp
+    unzip
 
     mgba
     mdbook
