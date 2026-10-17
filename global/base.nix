@@ -5,6 +5,10 @@
   inputs,
   ...
 }: {
+  imports = [
+    ./util
+  ];
+
   environment.systemPackages = with pkgs; [
     tree
     kitty
