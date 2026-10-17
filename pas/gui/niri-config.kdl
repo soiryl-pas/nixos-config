@@ -25,6 +25,10 @@ spawn-sh-at-startup "wl-clip-persist --clipboard both"
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
 spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
 
+prefer-no-csd // Prefer no client side decorations
+
+screenshot-path "~/pictures/niri-screenshots/%Y-%m-%d-%H-%M-%S.png"
+
 binds {
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+B hotkey-overlay-title="Open the clipboard history: cliphist-fuzzel-img" { spawn "cliphist-fuzzel-img"; }
