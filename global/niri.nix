@@ -36,6 +36,7 @@ in {
         wl-clip-persist
         brightnessctl
         nautilus
+        wl-mirror
       ];
 
       sessionVariables = {

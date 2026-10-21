@@ -22,6 +22,7 @@
     wireguard-tools
     manix
     playerctl
+    jq
   ];
 
   nix = {

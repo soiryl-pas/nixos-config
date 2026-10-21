@@ -18,6 +18,16 @@ layout {
     }
 }
 
+window-rule {
+    match app-id=r#"^org\.gnome\.seahorse\.Application$"#
+}
+
+layer-rule {
+    match namespace="^notifications$"
+
+    block-out-from "screencast"
+}
+
 spawn-at-startup "waybar"
 
 // Clipboard
@@ -32,6 +42,7 @@ screenshot-path "~/pictures/niri-screenshots/%Y-%m-%d-%H-%M-%S.png"
 binds {
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+B hotkey-overlay-title="Open the clipboard history: cliphist-fuzzel-img" { spawn "cliphist-fuzzel-img"; }
+    Mod+P hotkey-overlay-title="Mirror current screen: wl-mirror" repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
 
     // --- Default keybindings ---
     // Fetch XKB Names for keys with `wev`
