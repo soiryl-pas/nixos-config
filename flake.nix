@@ -61,7 +61,7 @@
 	# Custom Settings
 	{
 	  custom = {
-	    defaultDisplayManager = "greetd";
+	    defaultDisplayManager = "none";
         with-niri = true;
 	  };
 	  nixpkgs.config.allowUnfree = true;
@@ -107,7 +107,7 @@
 	# Custom Settings
 	{
 	  custom = {
-	    defaultDisplayManager = "greetd";
+	    defaultDisplayManager = "none";
         with-niri = true;
 	  };
 	  nixpkgs.config.allowUnfree = true;
