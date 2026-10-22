@@ -1,5 +1,7 @@
 # NixOS-Configuration
 
+- To start `niri` from the TTY, use `niri-session`
+
 ## TODOs
 
 * Hyprland Setup
