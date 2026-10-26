@@ -6,7 +6,6 @@
     themeFile = "Dracula";    
     font = {
       name = "Unifont";
-      size = 12;
     };
     settings = {
     };
