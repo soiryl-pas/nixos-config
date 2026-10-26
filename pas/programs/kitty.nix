@@ -6,11 +6,11 @@
     themeFile = "Dracula";
     font = {
       name = "Unifont";
-      size = 16;
+      size = 12.5;
     };
     settings = {
       modify_font = "cell_width 50%";
-      cursor = "#b83afc";
+      cursor = "#c981ef";
     };
   };
 }
