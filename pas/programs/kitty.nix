@@ -5,11 +5,13 @@
     enable = true;
     themeFile = "Dracula";
     font = {
-      name = "Unifont";
-      size = 12;
+      name = "Cozette";
+      package = pkgs.cozette;
+      #name = "Unifont";
+      #size = 12;
     };
     settings = {
-      modify_font = "cell_width 50%";
+      #modify_font = "cell_width 50%";
       cursor = "#c981ef";
     };
   };
