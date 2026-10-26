@@ -3,7 +3,7 @@
 {
   programs.kitty = {
     enable = true;
-    themeFile = "Dracula";    
+    themeFile = "Dracula";
     font = {
       name = "Unifont";
       size = 12;
