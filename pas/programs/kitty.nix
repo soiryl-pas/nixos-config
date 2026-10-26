@@ -4,15 +4,29 @@
   programs.kitty = {
     enable = true;
     themeFile = "Dracula";
+    /*
     font = {
-      name = "Cozette";
-      package = pkgs.cozette;
-      #name = "Unifont";
-      #size = 12;
+      name = "Unifont";
+      size = 12;
     };
+    */
     settings = {
       #modify_font = "cell_width 50%";
       cursor = "#c981ef";
     };
+  };
+
+  programs.alacritty = {
+    enable = true;
+    settings = {
+      colors.cursor.cursor = "#c981ef";
+      font = {
+        normal = {
+          family = "Unifont";
+          style = "Regular";
+        };
+      };
+    };
+    theme = "dracula";
   };
 }
