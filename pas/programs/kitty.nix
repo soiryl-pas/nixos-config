@@ -4,14 +4,12 @@
   programs.kitty = {
     enable = true;
     themeFile = "Dracula";
-    /*
     font = {
       name = "Unifont";
       size = 12;
     };
-    */
     settings = {
-      #modify_font = "cell_width 50%";
+      modify_font = "cell_width 50%";
       cursor = "#c981ef";
     };
   };
@@ -25,7 +23,7 @@
           family = "Unifont";
           style = "Regular";
         };
-        size = 12.0;
+        size = 14.0;
       };
     };
     theme = "dracula";
