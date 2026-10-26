@@ -14,6 +14,7 @@
     };
   };
 
+  /*
   programs.alacritty = {
     enable = true;
     settings = {
@@ -23,9 +24,10 @@
           family = "Unifont";
           style = "Regular";
         };
-        size = 14.0;
+        size = 12.0;
       };
     };
     theme = "dracula";
   };
+  */
 }
