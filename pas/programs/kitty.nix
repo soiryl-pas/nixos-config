@@ -25,6 +25,7 @@
           family = "Unifont";
           style = "Regular";
         };
+        size = 12.0;
       };
     };
     theme = "dracula";
