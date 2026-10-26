@@ -6,15 +6,10 @@
     themeFile = "Dracula";    
     font = {
       name = "Unifont";
-      size = 14;
+      size = 13;
     };
     settings = {
       modify_font = "cell_width 50%";
     };
-    /*
-    extraConfig = ''
-    modify_font cell_width 50%
-    '';
-    */
   };
 }
