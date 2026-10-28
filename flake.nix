@@ -153,6 +153,7 @@
         {
           custom = {
             defaultDisplayManager = "sddm";
+            kitty-font-size = 14;
           };
           nixpkgs.config.allowUnfree = true;
         }

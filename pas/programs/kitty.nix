@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, osConfig, pkgs, ... }:
 
 {
   programs.kitty = {
@@ -6,7 +6,7 @@
     themeFile = "Dracula";
     font = {
       name = "Unifont";
-      size = 12;
+      size = osConfig.custom.kitty-font-size;
     };
     settings = {
       modify_font = "cell_width 50%";
