@@ -397,6 +397,8 @@
         cmake
         rust
         python
+        html
+        css
       ];
       settings = {
         ensure_installed = [
