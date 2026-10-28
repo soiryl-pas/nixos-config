@@ -43,7 +43,7 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+B hotkey-overlay-title="Open the clipboard history: cliphist-fuzzel-img" { spawn "cliphist-fuzzel-img"; }
     Mod+P hotkey-overlay-title="Mirror current screen: wl-mirror" repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
-
+    Mod+X hotkey-overlay-title="Dismiss current Mako notification" { spawn-sh "makoctl dismiss"; }
     // --- Default keybindings ---
     // Fetch XKB Names for keys with `wev`
     // Use spawn-sh for shell commands

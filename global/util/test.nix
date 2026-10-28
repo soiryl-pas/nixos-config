@@ -96,6 +96,10 @@ in top-level {
       repeat = false;
       kdl.spawn-sh = "wl-mirror $(niri msg --json focused-output | jq -r .name)";
     };
+    "Mod+X" = args {
+      hotkey-overlay-title = "Dismiss current Mako notification";
+      kdl.spawn-sh = "makoctl dismiss";
+    };
     "Mod+Shift+Slash" = [
       "show-hotkey-overlay"
     ];
