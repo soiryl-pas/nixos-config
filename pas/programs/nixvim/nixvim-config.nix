@@ -284,6 +284,13 @@
         __raw = "function() if vim.fn.argc() == 0 then vim.cmd(\"Neotree current\") end end";
       };
     }
+
+    {
+      # Unset '}' as reindentation command in Idris2
+      command = "setlocal indentkeys-=}";
+      event = [ "Filetype" ];
+      pattern = [ "idris2" ];
+    }
   ];
   opts = {
     autochdir = true;
