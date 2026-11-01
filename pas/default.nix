@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, osConfig, ... }:
 
 {
   home = {
@@ -8,6 +8,8 @@
   };
 
   manual.manpages.enable = true;
+
+  nix.gc = osConfig.nix.gc;
 
   imports = [
     ./programs
