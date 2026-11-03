@@ -40,7 +40,15 @@
     nixos-hardware,
     tn5250,
     ...
-  }: {
+  }:
+  let
+    default-nixpkgs = {
+      config.allowUnfree = true;
+      overlays = [
+        tn5250.overlays.default
+      ];
+    };
+  in {
     nixosConfigurations.pas-magolor = 
     let
       system = "x86_64-linux";
@@ -69,12 +77,7 @@
             defaultDisplayManager = "none";
             with-niri = true;
           };
-          nixpkgs = {
-            config.allowUnfree = true;
-            overlays = [
-              tn5250.overlays.default
-            ];
-          };
+          nixpkgs = default-nixpkgs;
         }
 
         home-manager.nixosModules.home-manager {
@@ -118,7 +121,7 @@
             defaultDisplayManager = "none";
             with-niri = true;
           };
-          nixpkgs.config.allowUnfree = true;
+          nixpkgs = default-nixpkgs;
         }
 
         home-manager.nixosModules.home-manager {
@@ -161,7 +164,7 @@
             defaultDisplayManager = "sddm";
             kitty-font-size = 14;
           };
-          nixpkgs.config.allowUnfree = true;
+          nixpkgs = default-nixpkgs;
         }
 
         home-manager.nixosModules.home-manager {
