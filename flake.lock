@@ -284,6 +284,7 @@
         "nixpkgs-24-11": "nixpkgs-24-11",
         "nixpkgs-25-05": "nixpkgs-25-05",
         "nixvim": "nixvim",
+        "tn5250": "tn5250",
         "zen-browser": "zen-browser"
       }
     },
@@ -301,6 +302,22 @@
         "repo": "default",
         "type": "github"
       }
+    },
+    "tn5250": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "path": "subflakes/tn5250",
+        "type": "path"
+      },
+      "original": {
+        "path": "subflakes/tn5250",
+        "type": "path"
+      },
+      "parent": []
     },
     "zen-browser": {
       "inputs": {

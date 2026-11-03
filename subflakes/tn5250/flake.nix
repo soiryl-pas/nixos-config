@@ -34,6 +34,6 @@
     };
   in {
     packages.${system}.default = tn5250;
-    overlays.default = { inherit tn5250; };
+    overlays.default = _final: _prev: { inherit tn5250; };
   };
 }

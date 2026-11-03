@@ -23,12 +23,10 @@
     nix-alien.url = "github:thiagokokada/nix-alien";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
-    /*
     tn5250 = {
       url = ./subflakes/tn5250;
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    */
   };
 
   outputs = inputs @ {
@@ -40,6 +38,7 @@
     zen-browser,
     nix-alien,
     nixos-hardware,
+    tn5250,
     ...
   }: {
     nixosConfigurations.pas-magolor = 
@@ -70,7 +69,12 @@
             defaultDisplayManager = "none";
             with-niri = true;
           };
-          nixpkgs.config.allowUnfree = true;
+          nixpkgs = {
+            config.allowUnfree = true;
+            overlays = [
+              tn5250.overlays.default
+            ];
+          };
         }
 
         home-manager.nixosModules.home-manager {
