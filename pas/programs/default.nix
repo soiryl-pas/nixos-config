@@ -67,6 +67,7 @@
     foliate
     gimp3
     zotero
+    tn5250
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
