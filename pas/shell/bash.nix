@@ -10,6 +10,7 @@
     # Aliases
     shellAliases = {
       rm = "rm -i";
+      cdtmp = "cd $(mktemp -d)";
     };
 
     # Environmental Variables
