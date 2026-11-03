@@ -22,6 +22,13 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nix-alien.url = "github:thiagokokada/nix-alien";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
+    /*
+    tn5250 = {
+      url = ./subflakes/tn5250;
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    */
   };
 
   outputs = inputs @ {
@@ -38,7 +45,6 @@
     nixosConfigurations.pas-magolor = 
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; };
       pkgs-24-11 = import nixpkgs-24-11 { inherit system; config.allowUnfree = true; };
       pkgs-25-05 = import nixpkgs-25-05 { inherit system; };
       specialArgs = { inherit inputs system pkgs-24-11 pkgs-25-05; };
@@ -48,43 +54,41 @@
         ./pas-magolor
         nix-index-database.nixosModules.default
 
-	# Flakes in Registry
-	{
-	  nix.registry = {
-	    nixpkgs.flake = nixpkgs;
-	    home-manager.flake = home-manager;
-	    zen-browser.flake = zen-browser;
-	    nix-alien.flake = nix-alien;
-	  };
-	}
+        # Flakes in Registry
+        {
+          nix.registry = {
+            nixpkgs.flake = nixpkgs;
+            home-manager.flake = home-manager;
+            zen-browser.flake = zen-browser;
+            nix-alien.flake = nix-alien;
+          };
+        }
 
-	# Custom Settings
-	{
-	  custom = {
-	    defaultDisplayManager = "none";
-        with-niri = true;
-	  };
-	  nixpkgs.config.allowUnfree = true;
-	}
+        # Custom Settings
+        {
+          custom = {
+            defaultDisplayManager = "none";
+            with-niri = true;
+          };
+          nixpkgs.config.allowUnfree = true;
+        }
 
-	home-manager.nixosModules.home-manager
-	{
-	  home-manager = {
-	    useGlobalPkgs = true;
-	    useUserPackages = true;
-	    backupFileExtension = "orig.home";
-        overwriteBackup = true;
-	    extraSpecialArgs = specialArgs;
-	    users.pas = import ./pas;
-	  };
-	}
+        home-manager.nixosModules.home-manager {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            backupFileExtension = "orig.home";
+            overwriteBackup = true;
+            extraSpecialArgs = specialArgs;
+            users.pas = import ./pas;
+          };
+        }
       ];
     };
 
     nixosConfigurations.pas-waddledee =
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; };
       pkgs-24-11 = import nixpkgs-24-11 { inherit system; config.allowUnfree = true; };
       specialArgs = { inherit inputs system pkgs-24-11; };
     in nixpkgs.lib.nixosSystem {
@@ -95,42 +99,40 @@
         nix-index-database.nixosModules.default
 
         # Flakes in Registry
-	{
-	  nix.registry = {
-	    nixpkgs.flake = nixpkgs;
-	    home-manager.flake = home-manager;
-	    zen-browser.flake = zen-browser;
-	    nix-alien.flake = nix-alien;
-	  };
-	}
+        {
+          nix.registry = {
+            nixpkgs.flake = nixpkgs;
+            home-manager.flake = home-manager;
+            zen-browser.flake = zen-browser;
+            nix-alien.flake = nix-alien;
+          };
+        }
 
-	# Custom Settings
-	{
-	  custom = {
-	    defaultDisplayManager = "none";
-        with-niri = true;
-	  };
-	  nixpkgs.config.allowUnfree = true;
-	}
+        # Custom Settings
+        {
+          custom = {
+            defaultDisplayManager = "none";
+            with-niri = true;
+          };
+          nixpkgs.config.allowUnfree = true;
+        }
 
-	home-manager.nixosModules.home-manager
-	{
-	  home-manager = {
-	    useGlobalPkgs = true;
-	    useUserPackages = true;
-	    backupFileExtension = "orig.home";
-        overwriteBackup = true;
-	    extraSpecialArgs = specialArgs;
-	    users.pas = import ./pas-waddledee/home-manager-configuration.nix;
-	  };
-	}
+        home-manager.nixosModules.home-manager {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            backupFileExtension = "orig.home";
+            overwriteBackup = true;
+            extraSpecialArgs = specialArgs;
+            users.pas = import ./pas-waddledee/home-manager-configuration.nix;
+          };
+        }
       ];
     };
 
     nixosConfigurations.pas-whispywoods =
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; };
       specialArgs = { inherit inputs system; };
     in nixpkgs.lib.nixosSystem {
       inherit system specialArgs;
