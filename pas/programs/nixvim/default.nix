@@ -7,18 +7,23 @@
 }:
 
 {
-  home.packages =
-    with pkgs;
-    [
-      tree-sitter
-    ]
+  imports = [
+    inputs.nixvim.homeModules.nixvim
+  ];
+
+  /*
     ++ [
       (inputs.nixvim.legacyPackages.${system}.makeNixvim (import ./nixvim-config.nix { inherit pkgs; }))
     ];
+    */
 
   home.shellAliases.vi = "nvim";
 
   programs = {
+    nixvim = {
+      enable = true;
+    } // (import ./nixvim-config.nix { inherit pkgs; });
+
     fd.enable = true;
     lazygit = {
       enable = true;
@@ -29,4 +34,8 @@
       };
     };
   };
+
+  home.packages = [
+      pkgs.tree-sitter
+  ];
 }
