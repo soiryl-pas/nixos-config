@@ -11,12 +11,6 @@
     inputs.nixvim.homeModules.nixvim
   ];
 
-  /*
-    ++ [
-      (inputs.nixvim.legacyPackages.${system}.makeNixvim (import ./nixvim-config.nix { inherit pkgs; }))
-    ];
-    */
-
   home.shellAliases.vi = "nvim";
 
   programs = {
