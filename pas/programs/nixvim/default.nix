@@ -16,7 +16,7 @@
   programs = {
     nixvim = {
       enable = true;
-      nixpkgs.source = inputs.nixpkgs;
+      #nixpkgs.source = inputs.nixpkgs;
     } // (import ./nixvim-config.nix { inherit pkgs; });
 
     fd.enable = true;
