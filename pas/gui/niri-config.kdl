@@ -22,6 +22,18 @@ window-rule {
     match app-id=r#"^org\.gnome\.seahorse\.Application$"#
 }
 
+animations {
+    slowdown 2.0
+}
+
+window-rule {
+    match title="^Picture-in-Picture$"
+    open-floating true
+    open-focused false
+    default-column-width { proportion 0.25; }
+    default-floating-position x=0 y=0 relative-to="top-right"
+}
+
 layer-rule {
     match namespace="^notifications$"
 
