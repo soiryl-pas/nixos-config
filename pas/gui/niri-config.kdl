@@ -23,7 +23,7 @@ window-rule {
 }
 
 animations {
-    slowdown 2.0
+    slowdown 1.2
 }
 
 window-rule {
